@@ -103,20 +103,25 @@ function itemTemplate(item) {
 
   // Google News RSS links (news.google.com/rss/articles/...) are opaque
   // redirects that dead-end on an EU cookie-consent page when fetched
-  // directly. Decoding them locally (batched, rate-limit-friendly) gets us
-  // the real publisher URL, gaa_* tokens included (Google's "News Showcase"
-  // grant that unlocks some paywalled articles for readers coming from
-  // Google News).
-  const decoded = await decoder.decodeBatch(allItems.map((item) => item.link));
-  allItems.forEach((item, i) => {
-    const result = decoded[i];
+  // directly. Decoding them locally gets us the real publisher URL, gaa_*
+  // tokens included (Google's "News Showcase" grant that unlocks some
+  // paywalled articles for readers coming from Google News).
+  //
+  // NOTE: decoder.decodeBatch() sends all links in one grouped Google
+  // batchexecute call and re-matches results by their position in the
+  // response array, but Google does not guarantee that response order
+  // matches request order for that endpoint — it silently mismatched
+  // articles in practice. Decoding one link at a time, sequentially, avoids
+  // that reordering bug entirely (each call is self-contained).
+  for (const item of allItems) {
+    const result = await decoder.decode(item.link);
     if (result && result.status) {
       item.realUrl = result.decoded_url;
     } else {
       console.warn(`Could not decode Google News link for "${item.title}": ${result && result.message}`);
       item.realUrl = item.link;
     }
-  });
+  }
 
   await Promise.all(allItems.map(buildArticlePage));
 
