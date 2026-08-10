@@ -1,4 +1,4 @@
-module.exports.document = function (body) {
+module.exports.document = function (body, { basePrefix = './' } = {}) {
   return `<!DOCTYPE html>
   <html lang="en">
   <head>
@@ -8,14 +8,14 @@ module.exports.document = function (body) {
     <meta name="description" content="Extrait de la section Toulouse de Google Actualités">
     <link rel="shortcut icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2537/2537856.png">
     <title>Actualités Toulouse</title>
-    <link type="text/css" rel="stylesheet" href="./styles.css" media="all">
+    <link type="text/css" rel="stylesheet" href="${basePrefix}styles.css" media="all">
   </head>
   <body>
     <main>
       <header class="bg-dark mb-4">
         <nav class="container navbar navbar-dark">
         <div class="container-fluid">
-          <h1 class="text-light h2 mb-0">Actualités Toulouse</h1>
+          <a href="${basePrefix}index.html"><h1 class="text-light h2 mb-0">Actualités Toulouse</h1></a>
         </div>
         </nav>
       </header>

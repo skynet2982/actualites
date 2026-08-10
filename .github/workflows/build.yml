@@ -17,6 +17,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Restore previous build state 📜
+        run: |
+          git fetch origin gh-pages --depth=1 || true
+          mkdir -p dist
+          if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
+            # Two separate calls: git archive aborts the whole archive (even
+            # for paths that do exist) if any single pathspec doesn't match,
+            # and history.json won't exist yet on the very first run.
+            git archive origin/gh-pages -- articles 2>/dev/null | tar -x -C dist 2>/dev/null || true
+            git archive origin/gh-pages -- history.json 2>/dev/null | tar -x -C dist 2>/dev/null || true
+          fi
       - name: Install and Build
         run: |
           npm ci --omit=dev
