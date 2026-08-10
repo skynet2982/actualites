@@ -1,11 +1,14 @@
-module.exports.document = function (body, { basePrefix = './' } = {}) {
+module.exports.document = function (body, { basePrefix = './', switchLinks = [], activeCategory } = {}) {
+  const switchHtml = switchLinks.length > 1 ? `<div class="category-switch">
+    ${switchLinks.map((l) => `<a class="category-btn${l.slug === activeCategory ? ' is-active' : ''}" href="${l.href}">${l.label}</a>`).join('')}
+  </div>` : '';
   return `<!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Extrait de la section Toulouse de Google Actualités">
+    <meta name="description" content="Extrait de Google Actualités">
     <link rel="shortcut icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2537/2537856.png">
     <title>Actualités Toulouse</title>
     <link type="text/css" rel="stylesheet" href="${basePrefix}styles.css" media="all">
@@ -25,6 +28,7 @@ module.exports.document = function (body, { basePrefix = './' } = {}) {
             <strong>Dernière mise à jour</strong>: ${new Date().toLocaleString("fr-FR", {timeZone: "Europe/Paris"})}
           </div>
         </div>
+        ${switchHtml}
         ${body}
       </div>
     </main>

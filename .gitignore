@@ -1,5 +1,3 @@
 node_modules
-dist/index.html
-dist/articles
-dist/page
-dist/history.json
+dist/*
+!dist/styles.css

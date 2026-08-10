@@ -293,6 +293,33 @@ body {
   color: var(--body-fg);
 }
 
+.category-switch {
+  display: inline-flex;
+  gap: .25rem;
+  padding: .25rem;
+  margin-bottom: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+}
+
+.category-btn {
+  padding: .45rem 1.1rem;
+  border-radius: 999px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--card-muted);
+}
+
+.category-btn:hover {
+  color: var(--card-title);
+}
+
+.category-btn.is-active {
+  background: var(--card-accent);
+  color: var(--body-bg);
+}
+
 .news-section {
   margin-bottom: 2rem;
 }

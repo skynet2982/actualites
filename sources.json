@@ -1,12 +1,17 @@
 {
-  "sections": [
+  "categories": [
     {
-      "title": "Actualités",
-      "items": [
-        {
-          "title": "Toulouse",
-          "url": "https://news.google.com/rss/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNR05pYUdnU0FtWnlLQUFQAQ?hl=fr"
-        }
+      "slug": "toulouse",
+      "label": "Toulouse",
+      "feeds": [
+        "https://news.google.com/rss/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNR05pYUdnU0FtWnlLQUFQAQ?hl=fr"
+      ]
+    },
+    {
+      "slug": "france",
+      "label": "France",
+      "feeds": [
+        "https://news.google.com/rss?hl=fr&gl=FR&ceid=FR:fr"
       ]
     }
   ]

@@ -9,9 +9,9 @@ const templates = require('./templates.js');
 let parser = new Parser({ customFields: { item: ['source'] } });
 let decoder = new GoogleDecoder();
 const sources = JSON.parse(fs.readFileSync('sources.json'));
+const PRIMARY_CATEGORY = sources.categories[0].slug;
 
 const ARTICLES_DIR = './dist/articles';
-const PAGE_DIR = './dist/page';
 const HISTORY_FILE = './dist/history.json';
 const FETCH_TIMEOUT_MS = 10000;
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
@@ -21,8 +21,8 @@ const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 // articles are left as-is, no further recursion.
 const LINKS_PER_ARTICLE = 4;
 const MAX_LINKED_ARTICLES = 20;
-// How many articles stay in the paginated history, and how many
-// url->local-page mappings we keep around across runs to resolve
+// How many articles stay in the paginated history (per category), and how
+// many url->local-page mappings we keep around across runs to resolve
 // in-article links against articles fetched in a previous build.
 const MAX_HISTORY = 200;
 const MAX_RESOLVED = 1000;
@@ -30,9 +30,9 @@ const PAGE_SIZE = 20;
 
 fs.mkdirSync('./dist', { recursive: true });
 fs.mkdirSync(ARTICLES_DIR, { recursive: true });
-fs.mkdirSync(PAGE_DIR, { recursive: true });
 
 function createFile(fileName, data) {
+  fs.mkdirSync(fileName.substring(0, fileName.lastIndexOf('/')), { recursive: true });
   fs.writeFile(fileName, data, (err) => {
     if (!err) {
       console.log('File created: ' + fileName);
@@ -42,17 +42,18 @@ function createFile(fileName, data) {
 
 // dist/history.json is seeded by the GitHub Actions workflow from the
 // previously deployed gh-pages before this script runs, so build state
-// (which articles we've already fetched, and the full article history)
-// survives across runs even though every run starts from a clean checkout.
+// (which articles we've already fetched, and the full article history per
+// category) survives across runs even though every run starts from a clean
+// checkout.
 function loadState() {
   try {
     const raw = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf-8'));
     return {
-      items: Array.isArray(raw.items) ? raw.items : [],
       resolved: Array.isArray(raw.resolved) ? raw.resolved : [],
+      categories: raw.categories && typeof raw.categories === 'object' ? raw.categories : {},
     };
   } catch {
-    return { items: [], resolved: [] };
+    return { resolved: [], categories: {} };
   }
 }
 
@@ -150,11 +151,11 @@ function rewriteInArticleLinks(html, baseUrl, resolvedSlugMap) {
   return dom.window.document.body.innerHTML;
 }
 
-function historyCardTemplate(entry, basePrefix) {
+function historyCardTemplate(entry, rootPrefix) {
   const date = new Date(entry.pubDate);
   const displayDate = date.toLocaleString("fr-FR", { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: "Europe/Paris" });
   const isoDate = date.toLocaleString("fr-FR", { timeZone: "Europe/Paris" });
-  const href = entry.slug ? `${basePrefix}articles/${entry.slug}.html` : entry.realUrl;
+  const href = entry.slug ? `${rootPrefix}articles/${entry.slug}.html` : entry.realUrl;
   return `<a class="card" rel="noopener" target="_blank" href="${href}" title="${escapeHtml(entry.title)}">
     <span class="card-source">${escapeHtml(entry.source || '')}</span>
     <h3 class="card-title">${escapeHtml(headlineOf(entry))}</h3>
@@ -162,21 +163,36 @@ function historyCardTemplate(entry, basePrefix) {
   </a>`
 }
 
-// Relative href from the page currently being rendered (page 1 = dist/,
-// page N>1 = dist/page/) to another page (page 1 = dist/index.html,
-// page N>1 = dist/page/N.html — same directory as any page N>1).
-function pageHref(targetPage, fromPage) {
-  if (targetPage === 1) return '../index.html';
-  return fromPage === 1 ? `page/${targetPage}.html` : `${targetPage}.html`;
+// Every generated listing page lives at one of:
+//   dist/index.html                (primary category, page 1)
+//   dist/page/N.html               (primary category, page N>1)
+//   dist/<slug>/index.html         (other category, page 1)
+//   dist/<slug>/page/N.html        (other category, page N>1)
+function categoryDir(slug) {
+  return slug === PRIMARY_CATEGORY ? '' : `${slug}/`;
 }
 
-function paginationNav(pageNum, totalPages) {
+function pagePath(slug, pageNum) {
+  const dir = categoryDir(slug);
+  return pageNum === 1 ? `${dir}index.html` : `${dir}page/${pageNum}.html`;
+}
+
+function rootPrefixFor(slug, pageNum) {
+  const depth = (slug === PRIMARY_CATEGORY ? 0 : 1) + (pageNum === 1 ? 0 : 1);
+  return '../'.repeat(depth);
+}
+
+function pageHref(targetPage, currentSlug, currentPage) {
+  return rootPrefixFor(currentSlug, currentPage) + pagePath(currentSlug, targetPage);
+}
+
+function paginationNav(pageNum, totalPages, slug) {
   if (totalPages <= 1) return '';
   const prev = pageNum > 1
-    ? `<a class="page-link" href="${pageHref(pageNum - 1, pageNum)}">&larr; Plus récent</a>`
+    ? `<a class="page-link" href="${pageHref(pageNum - 1, slug, pageNum)}">&larr; Plus récent</a>`
     : `<span class="page-link is-disabled">&larr; Plus récent</span>`;
   const next = pageNum < totalPages
-    ? `<a class="page-link" href="${pageHref(pageNum + 1, pageNum)}">Plus ancien &rarr;</a>`
+    ? `<a class="page-link" href="${pageHref(pageNum + 1, slug, pageNum)}">Plus ancien &rarr;</a>`
     : `<span class="page-link is-disabled">Plus ancien &rarr;</span>`;
   return `<nav class="pagination" aria-label="Pagination">
     ${prev}
@@ -185,76 +201,100 @@ function paginationNav(pageNum, totalPages) {
   </nav>`;
 }
 
+function paginate(items) {
+  const pages = [];
+  for (let i = 0; i < items.length || i === 0; i += PAGE_SIZE) {
+    pages.push(items.slice(i, i + PAGE_SIZE));
+    if (items.length === 0) break;
+  }
+  return pages;
+}
+
 (async () => {
   const state = loadState();
-  const historyByGuid = new Map(state.items.filter((h) => h.slug).map((h) => [h.guid, h]));
-
-  const feeds = [];
-  for (const section of sources.sections) {
-    for (const src of section.items) {
-      feeds.push(await parser.parseURL(src.url));
-    }
-  }
-
-  const allItems = feeds.flatMap((feed) => feed.items);
-
-  // Split into items we've already processed in a previous run (reuse as-is,
-  // no network calls) and genuinely new ones.
-  const newItems = [];
-  for (const item of allItems) {
-    const existing = historyByGuid.get(item.guid);
-    if (existing) {
-      item.slug = existing.slug;
-      item.realUrl = existing.realUrl;
-    } else {
-      newItems.push(item);
-    }
-  }
-
-  // Google News RSS links (news.google.com/rss/articles/...) are opaque
-  // redirects that dead-end on an EU cookie-consent page when fetched
-  // directly. Decoding them locally gets us the real publisher URL, gaa_*
-  // tokens included (Google's "News Showcase" grant that unlocks some
-  // paywalled articles for readers coming from Google News).
-  //
-  // NOTE: decoder.decodeBatch() sends all links in one grouped Google
-  // batchexecute call and re-matches results by their position in the
-  // response array, but Google does not guarantee that response order
-  // matches request order for that endpoint — it silently mismatched
-  // articles in practice. Decoding one link at a time, sequentially, avoids
-  // that reordering bug entirely (each call is self-contained).
-  for (const item of newItems) {
-    const result = await decoder.decode(item.link);
-    if (result && result.status) {
-      item.realUrl = result.decoded_url;
-    } else {
-      console.warn(`Could not decode Google News link for "${item.title}": ${result && result.message}`);
-      item.realUrl = item.link;
-    }
-  }
-
-  // extracted: canonical fetch URL -> { title, byline, content, finalUrl, slug }.
-  const extracted = new Map();
-
-  await Promise.all(newItems.map(async (item) => {
-    try {
-      const article = await extractArticle(item.realUrl);
-      const slug = slugFor(item.realUrl);
-      extracted.set(item.realUrl, { ...article, title: article.title || item.title, slug });
-      item.slug = slug;
-    } catch (err) {
-      console.warn(`Fallback to direct link for "${item.title}": ${err.message}`);
-      item.slug = null;
-    }
-  }));
-
-  // Persistent + this-run resolved-URL -> slug lookup. Used to avoid
-  // re-fetching in-article links already resolved in a past run, and to
-  // rewrite hrefs against everything we've ever extracted, not just what's
-  // new this run.
   const resolvedSlugMap = new Map(state.resolved.map((r) => [r.url, r.slug]));
-  for (const [url, article] of extracted) resolvedSlugMap.set(url, article.slug);
+  const extracted = new Map(); // canonical fetch URL -> { title, byline, content, finalUrl, slug }
+  const mergedItemsByCategory = {};
 
+  for (const category of sources.categories) {
+    const historyItems = (state.categories[category.slug] && state.categories[category.slug].items) || [];
+    const historyByGuid = new Map(historyItems.filter((h) => h.slug).map((h) => [h.guid, h]));
+
+    const feeds = await Promise.all(category.feeds.map((url) => parser.parseURL(url)));
+    const allItems = feeds.flatMap((feed) => feed.items);
+
+    // Split into items we've already processed in a previous run (reuse
+    // as-is, no network calls) and genuinely new ones.
+    const newItems = [];
+    for (const item of allItems) {
+      const existing = historyByGuid.get(item.guid);
+      if (existing) {
+        item.slug = existing.slug;
+        item.realUrl = existing.realUrl;
+      } else {
+        newItems.push(item);
+      }
+    }
+
+    // Google News RSS links (news.google.com/rss/articles/...) are opaque
+    // redirects that dead-end on an EU cookie-consent page when fetched
+    // directly. Decoding them locally gets us the real publisher URL,
+    // gaa_* tokens included (Google's "News Showcase" grant that unlocks
+    // some paywalled articles for readers coming from Google News).
+    //
+    // NOTE: decoder.decodeBatch() sends all links in one grouped Google
+    // batchexecute call and re-matches results by their position in the
+    // response array, but Google does not guarantee that response order
+    // matches request order for that endpoint — it silently mismatched
+    // articles in practice. Decoding one link at a time, sequentially,
+    // avoids that reordering bug entirely (each call is self-contained).
+    for (const item of newItems) {
+      const result = await decoder.decode(item.link);
+      if (result && result.status) {
+        item.realUrl = result.decoded_url;
+      } else {
+        console.warn(`Could not decode Google News link for "${item.title}": ${result && result.message}`);
+        item.realUrl = item.link;
+      }
+    }
+
+    await Promise.all(newItems.map(async (item) => {
+      try {
+        const article = await extractArticle(item.realUrl);
+        const slug = slugFor(item.realUrl);
+        extracted.set(item.realUrl, { ...article, title: article.title || item.title, slug });
+        resolvedSlugMap.set(item.realUrl, slug);
+        item.slug = slug;
+      } catch (err) {
+        console.warn(`Fallback to direct link for "${item.title}": ${err.message}`);
+        item.slug = null;
+      }
+    }));
+
+    // Merge this run's items into the persisted history: replace/add
+    // entries by guid, keep everything else, sort newest-first, cap at
+    // MAX_HISTORY. Items that fall off the cap keep their reader page on
+    // disk (still reachable, just no longer listed) rather than being
+    // deleted — deleting them could break "à lire aussi" links from
+    // articles still in history.
+    const processedByGuid = new Map(allItems.map((item) => [item.guid, {
+      guid: item.guid,
+      title: item.title,
+      source: item.source,
+      pubDate: item.pubDate,
+      slug: item.slug,
+      realUrl: item.realUrl,
+    }]));
+    mergedItemsByCategory[category.slug] = [...processedByGuid.values(), ...historyItems.filter((h) => !processedByGuid.has(h.guid))]
+      .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate))
+      .slice(0, MAX_HISTORY);
+  }
+
+  // One extra pass across every category's freshly extracted articles:
+  // follow same-site links (e.g. "à lire aussi") and give those a clean
+  // reader page too, capped so a link-heavy article can't blow up the
+  // build. resolvedSlugMap already carries past runs' resolutions, so this
+  // also skips links we've resolved before, in any category.
   const linkCandidates = new Set();
   for (const article of extracted.values()) {
     const links = [...inArticleLinksOf(article.content, article.finalUrl)].slice(0, LINKS_PER_ARTICLE);
@@ -286,44 +326,35 @@ function paginationNav(pageNum, totalPages) {
     createFile(`${ARTICLES_DIR}/${article.slug}.html`, page);
   }
 
-  // Merge this run's items into the persisted history: replace/add entries
-  // by guid, keep everything else, sort newest-first, cap at MAX_HISTORY.
-  // Items that fall off the cap keep their reader page on disk (still
-  // reachable, just no longer listed) rather than being deleted — deleting
-  // them could break "à lire aussi" links from articles still in history.
-  const processedByGuid = new Map(allItems.map((item) => [item.guid, {
-    guid: item.guid,
-    title: item.title,
-    source: item.source,
-    pubDate: item.pubDate,
-    slug: item.slug,
-    realUrl: item.realUrl,
-  }]));
-  const mergedItems = [...processedByGuid.values(), ...state.items.filter((h) => !processedByGuid.has(h.guid))]
-    .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate))
-    .slice(0, MAX_HISTORY);
-  const mergedResolved = [...resolvedSlugMap].map(([url, slug]) => ({ url, slug })).slice(-MAX_RESOLVED);
+  const newState = {
+    resolved: [...resolvedSlugMap].map(([url, slug]) => ({ url, slug })).slice(-MAX_RESOLVED),
+    categories: Object.fromEntries(sources.categories.map((c) => [c.slug, { items: mergedItemsByCategory[c.slug] }])),
+  };
+  createFile(HISTORY_FILE, JSON.stringify(newState));
 
-  createFile(HISTORY_FILE, JSON.stringify({ items: mergedItems, resolved: mergedResolved }));
+  for (const category of sources.categories) {
+    const pages = paginate(mergedItemsByCategory[category.slug]);
 
-  const pages = [];
-  for (let i = 0; i < mergedItems.length || i === 0; i += PAGE_SIZE) {
-    pages.push(mergedItems.slice(i, i + PAGE_SIZE));
-    if (mergedItems.length === 0) break;
+    pages.forEach((pageItems, i) => {
+      const pageNum = i + 1;
+      const rootPrefix = rootPrefixFor(category.slug, pageNum);
+      // Switching category always lands on its page 1 — href is relative
+      // to *this* page, so it must use this page's own rootPrefix, not
+      // page 1's (a page/2.html is one directory deeper than index.html).
+      const switchLinks = sources.categories.map((c) => ({
+        slug: c.slug,
+        label: c.label,
+        href: rootPrefix + pagePath(c.slug, 1),
+      }));
+      let body = `<section class="news-section">`;
+        body += '<div class="news-grid">';
+        body += pageItems.map((entry) => historyCardTemplate(entry, rootPrefix)).join('');
+        body += '</div>';
+      body += `</section>`;
+      body += paginationNav(pageNum, pages.length, category.slug);
+
+      const html = templates.document(body, { basePrefix: rootPrefix, switchLinks, activeCategory: category.slug });
+      createFile(`./dist/${pagePath(category.slug, pageNum)}`, html);
+    });
   }
-
-  pages.forEach((pageItems, i) => {
-    const pageNum = i + 1;
-    const basePrefix = pageNum === 1 ? './' : '../';
-    let body = `<section class="news-section">`;
-      body += '<div class="news-grid">';
-      body += pageItems.map((entry) => historyCardTemplate(entry, basePrefix)).join('');
-      body += '</div>';
-    body += `</section>`;
-    body += paginationNav(pageNum, pages.length);
-
-    const html = templates.document(body, { basePrefix });
-    const fileName = pageNum === 1 ? './dist/index.html' : `${PAGE_DIR}/${pageNum}.html`;
-    createFile(fileName, html);
-  });
 })();
