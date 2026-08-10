@@ -31,3 +31,28 @@ module.exports.document = function (body) {
   </body>
   </html>`;
 }
+
+module.exports.article = function ({ title, byline, content, sourceUrl }) {
+  return `<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title} — Actualités Toulouse</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>${title}</h1>
+        ${byline ? `<p style="color: var(--bs-gray-600, #6c757d);">${byline}</p>` : ''}
+        <p class="small"><a rel="noopener" target="_blank" href="${sourceUrl}">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content">${content}</div>
+      </article>
+    </main>
+  </body>
+  </html>`;
+}
