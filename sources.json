@@ -1,6 +1,13 @@
 {
   "categories": [
     {
+      "slug": "france",
+      "label": "France",
+      "feeds": [
+        "https://news.google.com/rss?hl=fr&gl=FR&ceid=FR:fr"
+      ]
+    },
+    {
       "slug": "toulouse",
       "label": "Toulouse",
       "feeds": [
@@ -8,10 +15,31 @@
       ]
     },
     {
-      "slug": "france",
-      "label": "France",
+      "slug": "montauban",
+      "label": "Montauban",
       "feeds": [
-        "https://news.google.com/rss?hl=fr&gl=FR&ceid=FR:fr"
+        "https://news.google.com/rss/search?q=Montauban&hl=fr&gl=FR&ceid=FR:fr"
+      ]
+    },
+    {
+      "slug": "montpellier",
+      "label": "Montpellier",
+      "feeds": [
+        "https://news.google.com/rss/search?q=Montpellier&hl=fr&gl=FR&ceid=FR:fr"
+      ]
+    },
+    {
+      "slug": "agen",
+      "label": "Agen",
+      "feeds": [
+        "https://news.google.com/rss/search?q=Agen&hl=fr&gl=FR&ceid=FR:fr"
+      ]
+    },
+    {
+      "slug": "paris",
+      "label": "Paris",
+      "feeds": [
+        "https://news.google.com/rss/search?q=Paris&hl=fr&gl=FR&ceid=FR:fr"
       ]
     }
   ]
