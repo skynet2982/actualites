@@ -400,3 +400,23 @@ body {
     padding: .55rem .75rem;
   }
 }
+
+.article-content {
+  overflow-wrap: break-word;
+}
+
+.article-content img,
+.article-content video,
+.article-content iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
+.article-content table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
