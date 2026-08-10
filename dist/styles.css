@@ -351,14 +351,31 @@ body {
   box-shadow: var(--card-shadow-hover);
 }
 
-.card-source {
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
   align-self: flex-start;
+  gap: .35rem;
+}
+
+.card-source {
   font-size: .72rem;
   font-weight: 600;
   letter-spacing: .03em;
   text-transform: uppercase;
   color: var(--card-accent);
   background: var(--card-accent-bg);
+  padding: .2rem .6rem;
+  border-radius: 999px;
+}
+
+.card-section {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--card-muted);
+  background: var(--card-border);
   padding: .2rem .6rem;
   border-radius: 999px;
 }

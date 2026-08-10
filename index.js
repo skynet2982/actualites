@@ -77,6 +77,33 @@ function headlineOf(entry) {
   return entry.title.endsWith(suffix) ? entry.title.slice(0, -suffix.length) : entry.title;
 }
 
+// The RSS feeds themselves carry no per-item category, but most publishers
+// embed one in the article page: either schema.org NewsArticle
+// "articleSection" (JSON-LD, possibly wrapped in an @graph) or the
+// og-style <meta property="article:section">. Read before Readability
+// strips the page down, since it mutates the document.
+function sectionOf(document) {
+  for (const script of document.querySelectorAll('script[type="application/ld+json"]')) {
+    let data;
+    try {
+      data = JSON.parse(script.textContent);
+    } catch {
+      continue;
+    }
+    const nodes = Array.isArray(data) ? data : [data];
+    for (const node of nodes) {
+      const candidates = node && Array.isArray(node['@graph']) ? node['@graph'] : [node];
+      for (const candidate of candidates) {
+        const section = candidate && candidate.articleSection;
+        const value = Array.isArray(section) ? section[0] : section;
+        if (typeof value === 'string' && value.trim()) return value.trim();
+      }
+    }
+  }
+  const meta = document.querySelector('meta[property="article:section"]');
+  return meta && meta.content && meta.content.trim() ? meta.content.trim() : null;
+}
+
 // Fetches the article and extracts a clean, ad-free version with
 // Readability (the same engine Firefox Reader View and the now-defunct
 // clearthis.page used).
@@ -91,6 +118,7 @@ async function extractArticle(url) {
   }
   const html = await res.text();
   const dom = new JSDOM(html, { url: res.url });
+  const section = sectionOf(dom.window.document);
   const reader = new Readability(dom.window.document);
   const parsed = reader.parse();
   if (!parsed || !parsed.content) {
@@ -102,6 +130,7 @@ async function extractArticle(url) {
     byline: parsed.byline,
     content: DOMPurify.sanitize(parsed.content),
     finalUrl: res.url,
+    section,
   };
 }
 
@@ -157,7 +186,10 @@ function historyCardTemplate(entry, rootPrefix) {
   const isoDate = date.toLocaleString("fr-FR", { timeZone: "Europe/Paris" });
   const href = entry.slug ? `${rootPrefix}articles/${entry.slug}.html` : entry.realUrl;
   return `<a class="card" rel="noopener" target="_blank" href="${href}" title="${escapeHtml(entry.title)}">
-    <span class="card-source">${escapeHtml(entry.source || '')}</span>
+    <div class="card-tags">
+      <span class="card-source">${escapeHtml(entry.source || '')}</span>
+      ${entry.section ? `<span class="card-section">${escapeHtml(entry.section)}</span>` : ''}
+    </div>
     <h3 class="card-title">${escapeHtml(headlineOf(entry))}</h3>
     <time class="card-date" datetime="${isoDate}">${displayDate}</time>
   </a>`
@@ -231,6 +263,7 @@ function paginate(items) {
       if (existing) {
         item.slug = existing.slug;
         item.realUrl = existing.realUrl;
+        item.section = existing.section;
       } else {
         newItems.push(item);
       }
@@ -265,6 +298,7 @@ function paginate(items) {
         extracted.set(item.realUrl, { ...article, title: article.title || item.title, slug });
         resolvedSlugMap.set(item.realUrl, slug);
         item.slug = slug;
+        item.section = article.section;
       } catch (err) {
         console.warn(`Fallback to direct link for "${item.title}": ${err.message}`);
         item.slug = null;
@@ -284,6 +318,7 @@ function paginate(items) {
       pubDate: item.pubDate,
       slug: item.slug,
       realUrl: item.realUrl,
+      section: item.section,
     }]));
     mergedItemsByCategory[category.slug] = [...processedByGuid.values(), ...historyItems.filter((h) => !processedByGuid.has(h.guid))]
       .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate))
