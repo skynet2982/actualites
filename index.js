@@ -392,4 +392,10 @@ function paginate(items) {
       createFile(`./dist/${pagePath(category.slug, pageNum)}`, html);
     });
   }
-})();
+})().catch((err) => {
+  // Without this, a failure partway through (e.g. a feed fetch blocked on
+  // CI) leaves whatever files were already written on disk, npm still exits
+  // 0, and the deploy step happily publishes a half-built site.
+  console.error('Build failed:', err);
+  process.exitCode = 1;
+});
