@@ -35,8 +35,16 @@ jobs:
           npm ci --omit=dev
           npm run build
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          folder: dist
+        # A plain git push instead of a third-party deploy action: that
+        # action was silently no-op'ing (reporting success without ever
+        # pushing dist/'s contents) for reasons we couldn't diagnose without
+        # log access, so this replaces it with a transparent, dependency-free
+        # equivalent — squash dist/ into a single commit and force-push it
+        # as gh-pages.
+        run: |
+          cd dist
+          git init -q
+          git checkout -q -b gh-pages
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="github-actions[bot]@users.noreply.github.com" commit -q -m "Deploy ${{ github.sha }}"
+          git push -q "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:gh-pages --force
