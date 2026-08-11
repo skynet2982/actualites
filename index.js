@@ -33,11 +33,8 @@ fs.mkdirSync(ARTICLES_DIR, { recursive: true });
 
 function createFile(fileName, data) {
   fs.mkdirSync(fileName.substring(0, fileName.lastIndexOf('/')), { recursive: true });
-  fs.writeFile(fileName, data, (err) => {
-    if (!err) {
-      console.log('File created: ' + fileName);
-    }
-  });
+  fs.writeFileSync(fileName, data);
+  console.log('File created: ' + fileName);
 }
 
 // dist/history.json is seeded by the GitHub Actions workflow from the
@@ -59,6 +56,25 @@ function loadState() {
 
 function slugFor(url) {
   return crypto.createHash('md5').update(url).digest('hex').slice(0, 12);
+}
+
+// Article extraction (fetch + JSDOM parse + Readability + DOMPurify) is
+// memory-heavy, and a brand-new category starts with zero history, so every
+// one of its items is "new" — running all of them at once nearly OOM-killed
+// the build the first time a few hundred-item categories were added at once.
+// Cap how many run concurrently instead of firing off the whole batch.
+const EXTRACTION_CONCURRENCY = 8;
+async function mapWithConcurrency(items, limit, fn) {
+  const results = new Array(items.length);
+  let next = 0;
+  async function worker() {
+    while (next < items.length) {
+      const i = next++;
+      results[i] = await fn(items[i], i);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+  return results;
 }
 
 function escapeHtml(str) {
@@ -291,7 +307,7 @@ function paginate(items) {
       }
     }
 
-    await Promise.all(newItems.map(async (item) => {
+    await mapWithConcurrency(newItems, EXTRACTION_CONCURRENCY, async (item) => {
       try {
         const article = await extractArticle(item.realUrl);
         const slug = slugFor(item.realUrl);
@@ -303,7 +319,7 @@ function paginate(items) {
         console.warn(`Fallback to direct link for "${item.title}": ${err.message}`);
         item.slug = null;
       }
-    }));
+    });
 
     // Merge this run's items into the persisted history: replace/add
     // entries by guid, keep everything else, sort newest-first, cap at
@@ -339,7 +355,7 @@ function paginate(items) {
     }
   }
 
-  await Promise.all([...linkCandidates].map(async (url) => {
+  await mapWithConcurrency([...linkCandidates], EXTRACTION_CONCURRENCY, async (url) => {
     try {
       const article = await extractArticle(url);
       const slug = slugFor(url);
@@ -349,7 +365,7 @@ function paginate(items) {
       // Not every same-site link is an article (category pages, tag pages,
       // share links...) — silently leave those pointing at the original site.
     }
-  }));
+  });
 
   for (const article of extracted.values()) {
     const page = templates.article({
