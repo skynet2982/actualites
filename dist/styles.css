@@ -294,21 +294,31 @@ body {
 }
 
 .category-switch {
-  display: inline-flex;
+  display: flex;
   gap: .25rem;
   padding: .25rem;
   margin-bottom: 1.5rem;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 999px;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.category-switch::-webkit-scrollbar {
+  display: none;
 }
 
 .category-btn {
+  flex-shrink: 0;
   padding: .45rem 1.1rem;
   border-radius: 999px;
   font-size: .88rem;
   font-weight: 600;
   color: var(--card-muted);
+  white-space: nowrap;
 }
 
 .category-btn:hover {
