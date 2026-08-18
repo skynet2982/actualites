@@ -9,7 +9,10 @@ module.exports.document = function (body, { basePrefix = './', switchLinks = [],
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Extrait de Google Actualités">
-    <link rel="shortcut icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2537/2537856.png">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="${basePrefix}icons/apple-touch-icon.png">
+    <link rel="manifest" href="${basePrefix}manifest.json">
     <title>Actualités</title>
     <link type="text/css" rel="stylesheet" href="${basePrefix}styles.css" media="all">
   </head>
@@ -82,6 +85,10 @@ module.exports.article = function ({ title, byline, content, sourceUrl }) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
     <title>${title} — Actualités</title>
     <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
   </head>

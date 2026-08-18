@@ -2,3 +2,6 @@ node_modules
 dist/*
 !dist/styles.css
 !dist/qrcode.min.js
+!dist/manifest.json
+!dist/icons
+!dist/icons/*

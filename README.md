@@ -75,8 +75,12 @@ recherche :
   extraction → rendu).
 - `templates.js` — les gabarits HTML (page de liste, page de lecture d'un
   article).
-- `dist/styles.css`, `dist/qrcode.min.js` — les seuls fichiers versionnés
-  sous `dist/` ; tout le reste y est généré à chaque build et ignoré par git.
+- `dist/styles.css`, `dist/manifest.json`, `dist/icons/`, `dist/qrcode.min.js`
+  — les seules parties de `dist/` versionnées (le reste est généré à chaque
+  build). Le site est une PWA installable : `manifest.json` référence les
+  icônes dans `dist/icons/` (générées une fois depuis `assets/icon.svg` et
+  `assets/icon-maskable.svg` — logo à base de l'emoji 📰 — pas régénérées au
+  build, comme `styles.css`).
 
 ## Développement local
 
