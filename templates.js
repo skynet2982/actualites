@@ -23,14 +23,14 @@ module.exports.document = function (body, { basePrefix = './', switchLinks = [],
         </nav>
       </header>
       <div class="container mb-3">
-        <div class="row mb-3">
+        <div class="update-row mb-3">
+          <div class="util-actions">
+            <button type="button" class="util-btn" id="refresh-btn" title="Rafraîchir la page" aria-label="Rafraîchir la page">🔄</button>
+            <button type="button" class="util-btn" id="qr-btn" title="Afficher le QR code du site" aria-label="Afficher le QR code du site">📱</button>
+          </div>
           <div class="col">
             <strong>Dernière mise à jour</strong>: ${new Date().toLocaleString("fr-FR", {timeZone: "Europe/Paris"})}
           </div>
-        </div>
-        <div class="util-actions mb-3">
-          <button type="button" class="util-btn" id="refresh-btn" title="Rafraîchir la page" aria-label="Rafraîchir la page">🔄</button>
-          <button type="button" class="util-btn" id="qr-btn" title="Afficher le QR code du site" aria-label="Afficher le QR code du site">📱</button>
         </div>
         ${switchHtml}
         ${body}

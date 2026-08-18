@@ -475,8 +475,16 @@ body {
   overflow-x: auto;
 }
 
+.update-row {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
 .util-actions {
   display: flex;
+  flex-shrink: 0;
   gap: .5rem;
 }
 
