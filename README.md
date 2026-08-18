@@ -1,48 +1,66 @@
 # Actualités
 
-A static news digest built from Google News RSS. It pulls headlines for a
-handful of French cities/regions, resolves each Google News redirect to the
-real publisher URL, fetches the article and extracts a clean, ad-free reading
-view (à la Firefox Reader View), then publishes the whole thing as a static
-site — no ads, no tracking, no paywalled redirect loops.
+Site statique qui compile les actualités de plusieurs villes/régions
+françaises à partir des flux RSS de Google Actualités, résout chaque lien
+vers l'éditeur d'origine, puis en extrait une version de lecture propre et
+sans pub (à la Reader Mode de Firefox) — pas de pub, pas de tracker, pas de
+boucle de redirection payante.
 
-![screenshot](screenshot.png)
+**En ligne :** https://skynet2982.github.io/actualites/
 
-## How it works
+<img src="qrcode.png" alt="QR code vers le site" width="180">
 
-On every build (`node index.js`):
+![aperçu](screenshot.png)
 
-1. **Fetch** — each category in [sources.json](sources.json) lists one or
-   more Google News RSS feed URLs; all are fetched and merged.
-2. **Decode** — Google News RSS links are opaque redirects
-   (`news.google.com/rss/articles/...`); each one is decoded to the real
-   publisher URL (`google-news-url-decoder`), one at a time and sequentially,
-   which avoids a response-reordering bug in Google's batch decode endpoint.
-3. **Extract** — the real article page is fetched and run through
-   [Readability](https://github.com/mozilla/readability) to strip ads/nav/etc,
-   then sanitized with DOMPurify. If a source page also carries a
-   `schema.org articleSection` (JSON-LD) or `<meta property="article:section">`,
-   that becomes a visible theme label on the article's card (e.g. "Faits
-   divers", "Politique").
-4. **Follow "à lire aussi" links** — same-site links found inside an
-   extracted article are given a clean reader page too (capped per article
-   and per build), so readers don't get bounced back to the ad-filled
-   original site.
-5. **Render** — static HTML pages are generated per category, paginated
-   20 articles/page, with up to 200 articles kept in a persisted history
-   per category (`dist/history.json`) so past articles stay reachable across
-   builds even once new ones push them off the front page.
+## Fonctionnement
 
-## Categories
+Le site se reconstruit tout seul toutes les 30 minutes via GitHub Actions
+(voir [`build.yml`](.github/workflows/build.yml)) et se déploie sur la
+branche `gh-pages`.
 
-Categories live in [sources.json](sources.json). The **first entry is the
-default landing page** (`dist/index.html`); every other category gets its own
-subfolder (`dist/<slug>/`). Order in the file also sets the order of the
-category-switch buttons at the top of the site.
+- **Récupération** — chaque catégorie de [`sources.json`](sources.json)
+  liste un ou plusieurs flux RSS Google Actualités ; tous sont récupérés et
+  fusionnés.
+- **Décodage** — les liens RSS de Google Actualités sont des redirections
+  opaques (`news.google.com/rss/articles/...`) ; chacun est résolu vers
+  l'URL réelle de l'éditeur (`google-news-url-decoder`), un par un et de
+  façon séquentielle, ce qui évite un bug de réordonnancement des réponses
+  sur l'endpoint de décodage par lot de Google.
+- **Extraction** — la page réelle de l'article est récupérée puis passée
+  dans [Readability](https://github.com/mozilla/readability) pour en retirer
+  pubs/menus/etc., puis assainie avec DOMPurify (jusqu'à 8 extractions en
+  parallèle). Si la page source porte aussi un `articleSection` schema.org
+  (JSON-LD) ou une balise `<meta property="article:section">`, ça devient une
+  étiquette de thème visible sur la carte de l'article (ex. « Faits divers »,
+  « Politique »).
+- **Liens « à lire aussi »** — les liens internes au même site trouvés dans
+  un article extrait reçoivent eux aussi une page de lecture propre (plafonné
+  par article et par build), pour éviter de renvoyer le lecteur vers le site
+  d'origine bourré de pubs.
+- **Rendu** — les pages HTML sont générées par catégorie, paginées à 20
+  articles par page, avec jusqu'à 200 articles conservés dans un historique
+  persistant par catégorie (`dist/history.json`) — un article reste donc
+  accessible d'un build à l'autre même une fois poussé hors de la page
+  d'accueil par les suivants.
+- **Deux boutons utilitaires** sous la date de dernière mise à jour :
+  🔄 recharge la page (pratique en PWA, sans avoir à quitter l'appli), et
+  📱 affiche un QR code du site (toujours le lien principal, pas la page ou
+  l'article en cours) via `dist/qrcode.min.js`, une lib vendorisée (MIT,
+  kazuhikoarase/qrcode-generator) générée entièrement côté client, sans
+  requête réseau ni service tiers.
 
-To add a city, add an entry with a Google News RSS feed for it — either a
-location "topic" feed (visit Google News, browse to the location, copy the
-RSS-style topic URL) or a plain search feed:
+## Catégories
+
+Les catégories vivent dans [`sources.json`](sources.json). La **première
+entrée est la page d'accueil** (`dist/index.html`, actuellement « France ») ;
+chaque autre catégorie a son propre sous-dossier (`dist/<slug>/`). L'ordre
+dans le fichier fixe aussi l'ordre des boutons du sélecteur de catégorie en
+haut du site.
+
+Pour ajouter une ville, ajoute une entrée avec un flux RSS Google Actualités
+pour elle — soit un flux « topic » de lieu (va sur Google Actualités,
+navigue jusqu'au lieu, copie l'URL de type RSS), soit un simple flux de
+recherche :
 
 ```json
 {
@@ -52,33 +70,29 @@ RSS-style topic URL) or a plain search feed:
 }
 ```
 
-## Development
+## Structure
+
+- `sources.json` — les catégories et leurs flux RSS.
+- `index.js` — tout le pipeline de build (récupération → décodage →
+  extraction → rendu).
+- `templates.js` — les gabarits HTML (page de liste, page de lecture d'un
+  article).
+- `dist/styles.css`, `dist/qrcode.min.js` — les seuls fichiers versionnés
+  sous `dist/` ; tout le reste y est généré à chaque build et ignoré par git.
+
+## Développement local
 
 ```bash
 npm install
-npm run build   # runs node index.js, writes the static site to dist/
+npm run build   # génère dist/
 ```
 
-Open `dist/index.html` (or serve the `dist/` folder) to preview locally.
-`dist/history.json` and `dist/articles/` persist state between builds — the
-GitHub Actions workflow restores them from the deployed `gh-pages` branch
-before each run so history survives across clean checkouts.
+Ouvre `dist/index.html` (ou sers le dossier `dist/`) pour prévisualiser en
+local. `dist/history.json` et `dist/articles/` persistent l'état entre les
+builds — le workflow GitHub Actions les restaure depuis la branche
+`gh-pages` déployée avant chaque run, pour que l'historique survive aux
+checkouts propres.
 
-## Deployment
+## Licence
 
-[.github/workflows/build.yml](.github/workflows/build.yml) rebuilds and
-redeploys automatically: every 30 minutes on a schedule, and on every push to
-`main`. It publishes `dist/` to the `gh-pages` branch, which GitHub Pages then
-serves.
-
-## Project structure
-
-- `sources.json` — categories and their RSS feeds
-- `index.js` — the whole build pipeline (fetch → decode → extract → render)
-- `templates.js` — HTML templates (page shell, article reader page)
-- `dist/styles.css` — the only hand-maintained file under `dist/`; everything
-  else in `dist/` is generated and gitignored
-
-## License
-
-MIT — see [LICENSE](LICENSE).
+MIT — voir [LICENSE](LICENSE).
