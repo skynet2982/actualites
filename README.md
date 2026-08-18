@@ -10,8 +10,6 @@ boucle de redirection payante.
 
 <img src="qrcode.png" alt="QR code vers le site" width="180">
 
-![aperçu](screenshot.png)
-
 ## Fonctionnement
 
 Le site se reconstruit tout seul toutes les 30 minutes via GitHub Actions
