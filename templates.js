@@ -28,10 +28,49 @@ module.exports.document = function (body, { basePrefix = './', switchLinks = [],
             <strong>Dernière mise à jour</strong>: ${new Date().toLocaleString("fr-FR", {timeZone: "Europe/Paris"})}
           </div>
         </div>
+        <div class="util-actions mb-3">
+          <button type="button" class="util-btn" id="refresh-btn" title="Rafraîchir la page" aria-label="Rafraîchir la page">🔄</button>
+          <button type="button" class="util-btn" id="qr-btn" title="Afficher le QR code du site" aria-label="Afficher le QR code du site">📱</button>
+        </div>
         ${switchHtml}
         ${body}
       </div>
+      <div class="qr-overlay" id="qr-overlay" hidden>
+        <div class="qr-modal">
+          <button type="button" class="qr-close" id="qr-close" aria-label="Fermer">✕</button>
+          <div id="qr-code"></div>
+          <p class="qr-url" id="qr-url"></p>
+        </div>
+      </div>
     </main>
+    <script src="${basePrefix}qrcode.min.js"></script>
+    <script>
+      document.getElementById('refresh-btn').addEventListener('click', function () {
+        location.reload();
+      });
+      (function () {
+        var overlay = document.getElementById('qr-overlay');
+        var rendered = false;
+        document.getElementById('qr-btn').addEventListener('click', function () {
+          if (!rendered) {
+            var siteUrl = new URL('${basePrefix}', location.href).href.replace(/index\\.html$/, '');
+            var qr = qrcode(0, 'M');
+            qr.addData(siteUrl);
+            qr.make();
+            document.getElementById('qr-code').innerHTML = qr.createSvgTag({ cellSize: 6, margin: 4 });
+            document.getElementById('qr-url').textContent = siteUrl;
+            rendered = true;
+          }
+          overlay.hidden = false;
+        });
+        document.getElementById('qr-close').addEventListener('click', function () {
+          overlay.hidden = true;
+        });
+        overlay.addEventListener('click', function (e) {
+          if (e.target === overlay) overlay.hidden = true;
+        });
+      })();
+    </script>
   </body>
   </html>`;
 }

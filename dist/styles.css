@@ -474,3 +474,85 @@ body {
   max-width: 100%;
   overflow-x: auto;
 }
+
+.util-actions {
+  display: flex;
+  gap: .5rem;
+}
+
+.util-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  color: var(--card-title);
+  cursor: pointer;
+}
+
+.util-btn:hover,
+.util-btn:focus-visible {
+  border-color: var(--card-accent);
+}
+
+.qr-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, .5);
+  z-index: 1000;
+}
+
+.qr-overlay[hidden] {
+  display: none;
+}
+
+.qr-modal {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  padding: 1.5rem;
+  /* stays white regardless of theme: the QR SVG itself paints a white
+     background, so a dark modal would leave a mismatched ring around it */
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--card-shadow-hover);
+  text-align: center;
+}
+
+.qr-modal svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.qr-close {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--card-border);
+  color: var(--card-title);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.qr-url {
+  margin: .75rem 0 0;
+  font-size: .8rem;
+  color: #6c757d;
+  word-break: break-all;
+}
