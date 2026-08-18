@@ -479,7 +479,11 @@ body {
   display: flex;
   align-items: center;
   gap: .75rem;
-  flex-wrap: wrap;
+}
+
+.update-row .col {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .util-actions {
