@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>Comment et où télécharger les outils ADB et Fastboot sur Windows, Mac OS et Linux ? — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>Comment et où télécharger les outils ADB et Fastboot sur Windows, Mac OS et Linux ?</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">La rédaction Frandroid</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://www.frandroid.com/android/rom-custom-2/403222_comment-telecharger-les-outils-adb-et-fastboot-sur-windows-macos-et-linux">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div>
+                                    
+                                <div><p>ADB et Fastboot sont des outils essentiels pour les bidouilleurs et les développeurs de l’écosystème Android. Voici notre guide pour les découvrir et bien débuter avec leurs fonctions.</p></div>
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2017/01/android-basics-install-adb-fastboot-mac-linux-windows-1280x600.jpg"><img decoding="async" loading="eager" width="630" height="295" src="https://c0.lestechnophiles.com/images.frandroid.com/wp-content/uploads/2017/01/android-basics-install-adb-fastboot-mac-linux-windows-1280x600.jpg?resize=1200&amp;key=f6fd0298" alt="android-basics-install-adb-fastboot-mac-linux-windows-1280x600" srcset="https://images.frandroid.com/wp-content/uploads/2017/01/android-basics-install-adb-fastboot-mac-linux-windows-1280x600-630x295.jpg 630w, https://images.frandroid.com/wp-content/uploads/2017/01/android-basics-install-adb-fastboot-mac-linux-windows-1280x600-768x360.jpg 768w, https://images.frandroid.com/wp-content/uploads/2017/01/android-basics-install-adb-fastboot-mac-linux-windows-1280x600-1000x469.jpg 1000w" sizes="(max-width: 630px) 100vw, 630px"></a></figure>
+
+
+
+<h2>Qu’est-ce qu’ADB&nbsp;?</h2>
+
+<p>ADB peut être défini assez facilement&nbsp;: c’est un pont entre le système Android et votre PC, ou plus globalement votre appareil Android et un autre appareil. ADB est l’acronyme de <em><strong>Android Debug Bridge</strong></em>, il permet aux développeurs (et autres acteurs de l’écosystème Android) de communiquer avec leur appareil Android grâce à des commandes.&nbsp;Si la syntaxe de ligne de commande d’ADB est intimidante aux premiers abords, elle reste pourtant simple et efficace.</p>
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2017/01/adbwireless.jpg"><img loading="lazy" decoding="async" width="630" height="318" src="https://images.frandroid.com/wp-content/uploads/2017/01/adbwireless-630x318.jpg" alt="" d="" srcset="https://images.frandroid.com/wp-content/uploads/2017/01/adbwireless-630x318.jpg 630w, https://images.frandroid.com/wp-content/uploads/2017/01/adbwireless.jpg 677w" sizes="auto, (max-width: 630px) 100vw, 630px"></a><figcaption>«&nbsp;adb devices&nbsp;» par exemple, permet de lister les appareils Android connectés au système.</figcaption></figure>
+
+<p><strong>Pour résumer&nbsp;: ADB est l’outil de base des développeurs et de tous les bidouilleurs qui veulent manipuler leur appareil Android depuis un ordinateur.&nbsp;</strong></p>
+
+
+
+<h2>Qu’est-ce que Fastboot&nbsp;?</h2>
+
+<p><em>Fastboot</em> est un protocole de communication, comme ADB. Cet outil sert en particulier à flasher les partitions sur votre appareil. Il permet donc de réaliser des opérations délicates qui peuvent potentiellement rendre inopérant votre appareil. C’est cet outil puissant qui permet <a href="https://www.frandroid.com/android/mises-a-jour-android/384544_comment-installer-la-developer-preview-de-android-7-1-nougat-sur-un-nexus-tutoriel">d’utiliser Android Preview</a>, d’installer des <em>firmwares</em> alternatifs ou de mettre à jour le système de fichiers, par exemple.</p>
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2016/10/flash_fastboot_nougat_developer_preview02-copy.jpg"><img loading="lazy" decoding="async" width="630" height="460" src="https://images.frandroid.com/wp-content/uploads/2016/10/flash_fastboot_nougat_developer_preview02-copy-630x460.jpg" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2016/10/flash_fastboot_nougat_developer_preview02-copy-630x460.jpg 630w, https://images.frandroid.com/wp-content/uploads/2016/10/flash_fastboot_nougat_developer_preview02-copy-768x561.jpg 768w, https://images.frandroid.com/wp-content/uploads/2016/10/flash_fastboot_nougat_developer_preview02-copy-1000x731.jpg 1000w" sizes="auto, (max-width: 630px) 100vw, 630px"></a></figure>
+
+
+
+<p>Attention, peu d’appareils ont accès au mode <em>fastboot</em> par défaut, il faut au préalable avoir un appareil débloqué (les procédures sont différentes en fonction des constructeurs). Bien souvent pour accéder à ce mode, il faut éteindre son appareil et maintenir les touches&nbsp;: «&nbsp;Power + Volume Bas&nbsp;».</p>
+
+<p>Une fois dans ce mode, vous pourrez déverrouiller ou verrouiller le <em>bootloader</em> de votre appareil :&nbsp;<em>fastboot oem unlock</em> est une des commandes les plus utilisées. Attention, certaines commandes peuvent tout simplement effacer le contenu de votre appareil, d’autres commandes peuvent même rendre votre appareil inutilisable. Faites donc attention à ce que vous faites, et sauvegardez toujours vos données avant de vous lancer.</p>
+
+<p><strong>Pour résumer&nbsp;: <em>Fastboot</em> est un outil utilisé le plus souvent utilisé pour flasher un smartphone avec une image système</strong></p>
+
+<h2>Comment installer ADB et Fastboot sur l’ordinateur ?</h2>
+
+<h3>La méthode Google officielle</h3>
+
+<p>Ces outils sont directement intégrés au <a href="https://developer.android.com/studio/index.html" rel="nofollow">kit de développement (SDK)</a>&nbsp;fourni avec Android Studio&nbsp;(dans «&nbsp;sdk/platform-tools&nbsp;»). Si vous voulez seulement accéder aux outils ADB et/ou Fastboot et que vous ne comptez pas utiliser les autres services offerts par Android Studio ou le kit de développement, c’est plusieurs centaines de Mo téléchargés pour rien.</p>
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2017/01/fb8bd601-2e03-429d-9ea2-2db5401bf89f_sdk.png"><img loading="lazy" decoding="async" width="630" height="450" src="https://images.frandroid.com/wp-content/uploads/2017/01/fb8bd601-2e03-429d-9ea2-2db5401bf89f_sdk-630x450.png" alt="fb8bd601-2e03-429d-9ea2-2db5401bf89f_sdk" srcset="https://images.frandroid.com/wp-content/uploads/2017/01/fb8bd601-2e03-429d-9ea2-2db5401bf89f_sdk-630x450.png 630w, https://images.frandroid.com/wp-content/uploads/2017/01/fb8bd601-2e03-429d-9ea2-2db5401bf89f_sdk.png 700w" sizes="auto, (max-width: 630px) 100vw, 630px"></a></figure>
+
+<p>Google a donc mis à disposition les fichiers isolés de ces outils pour les trois plateformes principales, Windows, macOS et Linux.</p>
+
+<ul><li>Pour <a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip">Windows</a>
+</li>
+<li>Pour <a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip">Mac</a>
+</li>
+<li>Pour <a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip">GNU/Linux</a>
+</li></ul>
+
+<p>Notez que plusieurs distributions GNU/Linux intègrent nativement ces outils, ou les proposent dans leurs dépôts. Par exemple sous Ubuntu les commandes suivantes peuvent être utilisées&nbsp;:</p>
+
+<blockquote><p>sudo apt-get install android-tools-adb</p>
+ <p>sudo apt-get install android-tools-fastboot</p>
+</blockquote>
+
+<h3>Une&nbsp;autres possibilité</h3>
+
+<p>La communauté XDA, bien connue des amateurs de bidouilles sous Android, propose un kit prêt à l’emploi permettant d’accéder aux deux outils,&nbsp;<em><a href="https://forum.xda-developers.com/showthread.php?t=2317790">Minimal ADB and Fastboot</a></em>.</p>
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2017/01/https-2f2fsites-google-com2fsite2frodsmods132f_2frsrc2f13708392309912fhome2fstep202.png"><img loading="lazy" decoding="async" width="519" height="404" src="https://images.frandroid.com/wp-content/uploads/2017/01/https-2f2fsites-google-com2fsite2frodsmods132f_2frsrc2f13708392309912fhome2fstep202.png" alt="https-%2f%2fsites-google-com%2fsite%2frodsmods13%2f_%2frsrc%2f1370839230991%2fhome%2fstep%202"></a></figure>
+
+<h2>Configurer l’appareil Android pour ADB</h2>
+
+<p>Pour utiliser ADB, il est nécessaire <a href="https://www.frandroid.com/comment-faire/lemultimedia/229753_questcequelemodedebogageusb">d’activer le débogage USB</a> dans les options de développement sur l’appareil Android. Pour cela, rendez-vous dans la section&nbsp;«&nbsp;<em>À propos du téléphone</em>&nbsp;» dans les paramètres de l’appareil, puis touchez sept fois la zone <strong>Numéro de build</strong>. Au terme des sept appuis, un message vous indique que vous êtes développeur&nbsp;! L’option <strong>Options de développement</strong> apparaît de nouveau dans les paramétrages Android. Vous pourrez alors activer ou non le <strong>Débogage USB</strong>.</p>
+
+
+<div data-original-width="928" data-original-height="685">
+						<a href="https://images.frandroid.com/wp-content/uploads/2017/01/debogage-usb-android-81-oreo.jpg">
+							
+							
+							<img src="https://c0.lestechnophiles.com/images.frandroid.com/wp-content/uploads/2017/01/debogage-usb-android-81-oreo.jpg?resize=924,681&amp;key=4a051a7d" srcset="https://images.frandroid.com/wp-content/uploads/2017/01/debogage-usb-android-81-oreo.jpg 720w, https://images.frandroid.com/wp-content/uploads/2017/01/debogage-usb-android-81-oreo-630x465.jpg 630w" width="924" height="681" loading="lazy" data-original-width="924" data-original-height="681" title="Debogage USB Android 81 Oreo" alt="Debogage USB Android 81 Oreo">
+						</a>
+											</div>
+
+
+
+<h2>Premier pas avec ADB</h2>
+
+<p>L’objectif de ce guide est avant tout d’expliquer ce que sont ADB et <em>Fastboot</em>, et comment configurer son appareil et son ordinateur pour pouvoir les utiliser. Voici toutefois quelques exemples de commandes communément utilisées avec ADB et <em>Fastboot</em> pour débuter avec cet outil.</p>
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2017/01/adb-exemples-de-commandes.jpg"><img loading="lazy" decoding="async" width="630" height="185" src="https://images.frandroid.com/wp-content/uploads/2017/01/adb-exemples-de-commandes-630x185.jpg" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2017/01/adb-exemples-de-commandes-630x185.jpg 630w, https://images.frandroid.com/wp-content/uploads/2017/01/adb-exemples-de-commandes-768x225.jpg 768w, https://images.frandroid.com/wp-content/uploads/2017/01/adb-exemples-de-commandes.jpg 995w" sizes="auto, (max-width: 630px) 100vw, 630px"></a></figure>
+
+<p>Lister les&nbsp;appareils connectés à l’ordinateur&nbsp;:</p>
+
+<ul><li>adb devices</li></ul>
+
+<p>Redémarrer l’appareil normalement, en mode recovery ou en mode bootloader (fastboot). Très pratique si vous n’aimez pas faire les manipulations à faire avec les boutons au lancement de l’appareil&nbsp;:</p>
+
+<ul><li>adb reboot</li>
+<li>adb reboot recovery</li>
+<li>adb reboot&nbsp;bootloader</li></ul>
+
+<p>Installer une application .<a href="https://www.frandroid.com/comment-faire/tutoriaux/184151_comment-installer-un-fichier-apk-sur-son-terminal-android">APK</a> stockée sur l’ordinateur&nbsp;:</p>
+
+<ul><li>adb install MonApplication.apk</li></ul>
+
+<p>Selon que vous vouliez installer une ROM custom ou déboguer une application en développement, vos besoins seront évidement différents et des guides plus spécialisés sur les usages de ADB et <em>Fastboot</em> sont disponibles sur Internet, <a href="https://forum.frandroid.com/topic/139590-tuto-adb-fastboot-drivers-root-recovery-backup-sans-toolkit/">notamment sur notre forum</a>.</p><hr>            </div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>
