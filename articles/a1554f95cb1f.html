@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>Claude Fable 5.1 : Anthropic mise sur la baisse des coûts plus que sur les benchmarks — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>Claude Fable 5.1 : Anthropic mise sur la baisse des coûts plus que sur les benchmarks</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">Ulrich Rozier</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://www.frandroid.com/culture-tech/intelligence-artificielle/anthropic-claude-ai/3229607_claude-fable-5-1-anthropic-mise-sur-la-baisse-des-couts-plus-que-sur-les-benchmarks">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div>
+                                                                    <div>
+<p>Anthropic lance Claude Fable 5.1 et Claude Mythos 5.1, ses modèles les plus avancés pour le code. </p>
+</div>
+
+
+<figure><a rel="noopener" href="https://images.frandroid.com/wp-content/uploads/2026/09/building-enterprise-frontier-safeguards-with-our-customers-1-51-screenshot.jpg"><img decoding="async" loading="eager" width="1200" height="675" src="https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/09/building-enterprise-frontier-safeguards-with-our-customers-1-51-screenshot.jpg?resize=1200&amp;key=25b8b49c" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/09/building-enterprise-frontier-safeguards-with-our-customers-1-51-screenshot-1200x675.jpg 1200w, https://images.frandroid.com/wp-content/uploads/2026/09/building-enterprise-frontier-safeguards-with-our-customers-1-51-screenshot-768x432.jpg 768w, https://images.frandroid.com/wp-content/uploads/2026/09/building-enterprise-frontier-safeguards-with-our-customers-1-51-screenshot-928x522.jpg 928w, https://images.frandroid.com/wp-content/uploads/2026/09/building-enterprise-frontier-safeguards-with-our-customers-1-51-screenshot-300x169.jpg 300w" sizes="(max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+
+<p>Fable 5.1 fait mieux que Fable 5 sur les benchmarks. Sans surprise. Le chiffre qui parle à une direction informatique est ailleurs&nbsp;: les lectures de cache coûtent 75&nbsp;% moins cher que sur la génération précédente. Anthropic en tire une facture réelle allégée d’environ 25&nbsp;% pour un usage courant, et jusqu’à 45&nbsp;% pour les usages agentiques intensifs.</p>
+
+
+
+<figure><a rel="noopener" href="https://images.frandroid.com/wp-content/uploads/2026/09/hrjhcpfw4aebtvv-1.png"><img loading="lazy" decoding="async" width="1200" height="1250" src="https://images.frandroid.com/wp-content/uploads/2026/09/hrjhcpfw4aebtvv-1-1200x1250.png" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/09/hrjhcpfw4aebtvv-1-1200x1250.png 1200w, https://images.frandroid.com/wp-content/uploads/2026/09/hrjhcpfw4aebtvv-1-768x800.png 768w, https://images.frandroid.com/wp-content/uploads/2026/09/hrjhcpfw4aebtvv-1-928x967.png 928w, https://images.frandroid.com/wp-content/uploads/2026/09/hrjhcpfw4aebtvv-1-300x313.png 300w" sizes="auto, (max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+
+<p>Anthropic a <a rel="noopener" href="https://x.com/claudeai/status/2094848572143407483">dévoilé les deux modèles</a> comme ses plus avancés pour le code et le travail de connaissance. Côté chiffres, il revendique 55,8&nbsp;% sur Terminal-Bench 4.0, contre 42,0&nbsp;% pour Fable 5, soit près de 14 points de mieux sur ce test de code. Sur Terminal-Bench-Science 0.1, orienté sciences, le modèle passe à 52,6&nbsp;%, plus du double de son prédécesseur. Par contre, le périmètre et la méthode de ces deux tests ne sont pas documentés publiquement. </p>
+
+
+
+<h2>Le nerf de la guerre, c’est le cache</h2>
+
+
+
+<p>La grille tarifaire complète de Fable 5.1 n’a pas été communiquée, du moisn pour le moment. Il est donc compliqué de reconstituer une facture au centime près pour l’instant. Le principe, lui, est simple&nbsp;: la lecture de cache évite de repayer le même contexte à chaque requête, qu’il s’agisse d’un long prompt d’instructions ou d’une base de code relue en boucle. Concrètement, plus l’usage répète du contexte, plus la remise pèse, d’où l’écart entre 25 et 45&nbsp;%.</p>
+
+
+
+<p>Sur ce terrain, la concurrence n’a pas attendu. <a rel="noopener" href="https://developers.openai.com/api/docs/guides/prompt-caching">OpenAI</a> facture ses lectures de cache jusqu’à 90&nbsp;% moins cher que l’entrée standard. <a rel="noopener" href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/context-cache/context-cache-overview">Google</a> applique une remise du même ordre sur Gemini. En rabotant à son tour le prix du cache, Anthropic rejoint une bataille déjà bien engagée. Il avait déjà misé sur le prix avec <a rel="noopener" href="https://www.anthropic.com/news/claude-opus-5">Claude Opus 5</a>, présenté comme un modèle qui <a href="https://www.frandroid.com/culture-tech/intelligence-artificielle/anthropic-claude-ai/3194197_anthropic-lance-claude-opus-5-un-modele-qui-se-rapproche-de-fable-5-pour-deux-fois-moins-cher">se rapproche de Fable 5 pour moitié prix</a>.</p>
+
+
+
+<h2>Rassurer les grandes entreprises</h2>
+
+
+
+<p>L’autre chantier vise les directions informatiques. Avec les <a rel="noopener" href="https://www.anthropic.com/news/enterprise-frontier-safeguards">Enterprise Frontier Safeguards</a> (EFS), Anthropic promet de tenir ensemble confidentialité et détection des usages malveillants. Les données d’activité peuvent rester dans le cloud du client (Amazon S3, Azure Blob Storage ou Google Cloud Storage), sous ses propres clés de chiffrement, sans qu’un employé d’Anthropic n’y jette un œil. </p>
+
+
+
+<p>Enfin, Claude Mythos 5.1 reste réservé à la cyberdéfense et à la recherche en sciences du vivant, via des programmes d’accès restreint. On retrouve la prudence de Fable 5, <a href="https://www.frandroid.com/culture-tech/intelligence-artificielle/anthropic-claude-ai/3133561_anthropic-lance-fable-5-son-ia-mythos-la-plus-puissante-mais-bridee-volontairement">bridé volontairement</a> à son lancement, dont l’accès avait viré au <a href="https://www.frandroid.com/culture-tech/intelligence-artificielle/anthropic-claude-ai/3184835_anthropic-regle-enfin-le-casse-tete-autour-de-lacces-a-fable-5">casse-tête</a> après une <a href="https://www.frandroid.com/culture-tech/intelligence-artificielle/anthropic-claude-ai/3165199_fable-5-est-de-retour-anthropic-remet-son-ia-la-plus-puissante-en-ligne-partout-dans-le-monde">restriction côté États-Unis</a>. Pour les équipes techniques, tout se jouera sur la facture réelle. On aura la réponse quand Anthropic publiera sa grille tarifaire complète.</p>
+<hr>            </div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>
