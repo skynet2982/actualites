@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>Ugreen HomeAgent : le NAS qui veut faire ce que j&rsquo;ai mis un an à construire chez moi — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>Ugreen HomeAgent : le NAS qui veut faire ce que j&rsquo;ai mis un an à construire chez moi</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">Ulrich Rozier</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://www.frandroid.com/marques/ugreen/3233719_ugreen-homeagent-le-nas-qui-veut-faire-ce-que-jai-mis-un-an-a-construire-chez-moi">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div>
+                                                                    <div>
+<p>Ugreen dévoile à l’IFA le HomeAgent, un NAS à trois baies qui embarque hub Zigbee et Thread, enregistreur de caméras, assistant vocal et modèle d’IA local. C’est, à peu de choses près, ce que j’ai assemblé chez moi en un an avec Home Assistant. D’où mon intérêt, et mes réserves.</p>
+</div>
+
+
+<figure><a rel="noopener" href="https://images.frandroid.com/wp-content/uploads/2026/09/image-121.png"><img decoding="async" loading="eager" width="1200" height="770" src="https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/09/image-121.png?resize=1200&amp;key=2ef6d110" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/09/image-121-1200x770.png 1200w, https://images.frandroid.com/wp-content/uploads/2026/09/image-121-768x493.png 768w, https://images.frandroid.com/wp-content/uploads/2026/09/image-121-928x595.png 928w, https://images.frandroid.com/wp-content/uploads/2026/09/image-121-300x193.png 300w" sizes="(max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+
+<p>Il y a une catégorie de lecteurs de Frandroid qui vont reconnaître le HomeAgent au premier coup d’œil. Ceux qui, comme moi, ont un NAS dans un placard <a href="https://www.frandroid.com/comment-faire/tutoriaux/3135465_jai-mis-dix-ans-a-oser-home-assistant-il-ma-fallu-quelques-heures-et-une-ia">avec une machine Home Assistant dedans</a>, une clé Zigbee qui dépasse d’un port USB, un enregistreur vidéo pour les caméras, Frigate qui reconnaît le chat, et un assistant vocal local qui comprend une phrase sur deux. Chez moi, ça fait 1&nbsp;400 entités, quinze marques, un dépôt Git pour ne pas tout perdre, et pas mal de temps passé dessus. Ugreen vient de mettre tout ça dans un cube blanc avec un écran tactile.</p>
+
+
+
+<figure><a rel="noopener" href="https://images.frandroid.com/wp-content/uploads/2026/09/movie-mode-pro.png"><img loading="lazy" decoding="async" width="1200" height="655" src="https://images.frandroid.com/wp-content/uploads/2026/09/movie-mode-pro-1200x655.png" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/09/movie-mode-pro-1200x655.png 1200w, https://images.frandroid.com/wp-content/uploads/2026/09/movie-mode-pro-768x419.png 768w, https://images.frandroid.com/wp-content/uploads/2026/09/movie-mode-pro-928x506.png 928w, https://images.frandroid.com/wp-content/uploads/2026/09/movie-mode-pro-300x164.png 300w" sizes="auto, (max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+
+<p>Le HomeAgent HA100 est d’abord un <a href="https://www.frandroid.com/guide-dachat/672920_guide-achat-meilleurs-nas">NAS</a>. Trois baies pour disques 2,5 ou 3,5 pouces, dont une réservée à la vidéosurveillance, un processeur Rockchip RK3588 à huit cœurs, 16 Go de LPDDR5 non extensibles, 64 Go d’eMMC pour le système et un emplacement M.2 dédié aux modèles d’IA, pas au stockage. </p>
+
+
+
+<figure><a rel="noopener" href="https://images.frandroid.com/wp-content/uploads/2026/09/back.jpg"><img loading="lazy" decoding="async" width="1200" height="1200" src="https://images.frandroid.com/wp-content/uploads/2026/09/back-1200x1200.jpg" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/09/back-1200x1200.jpg 1200w, https://images.frandroid.com/wp-content/uploads/2026/09/back-60x60.jpg 60w, https://images.frandroid.com/wp-content/uploads/2026/09/back-768x768.jpg 768w, https://images.frandroid.com/wp-content/uploads/2026/09/back-928x928.jpg 928w, https://images.frandroid.com/wp-content/uploads/2026/09/back-300x300.jpg 300w" sizes="auto, (max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+
+<p>Le réseau est en 2,5 GbE, avec quatre ports PoE à 65 W en tout pour brancher les caméras directement dessus. </p>
+
+
+<div data-nosnippet="" data-gtm-bic="ZENDURE : Pack 2/3 - Survoltés &amp; Maison Co">
+                    
+                            <div>
+                <picture><source data-srcset="https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/08/box-zendure-solarflow-2400-ac-promo-ete-1200x446.png?webp=1&amp;key=8e56db67 1200w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/08/box-zendure-solarflow-2400-ac-promo-ete-1200x446.png?webp=1&amp;resize=928,344&amp;key=8e56db67 928w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/08/box-zendure-solarflow-2400-ac-promo-ete-1200x446.png?webp=1&amp;resize=768,285&amp;key=8e56db67 768w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/08/box-zendure-solarflow-2400-ac-promo-ete-1200x446.png?webp=1&amp;resize=480,178&amp;key=8e56db67 480w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/08/box-zendure-solarflow-2400-ac-promo-ete-768x285.png?webp=1&amp;resize=600,223&amp;key=21682494 600w,https://img.frandroid.com/www.frandroid.com/wp-content/uploads/2026/08/box-zendure-solarflow-2400-ac-promo-ete.png?webp=1&amp;key=91b17435 2400w" type="image/webp"><img decoding="async" width="1200" height="446" loading="lazy" alt="Box Zendure SolarFlow 2400 AC+ promo été" title="Box Zendure SolarFlow 2400 AC+ promo été" src="data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%271200%27 height=%27446%27/%3E" data-src="https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/08/box-zendure-solarflow-2400-ac-promo-ete-1200x446.png?key=8e56db67" data-srcset="https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/08/box-zendure-solarflow-2400-ac-promo-ete-1200x446.png?key=8e56db67 1200w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/08/box-zendure-solarflow-2400-ac-promo-ete-1200x446.png?resize=928,344&amp;key=8e56db67 928w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/08/box-zendure-solarflow-2400-ac-promo-ete-1200x446.png?resize=768,285&amp;key=8e56db67 768w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/08/box-zendure-solarflow-2400-ac-promo-ete-1200x446.png?resize=480,178&amp;key=8e56db67 480w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/08/box-zendure-solarflow-2400-ac-promo-ete-768x285.png?resize=600,223&amp;key=21682494 600w,https://img.frandroid.com/www.frandroid.com/wp-content/uploads/2026/08/box-zendure-solarflow-2400-ac-promo-ete.png?key=91b17435 2400w"></picture>            </div>
+                <div>
+                            <p>
+                    Noté 9/10 par Frandroid, le SolarFlow 2400AC+ perd 440 € !                 </p>
+                                        <p>
+                    Votre production solaire dépasse votre consommation ? Le SolarFlow 2400 AC+ stocke automatiquement votre surplus dans vos batteries. 100 % compatible avec la grande majorité des installations solaires en toiture, il permet de faire évoluer votre système simplement et à moindre coût.                </p>
+                                        
+                    </div>
+    </div>
+
+
+
+
+<figure><a rel="noopener" href="https://images.frandroid.com/wp-content/uploads/2026/09/front.jpg"><img loading="lazy" decoding="async" width="1200" height="1200" src="https://images.frandroid.com/wp-content/uploads/2026/09/front-1200x1200.jpg" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/09/front-1200x1200.jpg 1200w, https://images.frandroid.com/wp-content/uploads/2026/09/front-60x60.jpg 60w, https://images.frandroid.com/wp-content/uploads/2026/09/front-768x768.jpg 768w, https://images.frandroid.com/wp-content/uploads/2026/09/front-928x928.jpg 928w, https://images.frandroid.com/wp-content/uploads/2026/09/front-300x300.jpg 300w" sizes="auto, (max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+
+<p>Le reste est ce qu’on ne trouve dans aucun NAS grand public&nbsp;: Thread 1.4, Zigbee 3.0, Bluetooth 6.0, Matter en natif, ONVIF pour les caméras tierces, quatre micros, deux haut-parleurs et un mot d’éveil, «&nbsp;Hi Uliya&nbsp;». Le NPU intégré fait 6 TOPS, et une carte d’accélération T20 de 20 TOPS s’ajoute dans un slot latéral, fournie de série sur le HA100 Pro seulement. Un MasterAgent MA100 sous Nvidia Jetson Thor complète la gamme, sans que les documents disent ce qu’un particulier ferait d’une puce de robotique à plusieurs milliers d’euros.</p>
+
+
+
+<figure><a rel="noopener" href="https://images.frandroid.com/wp-content/uploads/2026/09/image-122.png"><img loading="lazy" decoding="async" width="1079" height="1171" src="https://images.frandroid.com/wp-content/uploads/2026/09/image-122.png" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/09/image-122.png 1079w, https://images.frandroid.com/wp-content/uploads/2026/09/image-122-768x833.png 768w, https://images.frandroid.com/wp-content/uploads/2026/09/image-122-928x1007.png 928w, https://images.frandroid.com/wp-content/uploads/2026/09/image-122-300x326.png 300w" sizes="auto, (max-width: 1079px) 100vw, 1079px"></a><figcaption>OD800 Pro</figcaption></figure>
+
+
+
+<h2>Ce que ça remplace, et ce que ça promet</h2>
+
+
+
+<p>Le discours d’Ugreen tient en trois mots, «&nbsp;Keep It Local&nbsp;». Les caméras SynCare enregistrent sur le NAS, la reconnaissance des personnes, animaux, véhicules et colis se fait sur la carte T20, les visages connus reçoivent un nom, la recherche se fait par mots-clés ou à la voix, et un grand modèle de langage tourne en local pour répondre à «&nbsp;Uliya, est-ce que Lola est passée hier&nbsp;?&nbsp;». Tout ça sans abonnement et sans envoyer une image hors du réseau. Sur le papier, c’est exactement le trio Home Assistant, Frigate et un modèle local que les bricoleurs ont mis des années à stabiliser. Sauf qu’ici, c’est censé marcher à la sortie du carton, avec une application mobile et un écran qui affiche l’heure.</p>
+
+
+
+<figure><a rel="noopener" href="https://images.frandroid.com/wp-content/uploads/2026/09/image-123.png"><img loading="lazy" decoding="async" width="1042" height="1087" src="https://images.frandroid.com/wp-content/uploads/2026/09/image-123.png" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/09/image-123.png 1042w, https://images.frandroid.com/wp-content/uploads/2026/09/image-123-768x801.png 768w, https://images.frandroid.com/wp-content/uploads/2026/09/image-123-928x968.png 928w, https://images.frandroid.com/wp-content/uploads/2026/09/image-123-300x313.png 300w" sizes="auto, (max-width: 1042px) 100vw, 1042px"></a><figcaption>OD600 Pro</figcaption></figure>
+
+
+
+<p>Il y a aussi les «&nbsp;AI Highlights&nbsp;». Les caméras ne se contentent plus de surveiller, elles repèrent «&nbsp;les moments importants de la journée&nbsp;» et en font des montages vidéo, castables sur un cadre photo Ugreen Gallery. </p>
+
+
+
+<figure><a rel="noopener" href="https://images.frandroid.com/wp-content/uploads/2026/09/front-side.jpg"><img loading="lazy" decoding="async" width="1200" height="1200" src="https://images.frandroid.com/wp-content/uploads/2026/09/front-side-1200x1200.jpg" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/09/front-side-1200x1200.jpg 1200w, https://images.frandroid.com/wp-content/uploads/2026/09/front-side-60x60.jpg 60w, https://images.frandroid.com/wp-content/uploads/2026/09/front-side-768x768.jpg 768w, https://images.frandroid.com/wp-content/uploads/2026/09/front-side-928x928.jpg 928w, https://images.frandroid.com/wp-content/uploads/2026/09/front-side-300x300.jpg 300w" sizes="auto, (max-width: 1200px) 100vw, 1200px"></a><figcaption>Gallery</figcaption></figure>
+
+
+
+<p>Le CEO Samuel Zhang parle de «&nbsp;précieux souvenirs familiaux qui risquaient d’être oubliés&nbsp;». Une caméra de sécurité qui monte des films de famille, c’est une idée qui plaira à certains et fera débrancher les autres.</p>
+
+
+
+<h2>Alors, on en pense quoi ?</h2>
+
+
+
+<p>Sous la promesse «&nbsp;parlez à votre maison, pas à une application&nbsp;», une note précise&nbsp;: «&nbsp;commandes prédéfinies pour le moment, prise en charge plus large du langage naturel prévue&nbsp;». Autrement dit, Uliya comprend «&nbsp;allume la lumière du salon&nbsp;» et «&nbsp;où est mon chien&nbsp;?&nbsp;», mais il ne devrait pas comprendre encore «&nbsp;ferme tout ce qui est ouvert à l’étage sauf la chambre&nbsp;». Le LLM local sert à résumer des événements, il est encore limité dans la compréhension du langage naturel. Le guide de test recommande d’ailleurs des demandes «&nbsp;claires et uniques&nbsp;».</p>
+
+
+
+<p>Le deuxième trou, c’est l’ouverture. Matter et ONVIF sont là, mais «&nbsp;les appareils doivent être testés et intégrés par Ugreen, se référer à la liste de compatibilité&nbsp;». Home Assistant gère mes quinze marques parce que des milliers de contributeurs ont écrit les intégrations, du Tado à la batterie Zendure en passant par le portail. Ugreen part de zéro, avec ses propres caméras, sa propre enceinte, son propre cadre. Aucune API ouverte n’est mentionnée, aucune passerelle vers Home Assistant, et le précédent NASync a montré ce que la marque entend par système ouvert&nbsp;: en 2024, les premiers testeurs n’avaient pas réussi à installer un autre OS que le sien. Un hub qui parle de vie privée mais qui ne parle qu’à ses propres objets, c’est un jardin clos avec un mur plus haut.</p>
+
+
+<p>
+    <span>Pour aller plus loin</span><br>
+            <a href="https://www.frandroid.com/produits-android/hardware/nas/3140673_test-ugreen-nasync-dxp4800-gt">Test du Ugreen NASync DXP4800 GT : le premier NAS AMD de la marque face au DXP4800 Plus</a>
+            </p>
+
+
+
+<p>Le troisième trou est commercial. Aucun prix, aucune date de livraison, aucune mention de l’Europe. Les précommandes ouvrent aujourd’hui avec un acompte de 50 dollars, environ 45 euros, pour une remise de 50&nbsp;% sur un tarif qu’on ne connaît pas, avant un Kickstarter le 27 octobre. Ugreen avait fait la même chose pour ses NASync en mars 2024, avec plus de 4,5 millions de dollars levés en quelques jours. </p>
+
+
+
+<p>Pour une entreprise qui revendique 300 millions d’utilisateurs, le financement participatif est surtout une façon de compter les clients avant de lancer la production. L’application n’existe pour l’instant que sur mobile, ce qui, pour un NAS, est une première.</p>
+<hr><p>Un petit geste pour Frandroid ? Abonnez-vous à <a href="https://shop.frandroid.com/gpfrandroid" rel="noopener">Frandroid sur Google</a> pour ne manquer aucun de nos articles.</p><div id="embedded-tag-ifa">
+            <p>
+            En direct du salon de l'            <a href="https://www.frandroid.com/events/ifa">
+                IFA 2026            </a>
+        </p>
+
+        <ul>
+                            <li>
+                    <a href="https://www.frandroid.com/marques/tecno/3234267_les-bordures-autour-de-lecran-sont-le-pire-ennemi-de-ce-smartphone">
+                        Les bordures autour de l’écran sont le pire ennemi de ce smartphone                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/produits-android/smartphone/3234043_ce-boitier-transforme-nimporte-quel-smartphone-en-telescope-grace-a-un-zoom-optique-x25">
+                        Ce boîtier transforme n’importe quel smartphone en télescope grâce à un zoom optique x25                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/events/ifa/3233087_prise-en-main-des-rtx-spark-nvidia-change-la-definition-du-pc-portable">
+                        Prise en main des RTX Spark : NVIDIA change la définition du PC portable                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/marques/lenovo/3233361_lenovo-dit-tout-de-ses-pc-rtx-spark-128-go-de-ram-oled-et-165-kg-seulement">
+                        Lenovo dit tout de ses PC RTX Spark : 128 Go de RAM, OLED et 1,65 kg seulement                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/survoltes/trottinette-electrique/3228761_batterie-amovible-et-pliage-triple-cette-trottinette-electrique-promet-de-se-ranger-nimporte-ou">
+                        Batterie amovible et pliage triple : cette trottinette électrique promet de se ranger n’importe où                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/survoltes/trottinette-electrique/3228781_1-635-w-de-puissance-et-90-km-dautonomie-la-nouvelle-trottinette-electrique-de-navee-en-a-sous-la-pedale">
+                        1 635 W de puissance et 90 km d’autonomie : la nouvelle trottinette électrique de Navee en a sous la pédale                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/marques/tcl/3233827_tcl-q95k-la-marque-chinoise-sattaque-au-haut-de-gamme-une-barre-de-son-avec-bang-olufsen">
+                        TCL Q95K : la marque chinoise s’attaque au haut de gamme une barre de son avec Bang &amp; Olufsen                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/produits-android/audio/casque-audio/3233811_beyerdynamic-aventho-y-un-casque-sans-fil-pense-pour-durer-avec-batterie-et-coussinets-remplacables">
+                        Beyerdynamic Aventho Y : un casque sans fil pensé pour durer, avec batterie et coussinets remplaçables                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/marques/lexar/3233523_voici-le-ssd-portable-le-plus-fin-du-monde-le-muse-ultra-slim-et-il-saimante-a-votre-smartphone">
+                        Voici le SSD portable le plus fin du monde, le Muse Ultra-Slim, et il s’aimante à votre smartphone                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/marques/mova/3231203_peau-electronique-main-robotique-et-ultrasons-sous-marins-mova-montre-quil-innove">
+                        Peau électronique, main robotique et ultrasons sous-marins : Mova montre qu’il innove                    </a>
+                </li>
+                    </ul>
+    </div>
+            </div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>
