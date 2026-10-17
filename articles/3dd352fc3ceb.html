@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>On a testé 8 VPN avec un vrai protocole : 700 mesures, un robot, et quelques surprises — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>On a testé 8 VPN avec un vrai protocole : 700 mesures, un robot, et quelques surprises</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">Ulrich Rozier</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://www.frandroid.com/services/vpn/3232825_on-a-teste-8-vpn-avec-un-vrai-protocole-700-mesures-un-robot-et-quelques-surprises">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div>
+                                    
+                                <div>
+<p>Les <a href="4620cf18fc71.html">comparatifs de VPN</a> reposent presque toujours sur quelques relevés faits à la main, un après-midi, sur un PC portable. Au pire, les médias s’en tiennent à ce que les fournisseurs annoncent. Nous avons voulu faire autrement : reprendre le protocole de mesure que Clubic applique chaque mois, le confier à une machine dédiée qui mesure seule, jour et nuit, puis regarder ce que disent 700 relevés. </p>
+</div>
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/09/vpn.jpeg" rel="noopener"><img decoding="async" loading="eager" width="1200" height="751" src="https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/09/vpn.jpeg?resize=1200&amp;key=4ad019a6" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/09/vpn-1200x751.jpeg 1200w, https://images.frandroid.com/wp-content/uploads/2026/09/vpn-768x480.jpeg 768w, https://images.frandroid.com/wp-content/uploads/2026/09/vpn-928x580.jpeg 928w, https://images.frandroid.com/wp-content/uploads/2026/09/vpn-300x188.jpeg 300w" sizes="(max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+<h2>Pourquoi un protocole, et pourquoi celui de Clubic ?</h2>
+
+
+
+<p>Mesurer un VPN, c’est facile. <a rel="noopener" href="https://www.clubic.com/antivirus-securite-informatique/vpn/article-844220-1-comparatif-vpn.html">Mesurer un VPN</a> correctement, c’est long. Le débit d’une fibre bouge selon l’heure, le serveur de test choisi, la charge du réseau du fournisseur. Et surtout, un relevé isolé ne prouve rien. Il faut répéter, aux mêmes heures, dans les mêmes conditions, sur plusieurs jours, et surtout mesurer la ligne sans VPN à chaque fois pour savoir de quoi on part.</p>
+
+
+<p>
+    <span>Pour aller plus loin</span><br>
+            <a href="4620cf18fc71.html">Quel est le meilleur VPN en 2026 ? Tests et comparatifs</a>
+            </p>
+
+
+
+<p>C’est exactement <a rel="noopener" href="https://www.clubic.com/antivirus-securite-informatique/vpn/article-844220-1-comparatif-vpn.html">ce que fait Clubic depuis des années pour son baromètre VPN</a> : trois relevés par jour (9 h, 13 h, 18 h) pendant trois jours, en Ethernet, sans VPN puis avec VPN, vers quatre destinations (France, États-Unis, Royaume-Uni, Japon), sur une dizaine de fournisseurs. Le tout à la main, sur <a href="012acdab4378.html">nPerf</a>. C’est rigoureux, et c’est une journée de travail par cycle.</p>
+
+
+
+<p>Nous avons repris ce protocole en le remodelant, avec l’accord de sa conceptrice, et nous l’avons automatisé. Puis nous l’avons enrichi de ce qu’une machine sait faire mieux qu’un humain : ne jamais oublier un créneau, mesurer la nuit, chronométrer chaque connexion, vérifier chaque adresse de sortie, et garder toutes les traces.</p>
+
+
+
+
+<h2>Le banc de test, en détail</h2>
+
+
+
+<p>Concernant la machine, nous avons utilisé un <a href="0cbb5c62183f.html">mini-PC</a> sous <a href="3568745a0c52.html">Linux</a>, dédié à cette seule tâche, branché en Ethernet 2,5 Gb/s sur une fibre Free. Aucun autre trafic pendant les mesures : le banc vérifie la charge de la machine et l’absence de tout tunnel résiduel avant de démarrer un créneau.</p>
+
+
+<div>
+        <ul>
+                                            <li>
+    <a href="https://bestengine.humanoid.fr/track/6955793/Framework-Desktop_Framework" rel="nofollow noopener" data-gtm="{&quot;nom_marchand&quot;:&quot;framework&quot;,&quot;nom_produit&quot;:&quot;framework-desktop&quot;,&quot;categorie_produit&quot;:&quot;ordinateurs-de-bureau&quot;,&quot;position_marchand&quot;:1,&quot;offer_url&quot;:&quot;https:\/\/bestengine.humanoid.fr\/track\/6955793\/Framework-Desktop_Framework&quot;,&quot;module_produit&quot;:&quot;price_table_product_card&quot;,&quot;zone&quot;:&quot;contenu-page&quot;,&quot;event&quot;:&quot;bestengine&quot;,&quot;best_product_id&quot;:15409,&quot;prix_produit&quot;:1279,&quot;bloc_offers_count&quot;:1}" title="Framework Desktop">
+        <span>
+            Framework        </span>
+        <span>
+                            <span>1&nbsp;279<span>&nbsp;€</span></span>                    </span>
+        <p><span>
+                
+                <span>Voir l’offre</span>
+            </span>
+        </p>
+    </a>
+</li>
+                        </ul>
+                        </div>
+
+
+
+<p>Chaque mesure tourne dans un espace réseau cloisonné (un network namespace Linux). Le VPN monte dans cette bulle, le <a href="https://www.frandroid.com/produits-android/2864513_le-roi-des-speed-tests-sort-un-vrai-boitier-pour-verifier-votre-debit-dans-les-meilleures-conditions">test de débit</a> part de cette bulle, et rien d’autre sur la machine ne peut interférer. Quand le créneau se termine, la bulle est nettoyée.</p>
+
+
+
+<p>Quatre fois par jour (9 h, 13 h, 18 h et 23 h, un créneau de plus que le protocole d’origine), le banc :</p>
+
+
+
+<ol>
+<li>mesure la ligne sans VPN, toujours vers le même serveur de test, épinglé pour que la référence soit stable ;</li>
+
+
+
+<li>pour chaque fournisseur, se connecte en France, vérifie que le tunnel est monté et que l’adresse publique de sortie est bien française, attend quelques secondes de stabilisation, mesure, se déconnecte ;</li>
+
+
+
+<li>recommence pour les États-Unis, le Royaume-Uni, le Japon ;</li>
+
+
+
+<li>passe au fournisseur suivant.</li>
+</ol>
+
+
+
+<p>Un créneau complet, c’est 33 relevés (1 sans VPN + 8 fournisseurs × 4 pays) et environ 45 minutes. Une seule mesure à la fois, jamais deux en parallèle.</p>
+
+
+
+<p>Concernant le moteur de mesure, on a décidé de travailler main dans la main avec <a href="012acdab4378.html"><strong>nPerf</strong></a>, le même service que celui du protocole manuel de Clubic, piloté par son agent Linux. Chaque relevé garde en base le moteur qui l’a produit.</p>
+
+
+
+<p>Pour chaque relevé, on mesure le débit descendant, le débit montant, la latence vers une cible fixe dans le pays de destination (Paris, New York, Londres, Tokyo), la gigue, la perte de paquets, le protocole réellement utilisé, le serveur attribué, l’adresse et le pays de sortie, sans oublier le temps mis par le tunnel pour s’établir.</p>
+
+
+
+<p>On garde tout. Une mesure ratée n’est jamais effacée, elle est marquée invalide avec sa raison. D’ailleurs, même un tunnel qui monte mais dont l’adresse de sortie est dans le mauvais pays est signalé. </p>
+
+
+
+<p>Au total, on a fait pour le moment deux campagnes, 704 relevés, dont 685 valides. </p>
+
+
+<h2>L’avertissement : WireGuard contre OpenVPN</h2>
+
+
+
+<p>Avant les chiffres, une précision sans laquelle ce test serait trompeur.</p>
+
+
+<p>
+    <span>Pour aller plus loin</span><br>
+            <a href="https://www.frandroid.com/services/vpn/2943555_vpn-cest-quoi-wireguard-et-a-quoi-ca-sert">VPN : qu’est ce que c’est WireGuard, et à quoi ça sert ?</a>
+            </p>
+
+
+
+<p>Sur un banc Linux automatisé, on ne passe pas par les applications des fournisseurs. On monte le tunnel soi-même, avec les fichiers de configuration que le fournisseur accepte de donner. Trois d’entre eux (<a href="https://www.frandroid.com/services/vpn/700419_nordvpn-notre-avis-complet">NordVPN</a>, <a href="https://www.frandroid.com/services/vpn/3027337_avis-proton-vpn-en-2026-est-ce-vraiment-le-champion-de-la-confidentialite-en-ligne">Proton VPN</a>, Private Internet Access) fournissent des configurations WireGuard exploitables durablement, par API ou par téléchargement. Les cinq autres (<a href="https://www.frandroid.com/services/vpn/700445_cyberghostvpn-notre-avis-sur-ce-vpn">CyberGhost</a>, <a href="https://www.frandroid.com/services/vpn/700310_expressvpn-notre-avis-sur-ce-vpn">ExpressVPN</a>, <a href="https://www.frandroid.com/services/vpn/701893_avis-purevpn-un-vpn-qui-joue-les-outsiders">PureVPN</a>, <a href="https://www.frandroid.com/services/vpn/709550_surfshark-notre-avis-sur-ce-vpn">Surfshark</a>, <a rel="noopener" href="https://www.clubic.com/telecharger/actus-logiciels/avis-424890-avis-privadovpn.html">PrivadoVPN</a>) ont été mesurés en OpenVPN UDP : soit parce que leurs clés WireGuard manuelles expirent au bout de 24 heures (<a href="https://www.frandroid.com/services/vpn/701893_avis-purevpn-un-vpn-qui-joue-les-outsiders">PureVPN</a>, <a rel="noopener" href="https://www.clubic.com/telecharger/actus-logiciels/avis-424890-avis-privadovpn.html">PrivadoVPN</a>), soit parce que le fournisseur ne propose pas WireGuard en configuration manuelle (<a href="https://www.frandroid.com/services/vpn/700310_expressvpn-notre-avis-sur-ce-vpn">ExpressVPN</a>, qui mise sur son protocole Lightway), soit parce que nous n’avons pas pu récupérer les fichiers à temps.</p>
+
+
+
+<p>Or OpenVPN est structurellement plus lent que WireGuard. Il chiffre sur un seul cœur, en espace utilisateur, et plafonne en pratique autour du gigabit sur une bonne machine, souvent bien en dessous. WireGuard vit dans le noyau Linux et suit une fibre 2,5 Gb/s sans broncher. Évidemment, comparer les deux dans un même classement reviendrait à comparer des voitures dont certaines roulent en première.</p>
+
+
+
+<p>Nous publions donc deux tableaux séparés. Le premier compare les trois VPN en WireGuard entre eux, à armes égales. Le second montre ce que donnent les cinq autres en OpenVPN, ce qui reste une information utile (c’est ce que vous obtiendrez sur un routeur, <a href="https://www.frandroid.com/guide-dachat/672920_guide-achat-meilleurs-nas">un NAS</a> ou un Linux sans application maison), mais ne dit rien de leur débit maximal dans leur propre application.</p>
+
+
+
+<p>Le graphique ci-dessous montre les huit fournisseurs côte à côte, tels que le banc les a mesurés en juillet, destination par destination. Regardez-le avec cette précision en tête.</p>
+
+
+
+<figure><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/09/juillet-download-par-pays.png" alt="Débit descendant par pays, juillet 2026"><figcaption>Débit descendant par pays, juillet 2026</figcaption></figure>
+
+
+
+<p>Les trois barres qui dépassent 2 000 Mb/s vers la France, les États-Unis et le Royaume-Uni sont les trois WireGuard. Tout ce qui reste sous 1 350 Mb/s est en OpenVPN. C’est cette coupure que les deux tableaux qui suivent détaillent séparément.</p>
+
+
+<h2>Ligue WireGuard : NordVPN, Proton VPN et PIA à armes égales</h2>
+
+
+
+<p>Trois fournisseurs, même protocole, mêmes créneaux, même ligne. Voilà ce que donne juillet, sur 16 créneaux.</p>
+
+
+
+<figure><table><thead><tr><th>Juillet 2026 (WireGuard)</th><th>Débit ↓ moyen 4 pays</th><th>Part du débit sans VPN</th><th>France</th><th>États-Unis</th><th>Royaume-Uni</th><th>Japon</th></tr></thead><tbody><tr><td>Sans VPN</td><td>1 944 Mb/s</td><td>100 %</td><td></td><td></td><td></td><td></td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/700419_nordvpn-notre-avis-complet">NordVPN</a></td><td>2 085 Mb/s</td><td>~100 %</td><td>2 237</td><td>2 182</td><td>2 229</td><td>1 691</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/3027337_avis-proton-vpn-en-2026-est-ce-vraiment-le-champion-de-la-confidentialite-en-ligne">Proton VPN</a></td><td>1 844 Mb/s</td><td>95 %</td><td>2 201</td><td>2 018</td><td>2 211</td><td>945</td></tr><tr><td>Private Internet Access</td><td>1 720 Mb/s</td><td>88 %</td><td>2 151</td><td>675</td><td>2 212</td><td>1 843</td></tr></tbody></table></figure>
+
+
+
+<p>On en tire trois enseignements.</p>
+
+
+
+<p><strong>Sur une fibre 2 Gb/s, un bon WireGuard ne coûte presque rien.</strong> Vers la France et le Royaume-Uni, les trois fournisseurs saturent la ligne : 2 150 à 2 240 Mb/s, soit le débit de la fibre elle-même. Le VPN est invisible.</p>
+
+
+
+<p><strong><a href="https://www.frandroid.com/services/vpn/700419_nordvpn-notre-avis-complet">NordVPN</a> affiche une moyenne supérieure au « sans VPN ». Il n’est pas plus rapide que votre fibre.</strong> L’explication est dans les données brutes : la ligne de référence a varié de 950 à 2 360 Mb/s selon l’heure sur les quatre jours (creux le matin), pendant que <a href="https://www.frandroid.com/services/vpn/700419_nordvpn-notre-avis-complet">NordVPN</a>, mesuré vers un serveur différent, restait stable au-dessus de 2 000. Deux tests de débit distincts, deux serveurs, deux moments. La lecture honnête : <a href="https://www.frandroid.com/services/vpn/700419_nordvpn-notre-avis-complet">NordVPN</a> délivre un débit équivalent à la connexion nue, et il est le plus régulier des trois (écart-type de 57 Mb/s contre 103 pour <a href="https://www.frandroid.com/services/vpn/3027337_avis-proton-vpn-en-2026-est-ce-vraiment-le-champion-de-la-confidentialite-en-ligne">Proton</a> et 154 pour PIA).</p>
+
+
+
+<p>Sa fiche complète, avec la ligne sans VPN en premier groupe, résume ce comportement en un coup d’œil.</p>
+
+
+
+<figure><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/09/juillet-fiche-nordvpn.png" alt="Fiche NordVPN, juillet 2026 : débit descendant, montant et latence face à la ligne sans VPN"><figcaption>Fiche NordVPN, juillet 2026 : débit descendant, montant et latence face à la ligne sans VPN</figcaption></figure>
+
+
+
+<p>Le débit descendant reste au niveau de la ligne nue vers l’Europe et les États-Unis, seul le Japon décroche. La courbe de latence suit simplement la géographie : 24 ms vers Paris, 258 ms vers Tokyo. </p>
+
+
+
+<p>La destination lointaine fait la différence. Vers le Japon, PIA passe devant tout le monde (1 843 Mb/s) et <a href="https://www.frandroid.com/services/vpn/3027337_avis-proton-vpn-en-2026-est-ce-vraiment-le-champion-de-la-confidentialite-en-ligne">Proton</a> décroche (945). Vers les États-Unis, c’est l’inverse : <a href="https://www.frandroid.com/services/vpn/3027337_avis-proton-vpn-en-2026-est-ce-vraiment-le-champion-de-la-confidentialite-en-ligne">Proton</a> tient 2 018 Mb/s et PIA tombe à 675. Un même VPN peut être excellent sur une route et médiocre sur une autre. La moyenne globale gomme cela, d’où l’intérêt du détail par pays.</p>
+
+
+
+<p><strong>Et en août ?</strong> Cinq créneaux, un mois plus tard, avec une ligne de référence cette fois parfaitement stable (2 330 Mb/s à chaque relevé, écart de 20 Mb/s sur six mesures). Le podium ne bouge pas : <a href="https://www.frandroid.com/services/vpn/700419_nordvpn-notre-avis-complet">NordVPN</a> 1 809 Mb/s (78 % du sans VPN), <a href="https://www.frandroid.com/telecharger/apps/private-internet-acces">PIA</a> 1 615 (69 %), <a href="https://www.frandroid.com/services/vpn/3027337_avis-proton-vpn-en-2026-est-ce-vraiment-le-champion-de-la-confidentialite-en-ligne">Proton</a> 1 572 (68 %).</p>
+
+
+
+<figure><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/09/aout-download-par-pays.png" alt="Débit descendant par pays, août 2026, moteur nPerf"><figcaption>Débit descendant par pays, août 2026, moteur nPerf</figcaption></figure>
+
+
+
+<p>Le Japon reste le terrain de <a href="https://www.frandroid.com/telecharger/apps/private-internet-acces">PIA</a> (1 661 contre 1 367 pour <a href="https://www.frandroid.com/services/vpn/700419_nordvpn-notre-avis-complet">NordVPN</a> et 914 pour <a href="https://www.frandroid.com/services/vpn/3027337_avis-proton-vpn-en-2026-est-ce-vraiment-le-champion-de-la-confidentialite-en-ligne">Proton</a>), et <a href="https://www.frandroid.com/services/vpn/3027337_avis-proton-vpn-en-2026-est-ce-vraiment-le-champion-de-la-confidentialite-en-ligne">Proton</a> prend la tête en France (2 127). Les pourcentages sont plus bas qu’en juillet parce que la référence est plus haute et plus fiable, et c’est précisément le chiffre à retenir : sur une fibre à 2,3 Gb/s, un VPN WireGuard bien routé vous laisse entre 70 et 80 % du débit en moyenne sur quatre continents, et près de 100 % vers l’Europe.</p>
+
+
+<h2>Ligue OpenVPN : cinq fournisseurs bridés par le protocole</h2>
+
+
+
+<p>Voici d’abord le classement moyen des huit sur les quatre pays, en juillet. Il se lit avec l’avertissement en tête : les trois premiers sont en WireGuard, les cinq suivants en OpenVPN.</p>
+
+
+
+<figure><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/09/juillet-classement-download.png" alt="Classement au débit descendant moyen, juillet 2026"><figcaption>Classement au débit descendant moyen, juillet 2026</figcaption></figure>
+
+
+
+<p>Le décrochage entre la troisième et la quatrième place, de 1 720 à 949 Mb/s, est d’abord le coût du protocole. Le tableau ci-dessous isole les cinq OpenVPN pour les comparer entre eux.</p>
+
+
+
+<figure><table><thead><tr><th>Juillet 2026 (OpenVPN UDP)</th><th>Débit ↓ moyen 4 pays</th><th>France</th><th>États-Unis</th><th>Royaume-Uni</th><th>Japon</th></tr></thead><tbody><tr><td><a href="https://www.frandroid.com/services/vpn/701893_avis-purevpn-un-vpn-qui-joue-les-outsiders">PureVPN</a></td><td>949 Mb/s</td><td>1 021</td><td>1 145</td><td>930</td><td>699</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/709550_surfshark-notre-avis-sur-ce-vpn">Surfshark</a></td><td>632 Mb/s</td><td>739</td><td>548</td><td>568</td><td>672</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/700445_cyberghostvpn-notre-avis-sur-ce-vpn">CyberGhost</a></td><td>532 Mb/s</td><td>1 332</td><td>512</td><td>242</td><td>42</td></tr><tr><td><a rel="noopener" href="https://www.clubic.com/telecharger/actus-logiciels/avis-424890-avis-privadovpn.html">PrivadoVPN</a></td><td>404 Mb/s</td><td>810</td><td>178</td><td>515</td><td>112</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/700310_expressvpn-notre-avis-sur-ce-vpn">ExpressVPN</a></td><td>335 Mb/s</td><td>684</td><td>129</td><td>405</td><td>124</td></tr></tbody></table></figure>
+
+
+
+<p>Le plafond OpenVPN saute aux yeux : personne ne dépasse 1 350 Mb/s, même vers la France, là où les WireGuard font 2 200. L’ordre entre les cinq est confirmé en août (<a href="https://www.frandroid.com/services/vpn/701893_avis-purevpn-un-vpn-qui-joue-les-outsiders">PureVPN</a> 802, <a href="https://www.frandroid.com/services/vpn/700445_cyberghostvpn-notre-avis-sur-ce-vpn">CyberGhost</a> 580, <a href="https://www.frandroid.com/services/vpn/709550_surfshark-notre-avis-sur-ce-vpn">Surfshark</a> 495, <a rel="noopener" href="https://www.clubic.com/telecharger/actus-logiciels/avis-424890-avis-privadovpn.html">PrivadoVPN</a> 336, <a href="https://www.frandroid.com/services/vpn/700310_expressvpn-notre-avis-sur-ce-vpn">ExpressVPN</a> 271), avec une seule inversion, <a href="https://www.frandroid.com/services/vpn/700445_cyberghostvpn-notre-avis-sur-ce-vpn">CyberGhost</a> et <a href="https://www.frandroid.com/services/vpn/709550_surfshark-notre-avis-sur-ce-vpn">Surfshark</a> qui échangent leurs places.</p>
+
+
+
+<p>Le classement d’août, sur <a href="012acdab4378.html">nPerf</a> cette fois, reproduit la même coupure au même endroit.</p>
+
+
+
+<figure><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/09/aout-classement-download.png" alt="Classement au débit descendant moyen, août 2026, moteur nPerf"><figcaption>Classement au débit descendant moyen, août 2026, moteur nPerf</figcaption></figure>
+
+
+
+<p>Deux moteurs de mesure, deux mois, deux lignes de référence différentes, et le même ordre à une place près. C’est la meilleure preuve que ce que le banc mesure tient au réseau des fournisseurs et au protocole, et ce n’est donc pas un hasard.</p>
+
+
+
+<p>Ce tableau ne dit pas qu’<a href="https://www.frandroid.com/services/vpn/700310_expressvpn-notre-avis-sur-ce-vpn">ExpressVPN</a> est un mauvais VPN. Il dit qu’<a href="https://www.frandroid.com/services/vpn/700310_expressvpn-notre-avis-sur-ce-vpn">ExpressVPN</a> en OpenVPN manuel sur Linux plafonne à 685 Mb/s vers Paris et 130 vers New York, et que si vous l’utilisez sur un routeur ou un NAS sans son application, c’est ce que vous aurez. Dans son application, avec Lightway, l’histoire est différente, et nous le vérifierons.</p>
+
+
+
+<p>Parlons de <strong><a href="https://www.frandroid.com/services/vpn/700445_cyberghostvpn-notre-avis-sur-ce-vpn">CyberGhost</a> et le Japon.</strong> 42 Mb/s en juillet, 31 en août, avec une latence de 262 ms en juillet et 653 ms en août, et une gigue moyenne de 45 ms. Sur 40 relevés en deux mois, jamais mieux. Le serveur japonais attribué par <a href="https://www.frandroid.com/services/vpn/700445_cyberghostvpn-notre-avis-sur-ce-vpn">CyberGhost</a> à une connexion OpenVPN depuis la France est simplement inutilisable, alors que le même fournisseur est quatrième en France (1 332 Mb/s, meilleur OpenVPN du panel sur cette destination) et huitième au Royaume-Uni. Un test manuel de trois relevés aurait pu attribuer cela à la malchance. Mais 40 relevés sur deux mois… c’est structurel. Sa fiche complète rend le contraste visible sans commentaire.</p>
+
+
+
+<figure><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/09/juillet-fiche-cyberghost.png" alt="Fiche CyberGhost, juillet 2026 : le décrochage vers le Japon"><figcaption>Fiche CyberGhost, juillet 2026 : le décrochage vers le Japon</figcaption></figure>
+
+
+
+<p>La barre japonaise est à peine visible à côté de la barre française, et la courbe de latence s’envole au même endroit. Le reste de la fiche est celui d’un OpenVPN honnête, ce qui rend le trou d’autant plus net.</p>
+
+
+
+<p>Dernier cas, celui de <a rel="noopener" href="https://www.clubic.com/telecharger/actus-logiciels/avis-424890-avis-privadovpn.html">PrivadoVPN</a> et de l’adresse de sortie. On lui demande Paris, il répond depuis Amsterdam. On lui demande Tokyo, il sort par les États-Unis. Le banc vérifie l’adresse publique de sortie à chaque relevé auprès de plusieurs services de géolocalisation, et <a rel="noopener" href="https://www.clubic.com/telecharger/actus-logiciels/avis-424890-avis-privadovpn.html">PrivadoVPN</a> est le seul du panel à sortir régulièrement dans un autre pays que celui demandé (Pays-Bas pour FR et UK, États-Unis pour JP). Pour du streaming géolocalisé, c’est un vrai sujet.</p>
+
+
+
+<h2>Latence et gigue : le protocole compte moins, la route compte plus</h2>
+
+
+
+<p>La latence est mesurée par ping vers une cible fixe dans le pays de destination, à travers le tunnel. Vers la France, tous les fournisseurs se tiennent entre 12 et 30 ms (la ligne nue fait 12 ms vers Paris). Vers le Royaume-Uni, 20 à 34 ms. Vers les États-Unis, 86 à 93 ms pour tout le monde, sauf <a href="https://www.frandroid.com/services/vpn/700445_cyberghostvpn-notre-avis-sur-ce-vpn">CyberGhost</a> (119 à 125 ms). Vers le Japon, 229 à 280 ms : c’est la physique, Tokyo est à 10 000 km, et aucun VPN ne raccourcit la fibre.</p>
+
+
+
+<p>Le graphique des latences par destination le montre mieux qu’un tableau.</p>
+
+
+
+<figure><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/09/juillet-ping-par-pays.png" alt="Latence par pays, juillet 2026"><figcaption>Latence par pays, juillet 2026</figcaption></figure>
+
+
+
+<p>Au sein d’une même destination, les barres se ressemblent presque toutes : le protocole ne change presque rien à la latence, la distance fait tout. Seul <a href="https://www.frandroid.com/services/vpn/700445_cyberghostvpn-notre-avis-sur-ce-vpn">CyberGhost</a> sort du lot vers les États-Unis, avec une trentaine de millisecondes de plus que les autres.</p>
+
+
+
+<p>La gigue (la variation de la latence d’un paquet à l’autre) est en revanche un excellent révélateur de la qualité du réseau du fournisseur. Chiffres <a href="012acdab4378.html">nPerf</a> de la campagne d’août, moyenne des quatre destinations :</p>
+
+
+
+<figure><table><thead><tr><th>Août 2026</th><th>Gigue moyenne</th><th>Pointe observée</th></tr></thead><tbody><tr><td>Sans VPN</td><td>1,2 ms</td><td>2 ms</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/709550_surfshark-notre-avis-sur-ce-vpn">Surfshark</a></td><td>1,6 ms</td><td>3 ms</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/700419_nordvpn-notre-avis-complet">NordVPN</a></td><td>2,7 ms</td><td>10 ms</td></tr><tr><td>Private Internet Access</td><td>4,2 ms</td><td>16 ms</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/3027337_avis-proton-vpn-en-2026-est-ce-vraiment-le-champion-de-la-confidentialite-en-ligne">Proton VPN</a></td><td>6,8 ms</td><td>92 ms</td></tr><tr><td><a rel="noopener" href="https://www.clubic.com/telecharger/actus-logiciels/avis-424890-avis-privadovpn.html">PrivadoVPN</a></td><td>9,0 ms</td><td>25 ms</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/701893_avis-purevpn-un-vpn-qui-joue-les-outsiders">PureVPN</a></td><td>9,8 ms</td><td>23 ms</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/700310_expressvpn-notre-avis-sur-ce-vpn">ExpressVPN</a></td><td>22 ms</td><td>71 ms</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/700445_cyberghostvpn-notre-avis-sur-ce-vpn">CyberGhost</a></td><td>88 ms</td><td>392 ms</td></tr></tbody></table></figure>
+
+
+
+<p><a href="https://www.frandroid.com/services/vpn/709550_surfshark-notre-avis-sur-ce-vpn">Surfshark</a>, sixième en débit à cause d’OpenVPN, est le plus propre du panel en gigue, à peine au-dessus de la ligne nue. C’est le genre de chose qu’on ne voit pas dans un classement au débit, et qui compte pour le jeu en ligne ou la visio. À l’autre bout, la gigue de <a href="https://www.frandroid.com/services/vpn/700445_cyberghostvpn-notre-avis-sur-ce-vpn">CyberGhost</a> est portée par sa route japonaise, et celle d’<a href="https://www.frandroid.com/services/vpn/700310_expressvpn-notre-avis-sur-ce-vpn">ExpressVPN</a> est élevée sur toutes les destinations.</p>
+
+
+
+<h2>Le temps de connexion : de 0,1 à 8 secondes</h2>
+
+
+
+<p>Le banc chronomètre chaque établissement de tunnel, du lancement de la connexion au moment où l’adresse de sortie est confirmée. C’est une mesure que le protocole manuel ne pouvait pas faire.</p>
+
+
+
+<figure><table><thead><tr><th>Fournisseur</th><th>Protocole</th><th>Temps d’établissement du tunnel</th></tr></thead><tbody><tr><td><a href="https://www.frandroid.com/services/vpn/700419_nordvpn-notre-avis-complet">NordVPN</a></td><td>WireGuard</td><td>~0,1 s (FR/UK) · ~1 s et + (US/JP)</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/3027337_avis-proton-vpn-en-2026-est-ce-vraiment-le-champion-de-la-confidentialite-en-ligne">Proton VPN</a></td><td>WireGuard</td><td>~0,1 s (FR/UK) · ~1 s et + (US/JP)</td></tr><tr><td><a href="https://www.frandroid.com/telecharger/apps/private-internet-acces">Private Internet Access</a></td><td>WireGuard</td><td>~0,1 s (FR/UK) · ~1 s et + (US/JP)</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/701893_avis-purevpn-un-vpn-qui-joue-les-outsiders">PureVPN</a></td><td>OpenVPN</td><td>1 s</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/709550_surfshark-notre-avis-sur-ce-vpn">Surfshark</a></td><td>OpenVPN</td><td>2 s</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/700310_expressvpn-notre-avis-sur-ce-vpn">ExpressVPN</a></td><td>OpenVPN</td><td>4 s</td></tr><tr><td><a rel="noopener" href="https://www.clubic.com/telecharger/actus-logiciels/avis-424890-avis-privadovpn.html">PrivadoVPN</a></td><td>OpenVPN</td><td>5 s</td></tr><tr><td><a href="https://www.frandroid.com/services/vpn/700445_cyberghostvpn-notre-avis-sur-ce-vpn">CyberGhost</a></td><td>OpenVPN</td><td>6 à 8 s</td></tr></tbody></table></figure>
+
+
+
+<p>Là encore le protocole pèse (la poignée de main OpenVPN est plus bavarde), mais l’écart de 1 à 8 entre les OpenVPN vient des fournisseurs eux-mêmes.</p>
+
+
+
+<h2>L’upload longue distance</h2>
+
+
+
+<p>Un mot sur le débit montant… Vers la France et le Royaume-Uni, les chiffres sont solides et cohérents : en août, <a href="https://www.frandroid.com/services/vpn/700419_nordvpn-notre-avis-complet">NordVPN</a> envoie à 2 034 Mb/s vers Paris et 1 559 vers Londres, <a href="https://www.frandroid.com/services/vpn/3027337_avis-proton-vpn-en-2026-est-ce-vraiment-le-champion-de-la-confidentialite-en-ligne">Proton</a> 2 169 et 1 561, <a href="https://www.frandroid.com/telecharger/apps/private-internet-acces">PIA</a> 1 654 et 1 627. Vers les États-Unis et le Japon, en revanche, l’upload mesuré s’effondre à 1 à 5 Mb/s pour presque tous les fournisseurs, y compris les meilleurs, alors que le download tient à plus de 1 500 Mb/s sur la même connexion.</p>
+
+
+
+<p>Ce genre d’écart est un artefact de mesure : un envoi TCP sur une liaison à 250 ms de latence est limité par la taille de fenêtre et le comportement du serveur de test distant, et le moteur de mesure ne compense pas. Nous préférons le dire et ne pas commenter ces valeurs plutôt que de publier un classement d’upload transcontinental qui n’aurait aucun sens. Il faudra sans doute faire des tests multi-flux sur le prochain cycle.</p>
+
+
+<h2>Ce qu’il faut retenir</h2>
+
+
+
+<ul>
+<li><strong>Si vous avez une fibre rapide et que vous voulez ne rien perdre en Europe</strong> : <a href="https://www.frandroid.com/services/vpn/700419_nordvpn-notre-avis-complet">NordVPN</a>, <a href="https://www.frandroid.com/services/vpn/3027337_avis-proton-vpn-en-2026-est-ce-vraiment-le-champion-de-la-confidentialite-en-ligne">Proton VPN</a> et <a href="https://www.frandroid.com/telecharger/apps/private-internet-acces">PIA</a> en WireGuard saturent une ligne 2 Gb/s vers la France et le Royaume-Uni. Le VPN ne se voit pas.</li>
+
+
+
+<li><strong>Si vous visez le Japon</strong> : <a href="https://www.frandroid.com/telecharger/apps/private-internet-acces">PIA</a>, et de loin, sur les deux campagnes.</li>
+
+
+
+<li><strong>Si vous visez les États-Unis</strong> : <a href="https://www.frandroid.com/services/vpn/700419_nordvpn-notre-avis-complet">NordVPN</a> d’abord, <a href="https://www.frandroid.com/services/vpn/3027337_avis-proton-vpn-en-2026-est-ce-vraiment-le-champion-de-la-confidentialite-en-ligne">Proton</a> ensuite.</li>
+
+
+
+<li><strong>Si vous jouez en ligne ou faites de la visio</strong> : regardez la gigue plutôt que le débit. <a href="https://www.frandroid.com/services/vpn/709550_surfshark-notre-avis-sur-ce-vpn">Surfshark</a> et <a href="https://www.frandroid.com/services/vpn/700419_nordvpn-notre-avis-complet">NordVPN</a> sont les plus réguliers.</li>
+
+
+
+<li><strong>Si vous utilisez votre VPN sur un routeur ou un NAS en OpenVPN</strong> : attendez-vous à un plafond autour du gigabit dans le meilleur des cas (<a href="https://www.frandroid.com/services/vpn/701893_avis-purevpn-un-vpn-qui-joue-les-outsiders">PureVPN</a>), et évitez <a href="https://www.frandroid.com/services/vpn/700445_cyberghostvpn-notre-avis-sur-ce-vpn">CyberGhost</a> pour le Japon.</li>
+
+
+
+<li><strong>Si le pays de sortie compte (streaming)</strong> : vérifiez votre adresse après connexion. <a rel="noopener" href="https://www.clubic.com/telecharger/actus-logiciels/avis-424890-avis-privadovpn.html">PrivadoVPN</a> ne sort pas toujours là où vous le lui demandez.</li>
+</ul>
+
+
+
+<p>Ces débits colossaux méritent d’être remis à l’échelle de l’usage réel. Même le fournisseur le plus lent du panel, ExpressVPN en OpenVPN à 130 Mb/s vers New York, reste très au-dessus de ce que réclame le quotidien : un flux Netflix en 4K demande environ 15 à 25 Mb/s, une visio ou une partie en ligne bien moins. Autrement dit, la perte de débit mesurée ici ne se voit que sur des transferts massifs (gros téléchargements, sauvegardes cloud) ; pour regarder une série ou naviguer, n’importe lequel de ces huit VPN suffit largement.</p>
+
+
+
+<h2>Les limites, et la suite</h2>
+
+
+
+<p>Ce test a deux limites que nous assumons. La première, déjà dite : cinq fournisseurs sur huit ont été mesurés dans un protocole qui n’est pas leur meilleur. </p>
+
+
+
+<p>Le prochain cycle du banc les passera en WireGuard (ou Lightway pour <a href="https://www.frandroid.com/services/vpn/700310_expressvpn-notre-avis-sur-ce-vpn">ExpressVPN</a>), et c’est seulement à ce moment-là qu’un classement unique des huit aura un sens. </p>
+
+
+
+<p>La deuxième : un seul banc, une seule fibre, un seul FAI. Le protocole est réplicable sur une autre machine et nous comptons bien le faire. </p>
+
+
+
+<p>Pour aller plus loin : si vous hésitez encore entre tous ces fournisseurs, notre <a href="https://www.frandroid.com/nos-comparateurs/selection-meilleurs-vpn">sélection des meilleurs VPN</a> reste le point de départ le plus rapide. Vous avez aussi <a rel="noopener" href="https://www.clubic.com/antivirus-securite-informatique/vpn/article-844220-1-comparatif-vpn.html">l’excellent comparatif de Clubic</a>, et maintenant vous savez un peu plus ce qui se cache derrière. Et si l’option gratuite vous tente malgré tout, mieux vaut d’abord savoir <a href="https://www.frandroid.com/services/vpn/1311261_vpn-gratuits-pourquoi-faut-il-sen-mefier-quels-sont-les-risques">pourquoi se méfier des VPN gratuits</a> avant de jeter un œil à <a rel="noopener" href="https://www.clubic.com/antivirus-securite-informatique/vpn/best-pick-18094-vpn-gratuit-quel-est-le-meilleur-vpn-pour-pc-en-2021-.html">notre sélection des meilleurs VPN gratuits</a>.</p>
+
+
+<hr>
+
+<hr><p>Un petit geste pour Frandroid ? Abonnez-vous à <a href="https://shop.frandroid.com/gpfrandroid" rel="noopener">Frandroid sur Google</a> pour ne manquer aucun de nos articles.</p><div id="embedded-tag-versus">
+            <p>
+            Encore plus de             <a href="https://www.frandroid.com/versus">
+                Comparatifs            </a>
+        </p>
+
+        <ul>
+                            <li>
+                    <a href="3dd352fc3ceb.html">
+                        On a testé 8 VPN avec un vrai protocole : 700 mesures, un robot, et quelques surprises                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/produits-android/smartphone/3232035_nos-3-smartphones-preferes-de-la-rentree-quels-modeles-ont-marque-lete">
+                        On a testé des dizaines de smartphones cet été : voici les 3 téléphones qui nous ont marqués                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/guide-dachat/guide-dachat-maison-connectee/1747823_quels-sont-les-meilleurs-ventilateurs-connectes-a-choisir-en-2023">
+                        Quels sont les meilleurs ventilateurs connectés en 2026 ? Notre sélection de modèles favoris                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/versus/3207457_xiaomi-poco-x8-pro-max-vs-google-pixel-10a-comment-choisir-le-meilleur-smartphone-milieu-de-gamme">
+                        Xiaomi POCO X8 Pro Max vs Google Pixel 10a&nbsp;: comment choisir le meilleur smartphone milieu de gamme&nbsp;?                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/marques/apple/3221383_mac-mini-m6-vs-mac-mini-m4-ce-qui-change-entre-les-deux-generations">
+                        Mac mini M6 vs Mac mini M4 : ce qui change entre les deux générations                    </a>
+                </li>
+                    </ul>
+    </div>
+            </div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>
