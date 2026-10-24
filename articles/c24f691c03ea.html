@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>GeForce Now Linux - NVIDIA lâche enfin son client natif pour les gamers manchots — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>GeForce Now Linux - NVIDIA lâche enfin son client natif pour les gamers manchots</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">Korben</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://korben.info/geforce-now-linux-nvidia-cloud-gaming.html">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div><p>Ça y est les amis, NVIDIA a enfin lâché <strong>son client
+<a href="https://www.nvidia.com/en-us/geforce-now/download/">GeForce Now</a>
+natif pour Linux</strong> ! Après des années à bidouiller avec des solutions non officielles ou à passer par le navigateur (beurk ^^), on a ENFIN droit à une vraie app qui tourne en natif.</p><p>Pour ceux qui débarquent, GeForce Now c'est donc le service de cloud gaming de NVIDIA. En gros, vous jouez à vos jeux sur des serveurs surpuissants équipés de RTX 5080, et le flux vidéo est streamé sur votre machine. Du coup, même si votre PC date de Mathusalem, vous pouvez faire tourner Cyberpunk 2077 en Ultra comme si de rien n'était. Attention quand même à
+<a href="https://korben.info/nvidia-app-baisse-performances-jeux-solution.html">la nouvelle NVIDIA App</a>
+qui peut grignoter vos FPS si les Game Filters sont activés.</p><p>Après y'a quand même un truc important à piger c'est que vos jeux, faut les acheter à côté. GeForce Now ne vend rien, il se connecte à vos bibliothèques Steam, Epic Games Store, Ubisoft Connect et compagnie. Ainsi, si vous possédez déjà des jeux sur ces plateformes, vous les retrouvez directement dans l'interface. Par contre, tous les jeux ne sont pas compatibles, mais il y a un catalogue d'environ 2000 titres supportés.</p><h2 id="ce-quil-vous-faut">Ce qu'il vous faut</h2><p>Côté config, c'est pas trop exigeant vu que c'est votre connexion internet qui fait le gros du boulot :</p><ul><li>Ubuntu 24.04 LTS (officiellement supporté, mais ça tourne aussi sur d'autres distros via Flatpak)</li><li>Un GPU compatible Vulkan Video pour le décodage H.264/H.265 (GeForce série 10 minimum, ou Intel/AMD récent)</li><li>Une connexion internet correcte : 15 Mbps pour du 720p, 25 Mbps pour du 1080p, et 65 Mbps si vous voulez taper dans le 5K à 120 fps</li><li>Latence réseau inférieure à 80ms (privilégiez l'Ethernet ou le WiFi 5 GHz)</li></ul><p>L'installation est carrément simple puisque NVIDIA distribue l'app via <strong>Flatpak</strong>, donc c'est universel. La première méthode qui est à mon sens la plus rapide c'est que vous téléchargiez le fichier .bin depuis le
+<a href="https://www.nvidia.com/en-us/geforce-now/download/">site officiel</a>
+. Ensuite vous le rendez exécutable et vous le lancez :</p><pre tabindex="0"><code>chmod +x GeForceNOWSetup.bin
+./GeForceNOWSetup.bin
+</code></pre><p>Deuxième méthode, si vous préférez tout faire en ligne de commande :</p><pre tabindex="0"><code>flatpak remote-add --user --if-not-exists GeForceNOW https://international.download.nvidia.com/GFNLinux/flatpak/geforcenow.flatpakrepo
+
+flatpak install flathub org.freedesktop.Platform//24.08
+
+flatpak install -y --user GeForceNOW com.nvidia.geforcenow
+</code></pre><p>Attention, petit piège : si vous êtes sous Wayland et que la fenêtre refuse de s'ouvrir, y'a un fix :</p><pre tabindex="0"><code>flatpak override --user --nosocket=wayland com.nvidia.geforcenow
+</code></pre><h2 id="les-abonnements-parce-que-faut-bien-payer">Les abonnements... parce que faut bien payer</h2><p>NVIDIA propose trois formules :</p><ul><li><strong>Gratuit</strong> : sessions d'une heure max, qualité standard 1080p/60fps, et vous aurez des pubs. C'est suffisant pour tester le service.</li><li><strong>Performance à 10,99€/mois</strong> : là ça devient intéressant. Sessions de 6 heures, qualité jusqu'à 1440p/60fps avec le ray tracing activé, et plus de pubs. C'est le sweet spot pour la plupart des joueurs.</li><li><strong>Ultimate à 21,99€/mois</strong> : le Graal. Vous jouez sur des serveurs équipés de RTX 5080, avec du DLSS 4, jusqu'à 5K à 120 fps ou 1080p à 360 fps si vous avez un écran gaming qui suit. Sessions de 8 heures.</li></ul><p>Petit détail qui peut piquer, depuis janvier 2026, y'a un cap de 100 heures de jeu par mois sur les abos payants. Si vous dépassez, c'est 2,99€ (Performance) ou 5,99€ (Ultimate) par tranche de 15 heures supplémentaires. Bon, 100 heures par mois ça fait quand même 3h20 par jour... sauf si vous faites des sessions marathon le week-end, ça devrait aller.</p><p>En tout cas, avoir le DLSS 4 et le ray tracing natifs sur Linux via le cloud, c'est quand même un sacré pas en avant. D'ailleurs, ça tombe bien au moment où
+<a href="https://korben.info/linux-gaming-90-pourcent-jeux-windows-compatibles.html">90% des jeux Windows tournent maintenant sur Linux</a>
+grâce à Proton... Entre le cloud gaming et la compatibilité native, y'a jamais eu de meilleur moment dans l'histoire de l'Humanité pour lâcher Windows si vous êtes un gamer ^^. Et si vous voulez des chiffres concrets,
+<a href="https://korben.info/bazzite-linux-gaming-benchmarks-gamers-nexus.html">les benchmarks de Gamers Nexus sous Bazzite</a>
+sont assez parlants.</p><h2 id="dépannage-rapide">Dépannage rapide</h2><p>Si l'installation plante avec "Flatpak not found", installez d'abord Flatpak via votre gestionnaire de paquets (<code>sudo apt install flatpak</code> sur Ubuntu).</p><p>Si vous avez des saccades, vérifiez que votre GPU supporte bien Vulkan Video. Sur les cartes NVIDIA, passez sur une session X11 plutôt que Wayland... sauf si vous avez une RTX série 30 ou plus récente, là ça devrait passer.</p><p>Pour les problèmes de latence, branchez-vous en Ethernet si possible. Le WiFi 5 GHz ça passe, mais attention au 2.4 GHz qui ajoute un sacré jitter.</p><p>Bref, si vous voulez jouer à des jeux AAA sur Linux sans vous prendre la tête avec Wine ou Proton,
+<a href="https://blogs.nvidia.com/blog/geforce-now-thursday-linux/">GeForce Now</a>
+est maintenant une option carrément viable.</p><p>Amusez-vous bien !</p></div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>
