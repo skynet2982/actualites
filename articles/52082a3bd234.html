@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>Failles PHP : c'est quoi ? On vous explique la panique mondiale sur internet, l'IA au coeur du problème — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>Failles PHP : c'est quoi ? On vous explique la panique mondiale sur internet, l'IA au coeur du problème</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">Julian Madiot</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://www.linternaute.com/hightech/internet/11310057-panne-internet-on-vous-explique-la-faille-php-qui-a-fait-trembler-internet-l-ia-au-coeur-de-la-panique-mondiale/">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div id="jArticleInside">
+                        <p>
+                
+                                    De nombreux sites internet ont été mis hors lignes ou affichés en maintenance ce mercredi, après la découverte de failles "critiques" dans le langage informatique PHP.
+                            </p>
+                        
+                                
+
+            
+
+<p>Une panne a touché de nombreux sites et services sur internet ce mercredi 21 octobre. En France, l'ensemble des sites des préfectures ont été mis hors ligne, le site des impôts, Impots.gouv.fr, a été placé "en maintenance" en milieu d'après-midi, le site de Météo France a aussi été rendu inaccessible, comme celui de la Cnil ou de la ville de Paris et des difficultés ont été constatées par la rédaction de Linternaute.com sur plusieurs sites de médias en ligne.&nbsp;</p>
+
+<p>Plusieurs sites étaient de retour ce jeudi matin comme celui de Météo France ou de la ville de Paris. Rien ne semble rapprocher ces perturbations internet de la <a href="https://www.linternaute.com/hightech/mobile/11309975-panne-orange-et-sosh/">panne massive des opérateurs télécom&nbsp;en France</a>&nbsp;ce mercredi, Orange, Sosh, Bouygues Telecom ou SFR ayant été frappés eux aussi par des perturbations.&nbsp;La panne internet est en revanche mondiale, d'autres sites institutionnels ont également été rendus inaccessibles.</p>
+
+<p>La cause de cette panne sur Internet est l'identification de deux failles de sécurité dans PHP (pour Hypertext Preprocessor), un langage de programmation qui structure près de 70% des sites web dans le monde. Ces vulnérabilités, référencées CVE-2026-109618 et CVE-2026-109619&nbsp;et surnommées "PHP2Shell", ont été détectées au mois d'août à l'aide de l'intelligence artificielle. Elles permettaient d'exécuter du code à distance sur un serveur sans aucune authentification.</p>
+
+<p>Ces failles PHP devaient faire l'objet d'une communication officielle dans les prochains jours après la mise en place de correctifs, mais une fuite a permis à des hackers de s'en saisir et de mener les premières attaques, elles aussi boostées à l'IA.&nbsp;Les gestionnaires de nombreux services gouvernementaux et de grands médias ont donc préféré&nbsp;mettre leurs sites hors ligne par précaution.</p>
+
+<p>Le risque de ces failles PHP est la prise de&nbsp;contrôle d'un site pour en modifier le contenu, accéder aux données qu'il traite, ou s'en servir comme porte d'entrée vers le reste du système d'information.&nbsp;À ce stade, aucune intrusion ni fuite de données liée à ces failles n'est confirmée. Pour les particuliers, le risque immédiat est plutôt le phishing : de faux messages invitant à "se reconnecter" à un service administratif.</p>
+
+<h2><a id="failles" name="failles">Quelles sont les failles PHP à l'origine de la panne ?</a></h2>
+
+<p>La panne constatée sur de nombreux sites internet en France et dans le monde ce mercredi 21 octobre 2026 est liée à des mesures de précaution prises par les éditeurs et gestionnaires des sites après la découverte de failles dans le langage informatique PHP. Deux failles CVE (pour "Common Vulnerabilities and Exposures")&nbsp;ont été détectées et référencées dès le mois d'août par&nbsp;l'organisation américaine MITRE Corporation, sous l'égide du gouvernement américain :</p>
+
+<ul>
+	<li>La faille CVE-2026-109618 exploite une faille mémoire.&nbsp;Lorsqu'un serveur reçoit une requête d'un internaute, il prépare un espace en mémoire pour la traiter. Cette faille permet de le surcharger au mauvais moment, l'interrompant alors que cet espace n'est qu'à moitié prêt — et le forçant à continuer quand même, avec des données invalides qu'il traite comme si elles étaient fiables.</li>
+	<li>La faille CVE-2026-109619 porte sur le nettoyage des données.&nbsp;Après avoir traité une requête, un serveur est censé effacer toutes les données liées à celle-ci avant d'en traiter une nouvelle. Ici, cet effacement est défaillant : des informations de la requête précédente restent accessibles en mémoire, et la requête suivante peut tomber dessus et les utiliser sans le savoir.</li>
+</ul>
+
+<p>Ces failles ont fait l'objet de fuites sur le Web avant toute communication officielle, faisant courir le risque d'attaques massives.&nbsp;Les versions de PHP antérieures à 8.2 n'étaient plus maintenues par l'éditeur et ne recevaient pas de correctif officiel. Les correctifs ont été publiés mercredi 21 octobre à 16h.&nbsp;Le directeur technique de ‌la société Cloudflare, spécialisée dans la sécurité Web et le cloud, ‌a indiqué dans un message publié sur le réseau social X, que des attaques exploitant ces vulnérabilités avaient déjà débuté.</p>
+
+<h2><a id="sites" name="sites">Quels sont les sites touchés par la panne d'internet ?</a></h2>
+
+<p>Face au risque d'attaque informatique, de nombreuses organisations ont donc décidé préventivement de mettre leurs sites en maintenance ou de les rendre inaccessibles mercredi 21 octobre 2026. En France, plusieurs sites institutionnels ont été mis&nbsp;en maintenance préventive, à la demande de l'ANSSI (l'Agence nationale de la sécurité des systèmes d'information), comme les sites de la Préfecture de Police, des préfectures à l'initiative du ministère de l'Intérieur, le site Impots.gouv, le site de Météo France ou celui de la Cnil. Certains titres de presse (Le Parisien, Les Echos) et des forums comme 4Chan étaient aussi concernés.</p>
+
+<p>L'ANSSI a averti qu'une "exploitation rapide est à craindre" : dès qu'une faille et son correctif sont publics, la fenêtre entre publication et installation est la période la plus risquée. Pour les sites les plus exposés, le CERT-FR a recommandé d'isoler les serveurs puis de migrer, une opération bien plus lourde qu'une simple mise à jour. D'où le choix de couper plutôt que d'attendre.</p>
+
+<p>A l'échelle mondiale, les sites concernés sont nombreux et difficiles à recenser. Les Pays-Bas, la Finlande, le Royaume-Uni, l'Allemagne, le Danemark et la Belgique ont pris des mesures similaires.</p>
+
+<h2>Pourquoi l'intelligence artificielle est-elle au coeur du problème ?</h2>
+
+<p>Selon OpenAI, les deux failles ont été découvertes par la société de sécurité informatique Calif à l’aide de GPT-5.6 Sol, l’un de ses modèles les plus récents. Wiz, entreprise de cybersécurité appartenant à Google, a également détecté ces vulnérabilités, sans indiquer quels modèles elle avait employés.&nbsp;En simplifiant l’examen de millions de lignes de code, l’intelligence artificielle accélère considérablement la détection des vulnérabilités. Une avancée précieuse pour les spécialistes de la cybersécurité, mais qui pourrait aussi servir les cybercriminels en leur permettant d’automatiser la recherche de failles et de passer plus rapidement à leur exploitation.</p>
+
+<p>Interrogé sur France Inter, Jérôme Billois, expert en cybersécurité chez Wavestone, décrit une véritable course à la détection des failles depuis l’arrivée de nouveaux modèles d’IA au printemps. Selon lui, le nombre de vulnérabilités découvertes et de correctifs à déployer a depuis été multiplié par dix, vingt, voire trente.&nbsp;Au micro de RTL, Guillaume Vassault-Houlière, PDG de YesWeHack, considère qu’une nouvelle voie est désormais ouverte et que ce type d’alerte pourrait devenir plus fréquent. Il estime que le phénomène ne fait que commencer.</p>
+
+<p>En juin dernier, Anthropic, principal concurrent d’OpenAI, avait renoncé à diffuser largement son modèle Mythos, estimant qu’il présentait des risques trop importants en matière de cybersécurité. Son utilisation avait été réservée à un petit nombre d’organisations, chargées de corriger les nombreuses vulnérabilités logicielles qu’il avait permis de découvrir.</p>
+
+<h2><a id="risques" name="risques">Quel sont les risques des failles PHP pour les utilisateurs ?</a></h2>
+
+<p>Pour les gestionnaires de sites comme pour les utilisateurs ordinaires, les conséquences de ce type de failles PHP peuvent être lourdes : un attaquant ayant pris le contrôle d'un serveur peut y installer des logiciels malveillants, mettre le site hors ligne, mais aussi lire la mémoire du serveur, qui contient potentiellement des mots de passe, des clés d'accès et des données personnelles ou bancaires d'utilisateurs connectés au même moment. PHP étant le socle technique de plateformes très répandues comme WordPress, Drupal ou Magento, qui propulsent des millions de sites de commerce, de presse ou de services publics, la surface d'exposition est considérable, comme la quantité de données potentiellement récupérée et les piratages possibles par la suite.</p>
+
+<p>Jérôme Billois invite les utilisateurs à installer toutes les mises à jour proposées par leurs outils, applis et services en ligne dans les prochaines semaines, y compris celles de leurs bornes Wi-Fi et de leurs équipements domotiques. L’expert souligne que des dizaines d’appareils devront être mis à jour dans les entreprises, mais aussi parfois chez les particuliers : un chantier de longue durée, qui nécessitera des efforts importants.</p>
+<p>Dernières mises à jour</p><div><div data-insertor-excluded="1" id="post-1792682465" data-sort-time="1792682465"><h3><a name="post1792682465"></a>17:21 - L'IA comme arme pour les attaquants aussi</h3><p>L'intelligence artificielle facilite également le travail des hackers : "Le problème avec des outils comme l'IA, c'est qu'au moment où toute l'information est rendue publique, les gens peuvent la transformer en arme extrêmement rapidement", avertit Steve Kerrison, maître de conférences en cybersécurité à l'Université James Cook. Selon l'expert Nans Marcoux, il suffit désormais de "donner la recette à une IA, le site visé, et celle-ci parviendra à se débrouiller toute seule pour atteindre l'objectif." Ce changement impose une réactivité inédite : "Avant, vous pouviez vous permettre d'attendre pour une mise à jour, car les failles ne circulaient que chez une poignée de sociétés spécialisées. À l'heure de l'IA, il faut prier pour que cela se passe bien."</p></div><div data-insertor-excluded="1" id="post-1792680004" data-sort-time="1792680004"><h3><a name="post1792680004"></a>16:40 - Les modèles de pointe de l'IA au coeur du phénomène</h3><p>Les deux failles PHP qui ont mis internet en émoi ont été identifiées grâce à l'intelligence artificielle : les sociétés de cybersécurité Wiz et Calif ont utilisé, de façon indépendante, des modèles d'OpenAI et de Google pour les détecter dès le mois d'août, pendant que la fondation PHP travaillait de son côté avec un modèle de pointe d'Anthropic. OpenAI a qualifié la découverte de "l'une des vulnérabilités les plus marquantes de ces dernières années", estimant qu'elles "marquent une nouvelle phase, où l'IA peut trouver des bugs de sécurité avec un impact à l'échelle d'internet." La fondation avait ensuite gardé l'information secrète, "le temps qu'un correctif soit élaboré", selon l'AFP.</p></div><div data-insertor-excluded="1" id="post-1792678167" data-sort-time="1792678167"><h3><a name="post1792678167"></a>16:09 - Ce qu'un pirate peut faire une fois dans la place</h3><p>La NSA américaine a alerté que ces failles "présentent des vulnérabilités susceptibles d'offrir un accès direct au système de fichiers ou à la base de données des serveurs." Guillaume Vassault-Houlière, fondateur de YesWeHack, précise que la faille "permet d'exécuter du code à distance, autrement dit de faire exécuter du code informatique sur une machine ou un serveur sans avoir à y accéder physiquement." Une fois engouffré dans la brèche, le pirate "peut prendre le contrôle, voler des données, installer des logiciels malveillants cachés, récupérer des comptes associés au site piraté", détaille-t-il.</p></div><p><a href="52082a3bd234.html" id="jLiveMore" data-sort-time="1792678166">LIRE PLUS</a>
+
+ </p></div>
+        </div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>

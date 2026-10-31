@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>« On a un problème » : une faille de sécurité absurde met Internet en alerte — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>« On a un problème » : une faille de sécurité absurde met Internet en alerte</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">Lisa Imperatrice</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://www.numerama.com/cyberguerre/2357519-on-a-un-probleme-une-faille-de-securite-absurde-met-internet-en-alerte.html">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div>
+    <div>
+<p><strong>H</strong>uit clés privées de l’autorité de certification eMudhra étaient tellement faibles qu’elles pouvaient être retrouvées presque instantanément. Révélé le 20 octobre 2026, l’incident permet de fabriquer de faux certificats pour usurper l’identité de sites web auprès de logiciels vulnérables. Les principaux navigateurs ont réagi, mais les correctifs doivent encore atteindre de nombreux autres outils.</p>
+</div>
+
+
+<p>Vous pensiez que « 123456 » était un mauvais <a href="https://www.numerama.com/cyberguerre/1164938-quest-ce-quun-gestionnaire-de-mots-de-passe.html" data-popover-target="definition" data-tag="Qu’est-ce qu’un gestionnaire de mots de passe&nbsp;?" data-chapo="Le gestionnaire de mots de passe sert à mémoriser pour vous vos codes d’accès à vos comptes en ligne, dans un environnement protégé, et de vous pousser à utiliser des mots de passe forts. C’est comme un coffre-fort. Dashlane, NordPass, 1Password, Bitwarden et LastPass font partie des plus connus." data-image="https://img.numerama.com/www.numerama.com/wp-content/uploads/2022/05/mot-de-passe-password-1024x576.jpg?key=f22c1373">mot de passe</a> ? Dans une infrastructure qui participe à la sécurité des connexions sur Internet, une clé privée était tout simplement le nombre <strong>4</strong>. Les sept autres n’avaient pas beaucoup plus d’ambition : 56, 66, 115, 155, 156, 230 et 237, rapporte <a rel="noopener" href="https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/">Ars Technica</a> le 20 octobre 2026.</p>
+
+
+
+<p>La découverte a poussé <strong>Chrome et Firefox à bloquer en urgence les certificats concernés dès le 17 octobre</strong>. Dans leurs communiqués, <a rel="noopener" href="https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates/">Mozilla</a> et <a rel="noopener" href="https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/">Google</a> expliquent que ces clés pouvaient permettre de fabriquer de faux certificats HTTPS pour usurper l’identité de sites web auprès de logiciels vulnérables.</p>
+
+
+
+<p>L’entreprise concernée, eMudhra, est indienne. Mais ses certificats sont reconnus par des logiciels utilisés dans le monde entier. Si les navigateurs ont rapidement réagi, de nombreuses autres applications et infrastructures doivent aussi être protégées.</p>
+
+
+
+<figure><a href="https://www.numerama.com/wp-content/uploads/2026/10/2-18.png"><picture><source data-srcset="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/2-18-1024x576.png?webp=1&amp;key=db87dee8 1024w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/2-18-1024x576.png?webp=1&amp;resize=928,522&amp;key=db87dee8 928w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/2-18-1024x576.png?webp=1&amp;resize=768,432&amp;key=db87dee8 768w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/2-18-1024x576.png?webp=1&amp;resize=480,270&amp;key=db87dee8 480w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/2-18-680x383.png?webp=1&amp;resize=512,288&amp;key=0e403605 512w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/2-18.png?webp=1&amp;key=fb7ee698 2048w" type="image/webp"><img decoding="async" width="1024" height="576" loading="lazy" alt="Les clés privées de 8 certificats de l'autorité de certification indienne eMudhra ont été compromises. // Source : @IntCyberDigest" title="Les clés privées de 8 certificats de l'autorité de certification indienne eMudhra ont été compromises. // Source : @IntCyberDigest" src="data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%271024%27 height=%27576%27/%3E" data-src="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/2-18-1024x576.png?resize=1024,576&amp;key=db87dee8" data-srcset="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/2-18-1024x576.png?key=db87dee8 1024w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/2-18-1024x576.png?resize=928,522&amp;key=db87dee8 928w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/2-18-1024x576.png?resize=768,432&amp;key=db87dee8 768w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/2-18-1024x576.png?resize=480,270&amp;key=db87dee8 480w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/2-18-680x383.png?resize=512,288&amp;key=0e403605 512w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/2-18.png?key=fb7ee698 2048w"></picture></a><figcaption> Les clés privées de 8 certificats de l’autorité de certification indienne eMudhra ont été compromises. // Source : @IntCyberDigest</figcaption></figure>
+
+
+<div>
+    <p><span>Pour aller plus loin</span></p><div>
+                <picture><source data-srcset="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/01/chrome-agents-ia-200x200.jpg?webp=1&amp;resize=87,87&amp;key=5b82dd10 87w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/01/chrome-agents-ia-200x200.jpg?webp=1&amp;resize=43,43&amp;key=5b82dd10 43w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/01/chrome-agents-ia-200x200.jpg?webp=1&amp;resize=174,174&amp;key=5b82dd10 174w" type="image/webp"><img decoding="async" width="87" height="87" loading="lazy" alt="bloqueur de pubs navigateur // Source : montage Numerama" title="bloqueur de pubs navigateur // Source : montage Numerama" src="data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2787%27 height=%2787%27/%3E" data-src="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/01/chrome-agents-ia-200x200.jpg?resize=87,87&amp;key=5b82dd10" data-srcset="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/01/chrome-agents-ia-200x200.jpg?resize=87,87&amp;key=5b82dd10 87w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/01/chrome-agents-ia-200x200.jpg?resize=43,43&amp;key=5b82dd10 43w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/01/chrome-agents-ia-200x200.jpg?resize=174,174&amp;key=5b82dd10 174w"></picture>            </div>
+</div>
+
+
+
+<h2>Une fausse carte d’identité pour n’importe quel site</h2>
+
+
+
+<p>Pour comprendre le problème, il faut revenir au rôle d’un certificat. Lorsqu’<a href="https://www.numerama.com/tech/1364748-cest-une-revolution-pour-le-web-google-chrome-va-cacher-le-cadenas.html">un navigateur se connecte à un site en HTTPS</a>, il doit vérifier qu’il communique avec le bon serveur. Un certificat numérique sert, en quelque sorte, de carte d’identité. Le navigateur le reconnaît grâce à une chaîne de signatures provenant d’autorités auxquelles il fait confiance.</p>
+
+
+
+<p>Les certificats compromis ici appartiennent à des autorités intermédiaires : les clés privées associées permettent de signer d’autres certificats. Récupérer ces clés revient donc à obtenir le tampon officiel avec lequel fabriquer de fausses cartes d’identité. Un attaquant peut alors créer un certificat pour un domaine qui ne lui appartient pas et tromper un logiciel qui accepte encore cette signature.</p>
+
+<div data-nosnippet="" data-gtm-bic="Bitdefender - 2026 Cyberguerre - FC-Bit26-24">
+                    
+                            <div>
+                <picture><source data-srcset="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/04/box-bitdefender-2-1024x380.png?webp=1&amp;key=9143f30c 1024w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/04/box-bitdefender-2-1024x380.png?webp=1&amp;resize=928,344&amp;key=9143f30c 928w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/04/box-bitdefender-2-1024x380.png?webp=1&amp;resize=768,285&amp;key=9143f30c 768w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/04/box-bitdefender-2-1024x380.png?webp=1&amp;resize=480,178&amp;key=9143f30c 480w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/04/box-bitdefender-2-680x252.png?webp=1&amp;resize=512,190&amp;key=a05ab7d6 512w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/04/box-bitdefender-2.png?webp=1&amp;key=7a18b03e 2048w" type="image/webp"><img decoding="async" width="1024" height="380" loading="lazy" alt="Box Bitdefender (2)" title="Box Bitdefender (2)" src="data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%271024%27 height=%27380%27/%3E" data-src="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/04/box-bitdefender-2-1024x380.png?key=9143f30c" data-srcset="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/04/box-bitdefender-2-1024x380.png?key=9143f30c 1024w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/04/box-bitdefender-2-1024x380.png?resize=928,344&amp;key=9143f30c 928w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/04/box-bitdefender-2-1024x380.png?resize=768,285&amp;key=9143f30c 768w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/04/box-bitdefender-2-1024x380.png?resize=480,178&amp;key=9143f30c 480w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/04/box-bitdefender-2-680x252.png?resize=512,190&amp;key=a05ab7d6 512w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/04/box-bitdefender-2.png?key=7a18b03e 2048w"></picture>            </div>
+                <div>
+                            <p>
+                    Et votre vie numérique devient sereine                </p>
+                                        <p>
+                    Bitdefender Premium Security est une solution de cybersécurité européenne qui vous protège automatiquement contre les pirates et toutes les menaces du web. Profitez de vos activités en ligne en toute tranquillité                </p>
+                                        
+                    </div>
+    </div>
+
+
+
+
+<p><strong>Ces clés doivent normalement être choisies au hasard parmi un nombre immense de possibilités. Le système utilisé ici, appelé P-384, offre près de 2 puissance 384 valeurs possibles : les essayer toutes est irréaliste.</strong></p>
+
+
+
+<p>Or, dans le <a rel="noopener" href="https://bugzilla.mozilla.org/show_bug.cgi?id=2083449#c5">rapport technique publié sur le site de Mozilla</a>, Dennis Jackson, ingénieur en cryptographie, confirme que les huit clés concernées étaient des nombres inférieurs à 256. Elles pouvaient donc être retrouvées presque immédiatement à partir des certificats publics. Le rapport distingue six certificats destinés aux connexions TLS et deux à la signature de logiciels.</p>
+
+
+
+<p>Le chercheur à l’origine du signalement, identifié sous le nom de Wayne, a fourni une démonstration : <strong>« <em>We have a problem here – Wayne</em> »</strong>, soit « <em>Nous avons un problème ici – Wayne</em> ». Il a signé numériquement ce message avec chacune des huit clés compromises. Les signatures pouvaient être vérifiées à l’aide des clés publiques contenues dans les certificats, prouvant qu’il disposait bien des clés secrètes.</p>
+
+
+
+<figure><a href="https://www.numerama.com/wp-content/uploads/2026/10/3-16.png"><picture><source data-srcset="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/3-16-1024x576.png?webp=1&amp;key=cd2c0ecd 1024w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/3-16-1024x576.png?webp=1&amp;resize=928,522&amp;key=cd2c0ecd 928w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/3-16-1024x576.png?webp=1&amp;resize=768,432&amp;key=cd2c0ecd 768w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/3-16-1024x576.png?webp=1&amp;resize=480,270&amp;key=cd2c0ecd 480w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/3-16-680x383.png?webp=1&amp;resize=512,288&amp;key=9c235e80 512w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/3-16.png?webp=1&amp;key=f4dbe5cc 2048w" type="image/webp"><img decoding="async" width="1024" height="576" loading="lazy" alt="Mozilla a publié un communiqué après l'incident. // Source : Mozilla" title="Mozilla a publié un communiqué après l'incident. // Source : Mozilla" src="data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%271024%27 height=%27576%27/%3E" data-src="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/3-16-1024x576.png?resize=1024,576&amp;key=cd2c0ecd" data-srcset="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/3-16-1024x576.png?key=cd2c0ecd 1024w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/3-16-1024x576.png?resize=928,522&amp;key=cd2c0ecd 928w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/3-16-1024x576.png?resize=768,432&amp;key=cd2c0ecd 768w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/3-16-1024x576.png?resize=480,270&amp;key=cd2c0ecd 480w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/3-16-680x383.png?resize=512,288&amp;key=9c235e80 512w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/3-16.png?key=f4dbe5cc 2048w"></picture></a><figcaption>Mozilla a publié un communiqué après l’incident. // Source : Mozilla</figcaption></figure>
+
+
+
+<h2>Quel risque pour vos connexions ?</h2>
+
+
+
+<p>Imaginons qu’une application vulnérable se connecte à un service pour lui transmettre des informations personnelles. Si un attaquant parvient à s’interposer dans cette connexion, il peut présenter un faux certificat et se faire passer pour le serveur attendu. L’application lui fait confiance : il peut alors potentiellement lire ou modifier les échanges.</p>
+
+
+
+<p>Cette condition est essentielle : <strong>l’attaquant doit aussi pouvoir intercepter la connexion</strong>. Posséder ces clés ne lui donne pas automatiquement accès à tous les comptes des internautes.</p>
+
+
+
+<p>Comme le souligne Cloudflare, les algorithmes de chiffrement de TLS eux-mêmes n’ont pas été cassés. Le problème porte sur l’identité du serveur : une connexion chiffrée ne suffit pas à protéger les données si elle est établie avec un imposteur.</p>
+
+
+
+<h2>Les navigateurs ont réagi, les autres logiciels doivent suivre</h2>
+
+
+
+<p>Chrome et Firefox ont bloqué les certificats concernés dès le 17 octobre. Mozilla indique avoir distribué sa protection en moins de trois heures aux utilisateurs de Firefox conservant les réglages standards, sans nécessiter de redémarrage du navigateur. Selon la page de suivi technique de Dennis Jackson, les blocages ont également été déployés sur les appareils Apple le 19 octobre, puis sur les plateformes Microsoft le 20 octobre.</p>
+
+
+
+<p>Ces mesures ne protègent toutefois pas automatiquement tous les logiciels installés. La page relève notamment que l’outil de connexion curl fourni avec macOS utilise une liste de certificats distincte et pouvait encore accepter les certificats compromis malgré le blocage d’Apple. Certains outils doivent donc être corrigés séparément : <strong>un navigateur protégé ne garantit pas que toutes les connexions du même appareil le soient.</strong></p>
+
+
+
+<p>Interrogé par Ars Technica, le cryptographe Filippo Valsorda estime que ce chantier pourrait dépasser celui de <a href="https://www.numerama.com/sciences/29026-heartbleed-ssl-openssl.html">Heartbleed</a>, une faille majeure découverte en 2014. Il pointe notamment la diversité des systèmes à corriger et les machines oubliées ou les outils qui ne sont plus maintenus.</p>
+
+
+
+<p>À ce stade, aucune exploitation malveillante n’est confirmée dans les sources consultées. Google indique qu’aucun certificat TLS rattaché aux six certificats intermédiaires concernés n’avait été enregistré dans les journaux publics de transparence avant leur blocage. Cela empêchait leur utilisation contre les logiciels exigeant cet enregistrement, comme Chrome. Des attaques contre ceux qui ne le vérifient pas ne peuvent toutefois pas être exclues.</p>
+
+
+
+<figure><a href="https://www.numerama.com/wp-content/uploads/2026/10/4-6.png"><picture><source data-srcset="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/4-6-1024x576.png?webp=1&amp;key=c22696cf 1024w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/4-6-1024x576.png?webp=1&amp;resize=928,522&amp;key=c22696cf 928w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/4-6-1024x576.png?webp=1&amp;resize=768,432&amp;key=c22696cf 768w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/4-6-1024x576.png?webp=1&amp;resize=480,270&amp;key=c22696cf 480w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/4-6-680x383.png?webp=1&amp;resize=512,288&amp;key=e0905e25 512w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/4-6.png?webp=1&amp;key=be91d593 2048w" type="image/webp"><img decoding="async" width="1024" height="576" loading="lazy" alt="Dennis Jackson confirme que les huit clés concernées étaient des nombres inférieurs à 256 // Source : Dennis Jackson" title="Dennis Jackson confirme que les huit clés concernées étaient des nombres inférieurs à 256 // Source : Dennis Jackson" src="data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%271024%27 height=%27576%27/%3E" data-src="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/4-6-1024x576.png?resize=1024,576&amp;key=c22696cf" data-srcset="https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/4-6-1024x576.png?key=c22696cf 1024w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/4-6-1024x576.png?resize=928,522&amp;key=c22696cf 928w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/4-6-1024x576.png?resize=768,432&amp;key=c22696cf 768w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/4-6-1024x576.png?resize=480,270&amp;key=c22696cf 480w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/4-6-680x383.png?resize=512,288&amp;key=e0905e25 512w,https://img.numerama.com/www.numerama.com/wp-content/uploads/2026/10/4-6.png?key=be91d593 2048w"></picture></a><figcaption>Dennis Jackson confirme que les huit clés concernées étaient des nombres inférieurs à 256. // Source : Dennis Jackson</figcaption></figure>
+
+
+
+<p>Dans une réponse publiée sur le suivi d’incident de Mozilla, Naveen Kumar ML, responsable chez eMudhra, avance une première explication : une erreur dans le programme de génération aurait produit un second jeu de clés, plus faibles, ensuite utilisées par erreur en raison d’étiquettes similaires.</p>
+
+
+
+<p>Pour les utilisateurs, la recommandation est de mettre à jour les navigateurs, les systèmes d’exploitation et les applications dès que les correctifs sont disponibles. Les responsables informatiques doivent aussi vérifier les logiciels et les équipements qui ne bénéficient pas de mises à jour automatiques.</p>
+
+
+
+
+
+
+
+
+
+<div id="installPwaDiv" data-nosnippet="">
+        <p><img src="https://www.numerama.com/wp-content/themes/numerama-next/dist/images/premium/iPhone-16-pro-vDJtn9o4_vzSsPIGCFDc5.png" alt="Toute l'actu tech en un clien d'oeil">
+        </p>
+        <div>
+                <p>Toute l'actu tech en un clin d'œil</p>
+            <p>Ajoutez Numerama à votre écran d'accueil et restez connectés au futur !</p>
+        </div>
+        <p><img src="https://www.numerama.com/wp-content/themes/numerama-next/dist/images/premium/logo-card-pwa-coupe-vCvPQ_Q_ysBNfqKp6w7gG.svg" alt="Logo PWA">
+        </p>
+    </div>
+
+<hr>        </div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>
