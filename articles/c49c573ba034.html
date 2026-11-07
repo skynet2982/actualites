@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShieldBreak - C'est Windows Defender qui tient la porte grande ouverte — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>ShieldBreak - C'est Windows Defender qui tient la porte grande ouverte</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">Korben</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://korben.info/shieldbreak-zero-day-defender-microsoft.html">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div aria-label="Contenu de l'article"><article id="section1" aria-labelledby="article-title"><p><img src="https://korben.info/shieldbreak-zero-day-defender-microsoft/shieldbreak-zero-day-defender-microsoft-1_hu_ba502980ed28e60f.webp" srcset="https://korben.info/shieldbreak-zero-day-defender-microsoft/shieldbreak-zero-day-defender-microsoft-1_hu_ba502980ed28e60f.webp 640w, https://korben.info/shieldbreak-zero-day-defender-microsoft/shieldbreak-zero-day-defender-microsoft-1_hu_4b0c5b5a91d42aff.webp 1280w, https://korben.info/shieldbreak-zero-day-defender-microsoft/shieldbreak-zero-day-defender-microsoft-1_hu_3ee28c7b5990c05f.webp 1920w" sizes="100vw" alt="Image illustrant l'article : ShieldBreak - C'est Windows Defender qui tient la porte grande ouverte" width="2560" height="640">
+<span role="note" data-ai-generated="true" aria-label="Image générée/modifiée par IA" title="Image générée/modifiée par IA" tabindex="0">
+<span>Image générée/modifiée par IA</span></span></p><div data-pagefind-body="true"><details open="" data-keypoints-container=""><summary><span>Ce qu’il faut retenir</span>
+<span>Résumé généré par IA</span></summary><div><ol><li>ShieldBreak permet à un compte utilisateur limité de passer SYSTEM sur Windows entièrement à jour en exploitant Windows Defender, rendu public par Nightmare Eclipse il y a 2 jours sans coordination préalable avec Microsoft.</li><li>L'exploit nécessite un accès local et l'exécution du programme, a été testé sur Windows 11 25H2 et Windows Server 2025, et requiert que Defender soit activé pour fonctionner.</li><li>Microsoft n'a pas encore attribué de CVE à la faille ni publié de correctif, mais Beaumont a mis en ligne des requêtes de détection pour Defender for Endpoint qui repèrent les chargements anormaux de bibliothèques Defender.</li></ol></div></details><div><p><strong>ShieldBreak</strong> est un nouvel exploit qui vise l'antivirus livré avec Windows. Cela permet à un compte utilisateur limité de passer SYSTEM sur un Windows entièrement à jour, grâce notamment à Windows Defender qui lui sert de marchepied.</p><p>Le chercheur Nightmare Eclipse a sorti le code de son exploit en public y'a 2 jours, quelques heures après un Patch Tuesday qui corrigeait plus de 400 failles. Mais pas celle-ci évidemment... Une machine parfaitement à jour reste donc exposée.</p><p>Kevin Beaumont, ancien de chez Microsoft, a testé l'exploit et confirme qu'il fonctionne sur un Windows 11 à jour. Sa lecture technique, en revanche, diffère de celle du chercheur. Nightmare Eclipse présente ShieldBreak comme un contournement complet du correctif de RoguePlanet, sa faille précédente, alors que Beaumont souligne que les deux reposent sur des mécanismes très différents.</p><p>L'attaque réclame un accès local et l'exécution du programme, elle ne s'attrape pas en visitant une page web. Elle a été testée sur Windows 11 25H2 et Windows Server 2025, Windows 10 étant déclaré vulnérable sans être pris en charge par le code publié. Et il faut que Defender soit activé pour que ça marche.</p><p>Cette publication sans préavis n'arrive pas de nulle part. En mai, Microsoft a publié
+<a href="https://www.microsoft.com/en-us/msrc/blog/2026/05/a-shared-responsibility-protecting-customers-through-coordinated-vulnerability-disclosure">un billet</a>
+qualifiant d'injustifiables les divulgations non coordonnées qui mettent du code d'exploitation entre les mains d'acteurs malveillants, en rappelant que sa Digital Crimes Unit continuerait à poursuivre ces acteurs. Le texte ne visait pas nommément les chercheurs. Le milieu de la sécurité l'a quand même reçu comme une menace.</p><p>Microsoft a fait ensuite machine arrière sur les réseaux sociaux, en assurant ne pas vouloir s'en prendre à ceux qui publient de la recherche. Le billet d'origine, lui, est toujours en ligne et les publications n'ont pas ralenti pour autant : une dizaine de zero-days Windows depuis avril, dont
+<a href="b7fe7630fe33.html">BlueHammer</a>
+et
+<a href="38389fd22fb7.html">GreatXML</a>
+dont je vous ai déjà parlé.</p><p>Microsoft dit avoir connaissance de la vulnérabilité signalée et enquêter sur la validité des affirmations mais pour le moment, la faille n'a même pas d'identifiant CVE à elle, et reste rattachée au correctif qu'elle est censée contourner. Bref, si ça vous fait flipper comme faille, désolé, il n'y a rien à installer pour l'instant pour fixer le problème.</p><p>En attendant, Beaumont a mis en ligne
+<a href="https://github.com/GossiTheDog/ThreatHunting/blob/master/AdvancedHuntingQueries/ShieldBreak.kql">des requêtes de "chasse"</a>
+pour Defender for Endpoint qui repèrent quand un processus étranger à Defender charge ses bibliothèques, ou qu'un processus non validé charge celles de l'API Cloud Filter. Tout ça via le même processus.</p><p>Mais c'est de la détection, et pas un correctif...</p><p><a href="https://techcrunch.com/2026/08/12/after-microsoft-threatened-legal-action-a-security-researcher-publishes-a-new-windows-zero-day-bug/">Source</a></p></div><p><a href="https://www.google.com/preferences/source?q=https://korben.info" rel="noopener noreferrer" aria-label="Ajouter Korben comme source préférée sur Google">
+<span>Ajouter Korben à mes<br>sources préférées</span></a></p><details><summary>Références</summary><section aria-label="Références"><ul><li><a href="https://www.microsoft.com/en-us/msrc/blog/2026/05/a-shared-responsibility-protecting-customers-through-coordinated-vulnerability-disclosure" rel="nofollow noopener noreferrer">https://www.microsoft.com/en-us/msrc/blog/2026/05/a-shared-responsibility-protecting-customers-through-coordinated-vulnerability-disclosure</a></li><li><a href="https://techcrunch.com/2026/08/12/after-microsoft-threatened-legal-action-a-security-researcher-publishes-a-new-windows-zero-day-bug/" rel="nofollow noopener noreferrer">https://techcrunch.com/2026/08/12/after-microsoft-threatened-legal-action-a-security-researcher-publishes-a-new-windows-zero-day-bug/</a></li></ul></section></details><p><span>Auteur :</span>
+<img src="https://korben.info/authors/korben/korben.png" alt="" width="36" height="36" loading="lazy" decoding="async">
+<strong>Korben</strong></p></div></article><section aria-label="Articles récents"><h2>Articles récents</h2></section></div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>
