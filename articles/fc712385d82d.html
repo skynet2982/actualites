@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>On a testé la puce Nvidia RTX Spark qui veut réinventer le PC : les résultats face à Apple, AMD et une RTX 5070 — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>On a testé la puce Nvidia RTX Spark qui veut réinventer le PC : les résultats face à Apple, AMD et une RTX 5070</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">Ulrich Rozier</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://www.frandroid.com/test/3283093_test-nvidia-rtx-spark">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div>
+                                    
+                                <div>
+<p><strong>Nvidia signe sa première puce complète pour PC portable Windows. Le RTX Spark réunit un GPU Blackwell, un processeur Arm et jusqu’à 128 Go de mémoire unifiée dans un seul boîtier. Je l’ai testé dans l’Asus ProArt P16, en jeu, en IA locale et sur batterie, face à un PC portable gamer en RTX 5070, un Mac Apple Silicon et un PC Ryzen AI Max+ 395.</strong></p>
+</div>
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/14102026-dsc03714.jpg" rel="noopener"><img decoding="async" loading="eager" width="1200" height="802" src="https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/10/14102026-dsc03714.jpg?resize=1200&amp;key=de52586b" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/10/14102026-dsc03714-1200x802.jpg 1200w, https://images.frandroid.com/wp-content/uploads/2026/10/14102026-dsc03714-768x513.jpg 768w, https://images.frandroid.com/wp-content/uploads/2026/10/14102026-dsc03714-928x620.jpg 928w, https://images.frandroid.com/wp-content/uploads/2026/10/14102026-dsc03714-300x200.jpg 300w" sizes="(max-width: 1200px) 100vw, 1200px"></a><figcaption>L’Asus ProArt P16 équipé de la puce Nvidia RTX Spark.</figcaption></figure>
+
+
+
+<p>Tester une plateforme aussi nouvelle n’est jamais simple, alors commençons par poser le contexte.</p>
+
+
+
+<p>Depuis des années, un <a href="https://www.frandroid.com/guide-dachat/689411_guide-meilleurs-pc-portables-gamer">PC portable gamer</a> repose sur le même schéma, avec un processeur Intel ou AMD, une carte graphique Nvidia ou AMD à côté, et chacun sa mémoire. La RTX Spark rompt avec cette organisation. Nvidia assemble dans un même boîtier deux puces gravées en 3 nm par TSMC, un GPU Blackwell de la même génération que les GeForce RTX 50 et un processeur Arm conçu avec MediaTek, qui aligne jusqu’à 20 cœurs Cortex-X925 et Cortex-A725. Les deux dialoguent par un lien NVLink C2C annoncé à 600 Go/s.</p>
+
+
+
+<p>L’autre grand changement concerne la mémoire, un sujet très sensible en ce moment avec la pénurie et les prix qui augmentent. Ici, il n’y a plus de mémoire vidéo dédiée, puisque processeur et GPU puisent dans un même stock de LPDDR5X, jusqu’à 128 Go avec un débit de 300 Go/s. Là où une RTX 5070 portable se contente de 8 ou 12 Go de mémoire vidéo selon les modèles, le GPU de la RTX Spark peut se réserver plusieurs dizaines de Go grâce à un curseur dans l’application Nvidia (il faut redémarrer à chaque changement). Pour l’IA locale, cet argument est essentiel, car un modèle doit tenir entièrement en mémoire pour tourner vite.</p>
+
+
+
+<blockquote>
+<p>Là où une RTX 5070 portable se contente de 8 ou 12 Go de mémoire vidéo selon les modèles, le GPU de la RTX Spark peut se réserver plusieurs dizaines de Go grâce à un curseur dans l’application Nvidia.</p>
+</blockquote>
+
+
+
+<p>Nvidia résume son ambition en trois mots, « The One PC », c’est-à-dire une seule machine pour créer, jouer et faire tourner des agents IA. Sur le papier, la RTX Spark ressemble à un PC portable gamer fusionné avec un mini PC dédié à l’IA, et le constructeur annonce plus de 100 images par seconde en 1440p dans les jeux AAA, ainsi que jusqu’à 3 h 30 de jeu sur batterie dans Civilization VII ou Counter-Strike 2. Beaucoup de promesses… et donc un très gros test qui vous attend.</p>
+
+
+<h2>Pourquoi ce test est plus compliqué que d’habitude</h2>
+
+
+
+<p>D’habitude, un test compare des machines bâties sur les mêmes fondations. La RTX Spark, elle, change à la fois d’architecture processeur (Arm au lieu de x86), d’organisation mémoire et de gestion de l’énergie. Chaque résultat doit donc être replacé dans son contexte, et c’est pourquoi j’ai découpé ce test en trois volets.</p>
+
+
+
+<h3>Le jeu vidéo, face à une RTX 5070 dédiée</h3>
+
+
+
+<p>Nvidia est d’abord attendu sur le jeu. C’est son héritage. Face à une RTX 5070 portable, la comparaison est équitable côté fonctionnalités, puisque les deux GPU appartiennent à la génération Blackwell et profitent du même DLSS avec génération d’images multiple. Le reste les sépare toutefois, car la RTX 5070 dispose de sa propre mémoire GDDR7, plus rapide, et d’un budget énergétique qui lui est réservé, alors que la RTX Spark partage une enveloppe de 45 à 80 W entre son processeur et son GPU.</p>
+
+
+
+<p>Sans parler de la compatibilité qui complique encore les choses. La plupart des jeux Windows sont compilés pour les processeurs x86 et passent donc, sur Arm, par Prism, la couche d’émulation de Windows qui traduit à la volée les instructions du processeur, le code exécuté par le GPU tournant lui nativement. Certains jeux multijoueurs restent par ailleurs bloqués par leur anti-triche, et d’après Nvidia, Valorant, League of Legends et Call of Duty ne sont pas encore pris en charge. On y reviendra.</p>
+
+
+
+<h3>L’IA locale, face aux autres machines à mémoire unifiée</h3>
+
+
+
+<p>Sur ce terrain, la RTX Spark se mesure aux autres machines à mémoire unifiée, les Mac Apple Silicon et les PC équipés du Ryzen AI Max+ 395 d’AMD, eux aussi disponibles en 128 Go. Nvidia y met en avant CUDA, la même base logicielle que ses GPU de datacenter, et j’ai fait tourner une série de modèles de langage de tailles différentes pour voir où la puce est à l’aise et où elle coince. Vous allez voir, il y a de très nombreux tests (et beaucoup d’heures passer dessus).</p>
+
+
+
+<h3>L’autonomie, et ce qu’il reste des performances sur batterie</h3>
+
+
+
+<p>Ce dernier volet est probablement celui qui sera le moins mesuré dans les tests de nos camarades des autres médias, il est partout essentiel sur cette plate-forme. </p>
+
+
+
+<p>Un PC portable gamer perd souvent une bonne partie de ses moyens une fois débranché, et ses performances sont presque toujours mesurées sur secteur. Jusqu’ici, seuls les Mac Apple Silicon combinaient vraiment puissance et efficience sur batterie, si bien qu’on a pris l’habitude de laisser les PC portables branchés quand on a de lourdes tâches.</p>
+
+
+
+<p>J’ai donc tout mesuré deux fois, sur secteur puis sur batterie, pour savoir ce qu’il reste de la promesse quand on part avec la machine sous le bras. Une seule machine peut-elle remplacer un mini PC d’IA et un PC portable gamer ? On est en droit de l’attendre de l’entreprise qui affiche la plus grosse valorisation au monde.</p>
+
+
+<h2>La machine de test : l’Asus ProArt P16</h2>
+
+
+
+<p>Les premiers PC portables RTX Spark sont attendus à partir du 16 octobre, avec notamment les ProArt P14 et P16 d’Asus, le Surface Laptop Ultra de Microsoft et le XPS 16 Creator Edition de Dell.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/14102026-dsc03679.jpg" rel="noopener"><img loading="lazy" decoding="async" width="1200" height="802" src="https://images.frandroid.com/wp-content/uploads/2026/10/14102026-dsc03679-1200x802.jpg" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/10/14102026-dsc03679-1200x802.jpg 1200w, https://images.frandroid.com/wp-content/uploads/2026/10/14102026-dsc03679-768x513.jpg 768w, https://images.frandroid.com/wp-content/uploads/2026/10/14102026-dsc03679-928x620.jpg 928w, https://images.frandroid.com/wp-content/uploads/2026/10/14102026-dsc03679-300x200.jpg 300w" sizes="auto, (max-width: 1200px) 100vw, 1200px"></a><figcaption>Le ProArt P16 RTX Spark testé ici, en version 128 Go.</figcaption></figure>
+
+
+
+<p>Mon exemplaire est un ProArt P16 (H7607BA) en version 128 Go, avec une RTX Spark N1X à 20 cœurs processeur et 6 144 cœurs CUDA, un SSD de 1 To et un écran de 3 840 x 2 400 pixels. Mon collègue Vincent a testé en parallèle un second ProArt P16 en 64 Go, et j’ai récupéré certaines de ses mesures.</p>
+
+
+
+<figure><table><thead><tr><th>Caractéristique</th><th>Asus ProArt P16 (H7607BA) RTX Spark</th></tr></thead><tbody><tr><td>Puce</td><td>Nvidia RTX Spark N1X, 3 nm TSMC (deux puces reliées en NVLink C2C, 600 Go/s)</td></tr><tr><td>Processeur</td><td>20 cœurs Arm : 10 Cortex-X925 et 10 Cortex-A725, 4 004 MHz relevés au maximum</td></tr><tr><td>GPU</td><td>Blackwell RTX, 6 144 cœurs CUDA, 48 SM, RT cores de 4e génération, Tensor cores de 5e génération</td></tr><tr><td>Mémoire</td><td>Jusqu’à 128 Go LPDDR5X à 9 400 MT/s, bus 256 bits, jusqu’à 300 Go/s</td></tr><tr><td>Enveloppe de la puce</td><td>45 à 80 W selon le réglage du constructeur</td></tr><tr><td>Stockage</td><td>SSD NVMe Samsung de 1 To (existe en 2 To)</td></tr><tr><td>Écran</td><td>16 pouces, 3 840 x 2 400 pixels</td></tr><tr><td>Wi-Fi</td><td>Wi-Fi 7 (MediaTek MT7925)</td></tr><tr><td>Batterie</td><td>99,9 Wh</td></tr><tr><td>Système</td><td>Windows 11 Famille on Arm (build 28000), pilote Nvidia 617.42</td></tr></tbody></table><figcaption>Configuration de l’exemplaire testé. Données relevées sur la machine, complétées par la fiche de Nvidia.</figcaption></figure>
+
+
+<h2>Quelles sont les machines de notre comparatif ?</h2>
+
+
+
+<p>En jeu, je confronte le ProArt P16 au <a href="https://www.frandroid.com/marques/framework/3207065_test-framework-laptop-16-2026">Framework Laptop 16</a>, qui associe un Ryzen AI 9 HX 370 et une GeForce RTX 5070 portable de 12 Go. C’est la machine que j’avais sous la main et ça tombe bien.</p>
+
+
+
+<p>En IA locale, ses adversaires sont le <a href="https://www.frandroid.com/marques/apple/3081219_test-de-lapple-macbook-pro-14-m5-pro-2026-la-reference-du-marche-tout-simplement">MacBook Pro M5 Pro</a> d’Apple en 48 Go et les machines à Ryzen AI Max+ 395 d’AMD, surnommé Strix Halo, en 128 Go. J’ai ajouté le <a href="https://www.frandroid.com/marques/asus/3039833_test-du-asus-zenbook-a16-2026-le-snapdragon-x2-elite-extreme-en-exclusivite">Zenbook A16</a> et son Snapdragon X2 Elite Extreme pour un duel Arm contre Arm sous Windows. </p>
+
+
+
+<figure><table><thead><tr><th>Machine</th><th>Puce</th><th>Mémoire</th><th>OS</th></tr></thead><tbody><tr><td>Asus ProArt P16</td><td>RTX Spark N1X (20 cœurs)</td><td>128 Go unifiés</td><td>Windows 11</td></tr><tr><td>Asus ProArt P16 (Vincent)</td><td>RTX Spark N1X</td><td>64 Go unifiés</td><td>Windows 11</td></tr><tr><td>Framework Laptop 16 (2026)</td><td>Ryzen AI 9 HX 370 + RTX 5070 portable 12 Go (100 W max)</td><td>32 Go DDR5-5600</td><td>Windows 11</td></tr><tr><td>MacBook Pro</td><td>Apple M5 Pro, 18 cœurs</td><td>48 Go unifiés</td><td>macOS Golden Gate</td></tr><tr><td>Asus Zenbook A16 (2026)</td><td>Snapdragon X2 Elite Extreme</td><td>48 Go LPDDR5X</td><td>Windows 11</td></tr><tr><td>GMKtec EVO-X2 / EVO-X3</td><td>AMD Ryzen AI Max+ 395 (Strix Halo)</td><td>128 Go unifiés</td><td>Arch Linux</td></tr></tbody></table><figcaption>Voici les machines de comparaison. Les fichiers de modèles d’IA sont identiques d’une machine à l’autre, sauf pour les mesures de Vincent (quantification Q4_K_XL sur certains modèles, llama.cpp b11384).</figcaption></figure>
+
+
+<h2>Processeur : 20 cœurs Arm face à x86 et Apple</h2>
+
+
+
+<p>Ici, on a donc un SoC ARM avec 20 cœurs CPU (10 cœurs performance Cortex-X925 + 10 cœurs efficience Cortex-A725). Il s’agit plus précisément de la puce N1X 675. Regardons ce que donne le CPU.</p>
+
+
+
+<p>Le score mono-cœur mesure la vitesse d’un seul cœur, qui pèse sur la réactivité de Windows et, en jeu, sur le fil principal chargé d’orchestrer chaque image. Le score multi-cœur mesure ce que tous les cœurs abattent ensemble, et compte davantage pour la compilation, l’export vidéo ou le rendu 3D.</p>
+
+
+
+<blockquote>
+<p>Le processeur n’est pas le point fort de la RTX Spark.</p>
+</blockquote>
+
+
+
+<p>Sur un seul cœur, la RTX Spark est la moins rapide du comparatif. Avec 2 635 points dans Geekbench 7, elle se place au niveau du Ryzen AI 9 HX 370 du Framework Laptop 16 (2 699) et du Ryzen AI Max+ 395 (2 742), alors que le Snapdragon X2 Elite Extreme fait 24 % mieux (3 264) et le M5 Pro d’Apple 41 % mieux (3 710).</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-processeur-geekbench-7-mono-coeur.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-processeur-geekbench-7-mono-coeur.png" alt="Graphique Geekbench 7 mono-cœur : RTX Spark 2 635, Zenbook A16 3 264, MacBook Pro M5 Pro 3 710, Framework Laptop 16 2 699"></a><figcaption>En mono-cœur, la RTX Spark se place au niveau des processeurs x86 d’AMD, loin derrière Qualcomm et Apple.</figcaption></figure>
+
+
+
+<p>À plusieurs, les 20 cœurs se rattrapent. Avec 23 462 points, la RTX Spark devance de 35 % le Framework Laptop 16 et ses 12 cœurs, mais reste derrière le Strix Halo (26 370), le Snapdragon X2 Elite Extreme (27 238) et surtout le M5 Pro, qui la dépasse de 45 % (34 083).</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-processeur-geekbench-7-multi-coeur.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-processeur-geekbench-7-multi-coeur.png" alt="Graphique Geekbench 7 multi-cœur : RTX Spark 23 462, Zenbook A16 27 238, MacBook Pro M5 Pro 34 083, Framework Laptop 16 17 331"></a><figcaption>En multi-cœur, les 20 cœurs Arm de la RTX Spark dépassent largement le Ryzen AI 9 HX 370, sans rattraper Qualcomm ni Apple.</figcaption></figure>
+
+
+
+<p>Cinebench 2026, qui tourne en version Arm native, confirme ce classement. En mono-cœur, la RTX Spark (469 points) fait jeu égal avec le Framework (485) et le Strix Halo (461), mais reste 26 % sous le Snapdragon (634). En multi-cœur, elle colle au Snapdragon (6 544 contre 6 852, score issu de notre base) et devance le Framework de 38 % (4 753), tandis que les 16 cœurs Zen 5 du Strix Halo gardent l’avantage avec 7 819 points.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-processeur-cinebench-2026.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-processeur-cinebench-2026.png" alt="Graphique Cinebench 2026 : RTX Spark 6 544 en multi-cœur et 469 en mono-cœur, Zenbook A16 6 852 et 634, Framework Laptop 16 4 753 et 485"></a><figcaption>Cinebench 2026 en version Arm native : la RTX Spark rejoint le Snapdragon X2 Elite Extreme en multi-cœur.</figcaption></figure>
+
+
+
+<p>Le processeur n’est donc pas le point fort de la puce. Il reste très correct pour créer ou travailler, mais son retrait en mono-cœur peut peser quand un jeu x64 passe par l’émulation.</p>
+
+
+<h2>Carte graphique : le niveau d’une RTX 5070 portable</h2>
+
+
+
+<p>Pour mesurer le GPU, j’utilise les tests de Geekbench 7, qui passent par plusieurs interfaces : CUDA, propre à Nvidia, Vulkan et OpenCL, universelles, ou Metal chez Apple. Comme un score ne se compare qu’avec un autre obtenu sur la même interface, la lecture demande un peu d’attention.</p>
+
+
+
+<p>La RTX Spark se situe au niveau d’une RTX 5070 portable dédiée, avec 184 550 points contre 189 503 en CUDA (−3 %) et 109 956 contre 112 365 en Vulkan (−2 %). Seul OpenCL la place nettement en retrait, de 15 % (117 532 contre 138 447). Le Strix Halo fait jeu égal en Vulkan (110 943), alors que le GPU Adreno du Snapdragon est deux fois moins rapide (52 792).</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-gpu-geekbench-7-calcul-graphique.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-gpu-geekbench-7-calcul-graphique.png" alt="Graphique Geekbench 7 GPU : RTX Spark 184 550 en CUDA et 109 956 en Vulkan, Framework Laptop 16 189 503 et 112 365, Zenbook A16 52 792 en Vulkan"></a><figcaption>En calcul pur, le GPU de la RTX Spark fait jeu égal avec la RTX 5070 portable du Framework Laptop 16.</figcaption></figure>
+
+
+
+<h3>3DMark : match nul avec la RTX 5070 portable</h3>
+
+
+
+<p>Pour compléter ces mesures, j’ai passé trois tests de 3DMark sur les deux machines, avec le même pilote 617.42. Ils tournent en Arm natif sur la RTX Spark, puisque seule l’interface de 3DMark est en x64, et le fichier de résultat de Port Royal confirme bien le lancement de la version ARM64 du test. En rendu classique, Steel Nomad donne une égalité parfaite, avec 2 970 points pour la RTX Spark contre 2 974 pour la RTX 5070 portable. En ray tracing, le résultat dépend du test : la RTX Spark gagne de 6 % dans Port Royal, le plus ancien des deux (9 135 contre 8 603), mais perd de 12 % dans Speed Way, plus récent et plus lourd (2 970 contre 3 391).</p>
+
+
+
+<figure><table><thead><tr><th>3DMark</th><th>RTX Spark</th><th>Framework 16 (RTX 5070)</th><th>Référence Nvidia</th></tr></thead><tbody><tr><td>Steel Nomad (rendu classique)</td><td>2 970</td><td><strong>2 974</strong></td><td>2 991</td></tr><tr><td>Speed Way (ray tracing, DirectX 12 Ultimate)</td><td>2 970</td><td><strong>3 391</strong></td><td>3 072</td></tr><tr><td>Port Royal (ray tracing)</td><td><strong>9 135</strong></td><td>8 603</td><td>9 112</td></tr></tbody></table><figcaption>Scores 3DMark du 15 octobre, pilote 617.42 sur les deux machines, une passe par test. Les deux scores identiques de la RTX Spark en Steel Nomad et en Speed Way sont une coïncidence, vérifiée dans les fichiers de résultat.</figcaption></figure>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-3dmark-contre-rtx-5070-1.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-3dmark-contre-rtx-5070-1.png" alt="Graphique 3DMark RTX Spark contre Framework Laptop 16 RTX 5070 : égalité en Steel Nomad, −12 % en Speed Way, +6 % en Port Royal"></a><figcaption>Dans 3DMark, la RTX Spark fait match nul avec la RTX 5070 portable : égalité en Steel Nomad, avantage en Port Royal, retard en Speed Way.</figcaption></figure>
+
+
+
+<p>Une piste possible, que je n’ai pas pu vérifier, est que Speed Way profite davantage de la GDDR7 de la RTX 5070, qui offre 31 à 39 % de bande passante en plus. Mes scores rejoignent en tout cas ceux de Nvidia, à 0,3 à 3,3 % près.</p>
+
+
+
+<p>Ce match nul surprend un peu, puisque la RTX Spark compte 6 144 cœurs CUDA, autant qu’une RTX 5070 de bureau et davantage que les 4 608 annoncés pour la version portable. Elle ne semble pas en profiter, probablement parce que son GPU travaille avec moins d’énergie, 44 à 63 W relevés en IA et en génération d’images contre 97 à 100 W pour la RTX 5070, et avec une mémoire moins rapide que la GDDR7.</p>
+
+
+
+<blockquote>
+<p>En calcul pur, le GPU de la RTX Spark fait jeu égal avec une RTX 5070 portable.</p>
+</blockquote>
+
+
+<h2>Mémoire : près de trois fois le débit d’un PC x86</h2>
+
+
+
+<p>La bande passante mémoire désigne la quantité de données qu’une puce peut lire ou écrire chaque seconde. En IA, elle conditionne directement la vitesse d’écriture, car le modèle entier est relu pour chaque mot généré. Je l’ai mesurée séparément côté processeur, avec le test STREAM compilé en Arm natif, et côté GPU, avec des tableaux de 1 Gio.</p>
+
+
+
+<blockquote>
+<p>Pour l’IA locale, la quantité de mémoire compte souvent plus que sa vitesse.</p>
+</blockquote>
+
+
+
+<p>Côté processeur, la RTX Spark atteint 139,8 Go/s, soit près de trois fois la DDR5-5600 du Framework Laptop 16 (48,0 Go/s) et un peu plus que le Snapdragon (120,5 Go/s). Le M5 Pro fait bien mieux avec 250,9 Go/s. Un seul cœur Cortex-X925 ne tire en revanche que 45,2 Go/s, contre 72,5 pour un cœur du Snapdragon et 132 pour un cœur du M5 Pro.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-memoire-bande-passante-processeur.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-memoire-bande-passante-processeur.png" alt="Graphique STREAM Triad tous les cœurs : RTX Spark 139,8 Go/s, Zenbook A16 120,5 Go/s, Framework Laptop 16 48,0 Go/s"></a><figcaption>Côté processeur, la mémoire unifiée de la RTX Spark offre près de trois fois le débit de la DDR5 d’un PC portable x86.</figcaption></figure>
+
+
+
+<p>Côté GPU, la RTX Spark tire 249 Go/s en triad, 258 en copie et 274 en lecture seule, soit 83 à 91 % des 300 Go/s annoncés et presque le double de ce qu’obtient le processeur. Le chiffre officiel correspond en effet au bus complet, que seul le GPU parvient à approcher.</p>
+
+
+
+<p>Le MacBook Pro M5 Pro fait 7 à 10 % mieux, avec 275 Go/s. La GDDR7 de la RTX 5070 portable va nettement plus vite (346 Go/s en triad, soit 31 à 39 % de plus), mais elle plafonne à 12 Go, alors que la RTX Spark offre à son GPU une mémoire sept à dix fois plus grande.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-memoire-bande-passante-gpu.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-memoire-bande-passante-gpu.png" alt="Graphique bande passante GPU et processeur : RTX Spark 248,8 et 139,8 Go/s, MacBook Pro M5 Pro 274,9 et 250,9 Go/s, Framework Laptop 16 345,7 et 48,0 Go/s"></a><figcaption>La RTX 5070 portable dispose d’une mémoire plus rapide, la RTX Spark d’une mémoire beaucoup plus grande.</figcaption></figure>
+
+
+
+<h3>Combien de mémoire pour l’IA</h3>
+
+
+
+<p>La part réservée au GPU se règle dans l’application Nvidia, en Gio (1 Gio vaut environ 1,07 Go). J’ai travaillé avec 91 Gio dédiés, ce qui laisse 35,5 Go à Windows, et en ajoutant la mémoire partagée, llama.cpp voit au total 109,7 Gio. En face, le ProArt 64 Go de Vincent expose environ 55,9 Go à CUDA, le MacBook Pro M5 Pro 48 Go laisse environ 40 Go à son GPU par défaut, et la RTX 5070 dispose de ses 12 Go.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-memoire-disponible-pour-ia.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-memoire-disponible-pour-ia.png" alt="Graphique de la mémoire accessible aux modèles d'IA : RTX Spark environ 110 Gio, ProArt P16 64 Go 56 Go, MacBook Pro M5 Pro 40 Go, Framework Laptop 16 12 Go"></a><figcaption>La quantité de mémoire que le GPU peut consacrer à un modèle d’IA. La version 128 Go de la RTX Spark ouvre la porte aux plus gros modèles.</figcaption></figure>
+
+
+
+<p>J’ai aussi essayé de pousser le curseur à 96 Gio, sans aucun gain. Windows ne garde alors que 30,5 Go pour lui-même, ce qui complique certains chargements, comme on le verra avec le plus gros modèle du test. Pour l’IA, le bon réglage se situe entre 85 et 91 Gio. Pour les jeux, je suis redescendu à 85 Gio, ce qui laisse 41,5 Go à Windows, et NBA 2K27 détecte alors 84,99 Go de mémoire vidéo, bien plus qu’un jeu n’en demande.</p>
+
+
+
+<h3>SSD et Wi-Fi</h3>
+
+
+
+<p>Le SSD Samsung de 1 To lit à 7 083 Mo/s en séquentiel et atteint 317 000 opérations par seconde en lecture aléatoire de blocs de 4 Ko (103 000 en écriture), un peu mieux que le Framework Laptop 16 et le Zenbook A16, qui lisent à environ 6 800 Mo/s.</p>
+
+
+
+<p>L’écriture séquentielle mérite une nuance. Mesurée à 5 485 Mo/s le matin, elle est tombée entre 630 et 1 890 Mo/s en fin de journée, après environ 300 Go écrits. L’hypothèse la plus probable est la saturation du cache SLC, la zone rapide qui absorbe les écritures avant de les recopier sur le reste du SSD.</p>
+
+
+
+<p>En Wi-Fi 7, avec la carte MediaTek connectée en 5 GHz, la machine a soutenu 185 à 195 Mo/s pendant les téléchargements de jeux et de modèles, avec un pic à 217 Mo/s, une valeur indicative qui dépend surtout de la box et des serveurs.</p>
+
+
+<h2>IA locale : le vrai terrain de la RTX Spark</h2>
+
+
+
+<p>Nvidia mise d’abord sur l’IA locale, et c’est logiquement la partie la plus longue de ce test. Commençons par quelques notions qui vous aideront à bien lire les chiffres qui suivent.</p>
+
+
+
+<p>Un modèle de langage (LLM) produit son texte par petits morceaux appelés <a href="https://www.frandroid.com/culture-tech/intelligence-artificielle/3133853_cest-quoi-un-token-dans-lia-tout-comprendre-a-une-notion-primordiale">tokens</a>, qui correspondent à un mot ou à un fragment de mot, et sa vitesse se mesure donc en tokens par seconde (tok/s). Pour tenir en mémoire, les modèles sont aussi « quantifiés », c’est-à-dire stockés sur 4 bits au lieu de 16, ce qui divise leur taille par quatre au prix d’une légère perte de précision.</p>
+
+
+
+<p>Il faut enfin distinguer deux phases. La lecture, ou « <em>prefill</em> », correspond au moment où le modèle ingère la question, un document ou du code, et dépend surtout de la puissance de calcul. L’écriture de la réponse dépend, elle, surtout de la bande passante mémoire. Sauf mention contraire, toutes les mesures ont été faites avec llama.cpp (b11582) en CUDA, en mode Performance, sur secteur, avec 91 Gio réservés au GPU.</p>
+
+
+
+<h3>Écriture : la vitesse d’un seul flux</h3>
+
+
+
+<figure><table><thead><tr><th>Écriture (tok/s)</th><th>RTX Spark 128 Go</th><th>ProArt 64 Go (Vincent)</th><th>MacBook Pro M5 Pro</th><th>Framework 16 (RTX 5070)</th><th>Strix Halo (Vulkan)</th><th>Snapdragon X2</th></tr></thead><tbody><tr><td>Qwen3-8B (5 Go)</td><td>53,1</td><td>–</td><td>54,4</td><td><strong>66,5</strong></td><td>45,0</td><td>28,5</td></tr><tr><td>Qwen3.8-27B (16,5 Go)</td><td>16,3</td><td>16,0</td><td><strong>16,5</strong></td><td>7,1</td><td>13,2</td><td>7,5</td></tr><tr><td>Qwen3.6-35B-A3B (22 Go)</td><td><strong>74,8</strong></td><td>71,5</td><td>68,7</td><td>50,9</td><td>64,7</td><td>31,0</td></tr><tr><td>gpt-oss-120b (63 Go)</td><td><strong>63,3</strong></td><td>ne charge pas</td><td>ne charge pas</td><td>ne charge pas</td><td>56,7</td><td>ne charge pas</td></tr></tbody></table><figcaption>Modèles quantifiés en 4 bits. Framework Laptop 16 mesuré avec Ollama. Snapdragon : meilleur moteur entre processeur et GPU (OpenCL).</figcaption></figure>
+
+
+
+<p>La RTX Spark et le MacBook Pro M5 Pro font jeu égal, avec 53,1 contre 54,4 tok/s sur Qwen3-8B et 16,3 contre 16,5 sur Qwen3.8-27B, et la puce de Nvidia prend un léger avantage sur Qwen3.6-35B-A3B (74,8 contre 68,7). Ce résultat est logique, car leurs bandes passantes côté GPU sont proches. </p>
+
+
+
+<p>D’ailleurs, un calcul rapide le confirme : relire 53 fois par seconde les 5 Go de Qwen3-8B demande environ 265 Go/s, et pour Qwen3.8-27B (16,5 Go), le plafond théorique à 300 Go/s serait d’environ 18,2 tok/s, alors que je mesure 16,1 à 16,3.</p>
+
+
+
+<blockquote>
+<p>Dès qu’un modèle dépasse 12 Go, la RTX 5070 s’effondre, et la RTX Spark prend le relais.</p>
+</blockquote>
+
+
+
+<p>Avec le Framework Laptop 16, on voit bien l’autre côté du problème. Tant que le modèle tient dans ses 12 Go, sa RTX 5070 écrit 24 % plus vite (sous Ollama) grâce à la GDDR7, mais dès que le modèle déborde, une partie doit être stockée dans la mémoire du processeur, bien plus lente, et la vitesse s’effondre à 7,1 tok/s sur le 27B, 2,3 fois moins que la RTX Spark. Face au Strix Halo, la RTX Spark écrit 12 à 23 % plus vite, tandis que le Snapdragon est 1,9 à 2,4 fois plus lent, son GPU Adreno n’écrivant pas plus vite que son propre processeur.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-vitesse-ecriture.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-vitesse-ecriture.png" alt="Graphique vitesse d'écriture IA selon la taille du modèle, en tokens par seconde, pour la RTX Spark, le ProArt P16 64 Go, le MacBook Pro M5 Pro, le Framework Laptop 16 et le Zenbook A16"></a><figcaption>Vitesse d’écriture sur trois modèles. La RTX 5070 portable mène sur le petit modèle, puis décroche dès que le modèle dépasse ses 12 Go de mémoire vidéo.</figcaption></figure>
+
+
+
+<p>Qwen3.6-35B-A3B est particulièrement rapide pour sa taille, car il s’agit d’un modèle « MoE », pour mélange d’experts. Sur ses 35 milliards de paramètres, il n’en active qu’environ 3 milliards pour chaque token (le « A3B » de son nom), ce qui lui permet d’aller plus vite que le 27B pourtant plus petit.</p>
+
+
+<div data-nosnippet="">
+                    <div>
+                <picture><source data-srcset="https://img.frandroid.com/www.frandroid.com/wp-content/uploads/2019/10/hello_bank_logo.png?webp=1&amp;key=1bc55184 273w,https://img.frandroid.com/www.frandroid.com/wp-content/uploads/2019/10/hello_bank_logo.png?webp=1&amp;resize=136,149&amp;key=1bc55184 136w,https://img.frandroid.com/www.frandroid.com/wp-content/uploads/2019/10/hello_bank_logo.png?webp=1&amp;key=1bc55184 546w" type="image/webp"><img decoding="async" width="273" height="300" loading="lazy" alt="Hello_bank!_Logo" title="Hello_bank!_Logo" src="data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27273%27 height=%27300%27/%3E" data-src="https://img.frandroid.com/www.frandroid.com/wp-content/uploads/2019/10/hello_bank_logo.png?key=1bc55184" data-srcset="https://img.frandroid.com/www.frandroid.com/wp-content/uploads/2019/10/hello_bank_logo.png?key=1bc55184 273w,https://img.frandroid.com/www.frandroid.com/wp-content/uploads/2019/10/hello_bank_logo.png?resize=136,149&amp;key=1bc55184 136w,https://img.frandroid.com/www.frandroid.com/wp-content/uploads/2019/10/hello_bank_logo.png?key=1bc55184 546w"></picture>            </div>
+                            <div>
+                <picture><source data-srcset="https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/10/frandroid-1375x492-1-1200x429.jpg?webp=1&amp;key=4d7ccb53 1200w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/10/frandroid-1375x492-1-1200x429.jpg?webp=1&amp;resize=928,331&amp;key=4d7ccb53 928w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/10/frandroid-1375x492-1-1200x429.jpg?webp=1&amp;resize=768,274&amp;key=4d7ccb53 768w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/10/frandroid-1375x492-1-1200x429.jpg?webp=1&amp;resize=480,171&amp;key=4d7ccb53 480w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/10/frandroid-1375x492-1-768x275.jpg?webp=1&amp;resize=600,214&amp;key=f808f13d 600w,https://img.frandroid.com/www.frandroid.com/wp-content/uploads/2026/10/frandroid-1375x492-1.jpg?webp=1&amp;key=df72f30c 2400w" type="image/webp"><img decoding="async" width="1200" height="429" loading="lazy" alt="Frandroid 1375×492" title="Frandroid 1375×492" src="data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%271200%27 height=%27429%27/%3E" data-src="https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/10/frandroid-1375x492-1-1200x429.jpg?key=4d7ccb53" data-srcset="https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/10/frandroid-1375x492-1-1200x429.jpg?key=4d7ccb53 1200w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/10/frandroid-1375x492-1-1200x429.jpg?resize=928,331&amp;key=4d7ccb53 928w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/10/frandroid-1375x492-1-1200x429.jpg?resize=768,274&amp;key=4d7ccb53 768w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/10/frandroid-1375x492-1-1200x429.jpg?resize=480,171&amp;key=4d7ccb53 480w,https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/10/frandroid-1375x492-1-768x275.jpg?resize=600,214&amp;key=f808f13d 600w,https://img.frandroid.com/www.frandroid.com/wp-content/uploads/2026/10/frandroid-1375x492-1.jpg?key=df72f30c 2400w"></picture>            </div>
+                <div>
+                            <p>
+                    Jusqu’à 330€ d’avantages offerts !                </p>
+                                        <p>
+                    Jusqu’à 330€ d’avantages avec nos offres Hello Prime ou Hello Prime Duo, dont 80€ cash à l’ouverture de compte !                 </p>
+                                        
+                    </div>
+    </div>
+
+
+
+
+<p>Sur le Framework, le Contrôle intelligent des applications de Windows bloquait llama.cpp, qui n’est pas signé. Je l’ai donc mesuré sous Ollama, puis j’ai repassé la RTX Spark sous Ollama avec les mêmes fichiers pour comparer les deux machines à armes égales.</p>
+
+
+
+<figure><table><thead><tr><th>Ollama, écriture / lecture (tok/s)</th><th>RTX Spark 128 Go</th><th>Framework 16 (RTX 5070 12 Go)</th></tr></thead><tbody><tr><td>Qwen3-8B</td><td>53,5 / 2 392</td><td><strong>66,5</strong> / <strong>2 629</strong></td></tr><tr><td>Qwen3.8-27B</td><td><strong>16,3</strong> / <strong>620</strong></td><td>7,1 / 152</td></tr><tr><td>Qwen3.6-35B-A3B</td><td><strong>75,7</strong> / <strong>734</strong></td><td>50,9 / 611</td></tr></tbody></table><figcaption>Duel sous Ollama, mêmes fichiers GGUF, médiane de trois passes.</figcaption></figure>
+
+
+
+<p>Et il y a le choix du moteur qui pèse aussi dans la balance. Sur la RTX Spark, llama.cpp en Vulkan écrit 18 à 28 % moins vite qu’en CUDA (38,4 contre 53,1 tok/s sur le 8B, 51,7 contre 63,3 sur gpt-oss-120b), ce qui confirme l’intérêt de l’écosystème CUDA mis en avant par Nvidia. Cela serait dommage de s’en passer si vous avez des applications à faire tourner.</p>
+
+
+
+<h3>Lecture : la puissance de calcul fait la différence</h3>
+
+
+
+<figure><table><thead><tr><th>Lecture du prompt (tok/s)</th><th>RTX Spark</th><th>MacBook Pro M5 Pro</th><th>Strix Halo (ROCm)</th></tr></thead><tbody><tr><td>Qwen3-8B, 512 tokens</td><td><strong>3 216</strong></td><td>1 443</td><td>1 181</td></tr><tr><td>Qwen3-8B, 16 384 tokens</td><td><strong>2 581</strong></td><td>860</td><td>966</td></tr><tr><td>Qwen3.8-27B, 512 tokens</td><td><strong>911</strong></td><td>395</td><td>400</td></tr><tr><td>Qwen3.8-27B, 16 384 tokens</td><td><strong>837</strong></td><td>329</td><td>344</td></tr><tr><td>Qwen3.6-35B-A3B, 512 tokens</td><td><strong>2 633</strong></td><td>1 831</td><td>1 518</td></tr><tr><td>gpt-oss-120b, 512 tokens</td><td><strong>2 084</strong></td><td>ne charge pas</td><td>986</td></tr></tbody></table><figcaption>llama.cpp, CUDA sur la RTX Spark, Metal sur le Mac, ROCm sur le Strix Halo. Sur les prompts courts, Vulkan fait un peu mieux que ROCm côté AMD (1 343 tok/s sur le 8B, 1 089 sur gpt-oss-120b).</figcaption></figure>
+
+
+
+<p>La lecture sollicite surtout le calcul, et les cœurs Tensor de la RTX Spark font ici la différence. Elle lit un prompt court 1,4 à 2,3 fois plus vite que le MacBook Pro M5 Pro, et l’écart grimpe à 2,5 à 3 fois sur un texte de 16 384 tokens, l’équivalent d’un long rapport. Avec Qwen3-8B, elle ingère ce texte en 6,3 secondes contre 19 pour le Mac, et avec Qwen3.8-27B, il lui faut 20 secondes, contre 50 pour le Mac et 48 pour le Strix Halo.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-lecture-long-texte.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-lecture-long-texte.png" alt="Graphique vitesse de lecture d'un texte de 16 384 tokens : RTX Spark 2 581 et 837 tok/s, MacBook Pro M5 Pro 860 et 329 tok/s"></a><figcaption>Sur un long texte, la RTX Spark lit 2,5 à 3 fois plus vite que le MacBook Pro M5 Pro.</figcaption></figure>
+
+
+
+<p>Cet avantage compte beaucoup pour les agents IA, qui relisent des fichiers entiers ou des PDF à chaque étape, car plus la lecture est rapide, plus la première réponse arrive vite. Côté AMD, il faut donc aller vers ROCm, bien plus rapide que Vulkan sur les longs textes (966 contre 251 tok/s à 16 384 tokens sur le 8B).</p>
+
+
+
+<blockquote>
+<p>Sur les modèles courants, aucune machine de ce comparatif ne lit aussi vite que la RTX Spark, un atout décisif pour les agents IA.</p>
+</blockquote>
+
+
+
+<h3>Les gros modèles : ce qu’ouvrent les 128 Go</h3>
+
+
+
+<p>Les 128 Go servent d’abord à charger des modèles hors de portée d’un PC portable classique. gpt-oss-120b, le modèle ouvert d’OpenAI, pèse 63 Go en MXFP4 et tourne pourtant à 63,3 tok/s en écriture et 2 084 en lecture, car il s’agit lui aussi d’un MoE qui n’active qu’environ 5 milliards de paramètres par token. Le MacBook Pro M5 Pro 48 Go et le Framework ne peuvent pas le charger, alors que le Strix Halo atteint 56,7 tok/s en Vulkan (51,5 en ROCm), avec une lecture deux fois plus lente (1 089 tok/s au mieux).</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-gros-modeles-128-go.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-gros-modeles-128-go.png" alt="Graphique vitesse d'écriture de la RTX Spark 128 Go : gpt-oss-120b 63,3 tok/s, Qwen3.8 Flash-Next 30,8 tok/s avec la recette Nvidia, Qwen3.6-35B-A3B 74,8 tok/s, Qwen3.8-27B 16,3 tok/s"></a><figcaption>Vitesse d’écriture de la RTX Spark 128 Go, des modèles moyens aux plus gros. En vert, les modèles que ni le MacBook Pro 48 Go ni le Framework Laptop 16 ne peuvent charger. Flash-Next tourne ici avec la recette de Nvidia.</figcaption></figure>
+
+
+
+<p>Qwen3.8 Flash-Next, le plus gros modèle de ce test, m’a donné plus de fil à retordre. Nvidia en fait la vitrine de la version 128 Go, car ce MoE de 125 milliards de paramètres approcherait, selon les chiffres d’Artificial Analysis repris par la marque, un modèle cloud comme Claude Sonnet 5.5 en réglage intermédiaire. Dans sa version UD-IQ4_XS, il pèse 93,7 Go, et mes premiers essais de chargement en CUDA se sont soldés par un message de mémoire insuffisante, alors que le modèle tenait dans la mémoire réservée au GPU.</p>
+
+
+
+<p>L’explication est venue d’une piste des ingénieurs de Nvidia, qui m’ont simplement demandé si la machine disposait d’un fichier d’échange. Sur la RTX Spark, la mémoire réservée au GPU entre aussi dans la « limite de validation » de Windows, qui additionne la mémoire vive vue par le système et le fichier d’échange stocké sur le SSD. Avec 96 Gio réservés au GPU, Windows ne voit plus que 30,5 Go de mémoire vive, si bien que le bloc de 64,2 Go réclamé par le modèle doit être couvert en grande partie par ce fichier d’échange. Or mon SSD de 1 To, rempli de modèles d’IA et de jeux, n’avait plus qu’une vingtaine de Go libres, et Windows ne pouvait pas agrandir le fichier.</p>
+
+
+
+<p>Après avoir libéré une centaine de Go et redémarré, sans toucher à aucun autre réglage, la même commande a chargé le modèle en CUDA. Pendant le chargement, Windows a fait passer son fichier d’échange d’environ 41 à 78 Go. Mesuré avec llama-bench, Flash-Next écrit alors 25,6 tok/s et lit 320 tok/s, contre 22,3 et 291 en Vulkan. </p>
+
+
+
+<blockquote>
+<p>Le plus gros modèle du test refusait de se charger à cause d’un SSD trop plein, et Windows ne le dit nulle part.</p>
+</blockquote>
+
+
+
+<p>Nvidia publie par ailleurs une recette dédiée à ce modèle sur sa page <a rel="noopener" href="https://nvidia.github.io/local-ai-inference-recipes/hardware/rtx-spark/index.html?model=qwen%2Fqwen3.8-flash-next&amp;os=windows&amp;backend=llama-cpp&amp;memory=78&amp;precision=iq4-xs&amp;variant=vision-mtp&amp;memoryConfig=128">« Local AI Inference Recipes »,</a> qu’il qualifie d’expérimentale et pour laquelle il ne donne aucun débit. Elle passe par llama-server, le serveur de llama.cpp, qui répartit lui-même le modèle entre la mémoire du GPU et le reste du système, avec un contexte de 262 144 tokens et un décodage spéculatif assuré par la tête MTP intégrée au modèle, qui propose trois tokens à la fois. Je l’ai suivie sur secteur, avec 85 Gio réservés au GPU, une version plus récente de llama.cpp (b11582 au lieu de b11370) et sans le module de vision, en reprenant les trois questions du test de décodage spéculatif décrit plus bas. Et j’ai soumis trois prompts avec des objectifs différents.</p>
+
+
+
+<figure><table><thead><tr><th>Flash-Next, recette Nvidia (CUDA)</th><th>Sans MTP (tok/s)</th><th>Avec MTP (tok/s)</th><th>Gain</th><th>Propositions acceptées</th></tr></thead><tbody><tr><td>Code Python</td><td>29,4 et 31,4</td><td><strong>49,0 et 47,0</strong></td><td>x 1,6</td><td>78 % et 72 %</td></tr><tr><td>Raisonnement (horaire de train)</td><td>31,0 et 31,7</td><td><strong>51,4 et 50,2</strong></td><td>x 1,6</td><td>81 % et 78 %</td></tr><tr><td>Prose en français</td><td>30,6 et 30,9</td><td><strong>40,7 et 39,7</strong></td><td>x 1,3</td><td>58 % et 56 %</td></tr></tbody></table><figcaption>Qwen3.8 Flash-Next UD-IQ4_XS (93,7 Go), llama-server en CUDA, 85 Gio réservés au GPU, deux passages par question.</figcaption></figure>
+
+
+
+<p>Avec cette recette, le modèle se charge en 35 secondes et écrit 30,8 tok/s en moyenne sans prédiction. La tête MTP le pousse ensuite entre 40 et 51 tok/s (46,3 en moyenne), avec un gain plus net sur le code et le raisonnement que sur la prose en français, comme pour les autres modèles. nvidia-smi relève alors 76,3 Go de mémoire GPU occupée avec MTP et 71,3 Go sans, pour un modèle de 93,7 Go, ce qui confirme que le serveur ne place pas tout dans la mémoire réservée au GPU.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-flash-next-recette-nvidia.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-flash-next-recette-nvidia.png" alt="Graphique Qwen3.8 Flash-Next : RTX Spark en CUDA avec MTP 46,3 tok/s, RTX Spark en CUDA 30,8 tok/s, Strix Halo en Vulkan 28,5 tok/s, RTX Spark en Vulkan 22,3 tok/s"></a><figcaption>Sur Qwen3.8 Flash-Next, la recette de Nvidia permet à la RTX Spark de dépasser le Strix Halo. Les méthodes de mesure diffèrent, l’écart donne un ordre de grandeur.</figcaption></figure>
+
+
+
+<p>Face au Ryzen AI Max+ 395, la comparaison demande un peu de prudence. Avec la recette de Nvidia, la RTX Spark écrit un peu plus vite que le Strix Halo (30,8 contre 28,5 tok/s), mais les deux chiffres ne viennent pas du même outil. </p>
+
+
+
+<p>À méthode égale, avec llama-bench, la puce d’AMD garde une courte avance en écriture (28,5 contre 25,6 tok/s) et lit ce modèle plus vite (572 contre 320 tok/s). Sur ce modèle géant, la RTX Spark tient donc tête à son rival, à condition de suivre la recette de Nvidia.</p>
+
+
+
+<h3>Décodage spéculatif : l’astuce de Nvidia</h3>
+
+
+
+<p>Nvidia pousse une technique appelée décodage spéculatif, dans laquelle un petit modèle « brouillon » devine plusieurs tokens d’avance, que le gros modèle se contente ensuite de valider ou de corriger en une seule passe. J’ai appliqué la recette de Nvidia, avec Qwen3.8-27B et le brouillon DFlash2 en CUDA, sur trois questions différentes, avec des réponses de 1 024 tokens au plus et la réflexion désactivée.</p>
+
+
+
+<figure><table><thead><tr><th>Type de question</th><th>Avec brouillon (tok/s)</th><th>Sans brouillon (tok/s)</th><th>Gain</th><th>Tokens devinés acceptés</th></tr></thead><tbody><tr><td>Code Python</td><td><strong>56,7</strong></td><td>16,1</td><td>× 3,5</td><td>64 %</td></tr><tr><td>Raisonnement (horaire de train)</td><td><strong>49,6</strong></td><td>16,1</td><td>× 3,1</td><td>54 %</td></tr><tr><td>Prose en français</td><td><strong>31,4</strong></td><td>16,1</td><td>× 2,0</td><td>29 %</td></tr></tbody></table><figcaption>Qwen3.8-27B Q4 avec le brouillon DFlash2, RTX Spark 128 Go, trois passages par question.</figcaption></figure>
+
+
+
+<p>Le gain dépend beaucoup du contenu. Le code et le raisonnement, très prévisibles, vont 3 à 3,5 fois plus vite, alors que la prose en français se contente d’un doublement, car moins d’un tiers des propositions du brouillon y sont acceptées. Dans tous les cas, le modèle 27B passe d’un rythme poussif à une vitesse de lecture confortable.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-decodage-speculatif-dflash.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-decodage-speculatif-dflash.png" alt="Graphique décodage spéculatif sur Qwen3.8-27B : code Python 56,7 contre 16,1 tok/s, raisonnement 49,6 contre 16,1, texte en français 31,4 contre 16,1"></a><figcaption>Le décodage spéculatif multiplie la vitesse par 3,5 sur du code et par 2 sur un texte en français.</figcaption></figure>
+
+
+
+<p>Nvidia annonce 23,81 tok/s pour ce modèle avec SpeedBench, son outil de mesure maison. Sur son exemplaire 64 Go, Vincent a mesuré 23,9 à 28,2 tok/s en conversation réelle, avec un brouillon MTP et la réflexion activée, ce qui correspond au niveau annoncé, voire un peu plus.</p>
+
+
+
+<h3>Plusieurs agents en même temps</h3>
+
+
+
+<p>Un agent IA lance parfois des sous-agents, et une même machine peut aussi servir plusieurs utilisateurs à la fois. J’ai donc mesuré la vitesse d’écriture cumulée lorsque 1, 4, 8 ou 16 requêtes arrivent en même temps, chacune lisant 512 tokens et en écrivant 128.</p>
+
+
+
+<figure><table><thead><tr><th>Qwen3-8B, écriture cumulée (tok/s)</th><th>1 requête</th><th>4 requêtes</th><th>8 requêtes</th><th>16 requêtes</th></tr></thead><tbody><tr><td>RTX Spark</td><td>49,8</td><td><strong>178,7</strong></td><td><strong>293,1</strong></td><td><strong>510,2</strong></td></tr><tr><td>Strix Halo (ROCm)</td><td>41,7</td><td>130,7</td><td>158,4</td><td>384,0</td></tr><tr><td>MacBook Pro M5 Pro</td><td><strong>54,0</strong></td><td>148,8</td><td>270,1</td><td>309,6</td></tr></tbody></table><figcaption>llama-batched-bench, 512 tokens lus et 128 écrits par requête.</figcaption></figure>
+
+
+
+<p>Avec une seule requête, le Mac garde un léger avantage, mais la puissance de calcul de la RTX Spark reprend le dessus dès que la charge augmente. À 16 requêtes, elle écrit 510 tok/s au total, 65 % de plus que le MacBook Pro M5 Pro et 33 % de plus que le Strix Halo, et l’écart reste du même ordre avec Qwen3.8-27B (111 tok/s, contre 89,6 et 67). Côté AMD, Vulkan fait toutefois mieux que ROCm à 4 et 8 requêtes (238 tok/s à 8), ce qui ramène dans ce cas l’avance de la RTX Spark à 23 %.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-plusieurs-agents-en-parallele.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-plusieurs-agents-en-parallele.png" alt="Graphique écriture cumulée sur Qwen3-8B selon le nombre de requêtes simultanées, pour la RTX Spark, le Strix Halo et le MacBook Pro M5 Pro"></a><figcaption>À 16 requêtes simultanées, la RTX Spark sert 65 % de tokens en plus que le MacBook Pro M5 Pro.</figcaption></figure>
+
+
+
+<h3>La gamme de modèles du labo</h3>
+
+
+
+<p>J’ai aussi repassé la série de modèles Ollama que nous utilisons pour tous les mini PC et PC portables testés à la rédaction. La RTX Spark y écrit 11 à 20 % plus vite que le GMKtec EVO-X3 et son Ryzen AI Max+ 395, 10 à 25 % plus vite que l’EVO-X2, et 57 à 77 % plus vite que le Mac mini M6 en 24 Go. Ces chiffres ne doivent pas être mélangés avec ceux de llama.cpp, puisque sur gpt-oss-120b, l’EVO-X2 fait par exemple 35,7 tok/s sous Ollama contre 56,7 en llama.cpp Vulkan.</p>
+
+
+
+<figure><table><thead><tr><th>Ollama, écriture (tok/s)</th><th>RTX Spark</th><th>GMKtec EVO-X3</th><th>GMKtec EVO-X2</th><th>Mac mini M6</th></tr></thead><tbody><tr><td>llama3.2:3b</td><td><strong>108,0</strong></td><td>96,7</td><td>98,1</td><td>69,0</td></tr><tr><td>qwen2.5:7b</td><td><strong>57,3</strong></td><td>47,8</td><td>45,7</td><td>33,1</td></tr><tr><td>gemma2:9b</td><td><strong>44,3</strong></td><td>–</td><td>–</td><td>25,0</td></tr><tr><td>qwen3:30b</td><td><strong>103,4</strong></td><td>90,3</td><td>92,6</td><td>61,6</td></tr><tr><td>qwen3-coder:30b</td><td><strong>98,2</strong></td><td>88,1</td><td>89,4</td><td>58,0</td></tr></tbody></table><figcaption>Ollama 0.40.3, 200 tokens écrits, médiane de trois passes.</figcaption></figure>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-gamme-ollama-labo-frandroid.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-ia-gamme-ollama-labo-frandroid.png" alt="Graphique gamme de modèles Ollama du labo : RTX Spark, GMKtec EVO-X3 et Mac mini M6 sur llama3.2 3B, qwen2.5 7B, qwen3 30B et qwen3-coder 30B"></a><figcaption>Sur la gamme de modèles du labo, la RTX Spark devance l’EVO-X3 de 11 à 20 % (10 à 25 % face à l’EVO-X2).</figcaption></figure>
+
+
+
+<h3>Une vitesse stable sur la durée</h3>
+
+
+
+<p>Pour vérifier la tenue sur la durée, j’ai enchaîné 30 réponses de 1 024 tokens avec Qwen3.6-35B-A3B, soit 7 minutes de génération continue. La vitesse est restée entre 75,2 et 76,8 tok/s, avec un GPU à 2 353 MHz et 43,8 W en moyenne (50,2 W au maximum), sans jamais dépasser 69 °C. Je n’ai relevé aucun bridage, et l’exemplaire 64 Go de Vincent se comporte de la même façon en mode Performance.</p>
+
+
+
+<p>Le mode Standard cache en revanche un piège. Sur son exemplaire, Vincent a vu le GPU plafonner vers 1 375 MHz et 14 W en charge prolongée, avec 64,2 tok/s en Standard sur secteur contre 72,2 en Performance sur batterie, et jusqu’à 31 % de perte en lecture de long prompt (1 993 contre 2 894 tok/s). Sur des tests courts, les deux modes font pourtant jeu égal, mais pour l’IA, le mode Performance s’impose.</p>
+
+
+
+<p>Sans l’aide du GPU, le processeur seul écrit 14,2 tok/s sur Qwen3-8B (contre 53,1 avec le GPU) et 17,4 sur Qwen3-Coder 30B (contre 104,6). Vincent mesure 9,7 tok/s sur ce dernier modèle, avec un autre fichier, une autre version de llama.cpp et en mode Standard. Il a aussi testé la transcription avec Whisper large-v3-turbo, qui traite 80 secondes d’audio en 4,6 secondes sur le GPU, contre 30,4 secondes sur le processeur.</p>
+
+
+
+<h3>64 Go contre 128 Go : la même vitesse</h3>
+
+
+
+<p>Bonne nouvelle pour ceux qui hésitent entre les deux versions : à fichiers comparables, le modèle 64 Go va aussi vite que le 128 Go (16,3 contre 16,0 tok/s sur Qwen3.8-27B, 67,4 contre 65,7 sur Nemotron 3.5 Lightning 30B, 104,6 contre 107,8 sur Qwen3-Coder 30B). Les 128 Go n’accélèrent rien, mais ils permettent de charger des modèles plus gros comme gpt-oss-120b ou Flash-Next, ou de faire tourner un modèle en même temps qu’un jeu ou un logiciel de création.</p>
+
+
+
+<h3>Agents : beaucoup de promesses, encore peu d’outils</h3>
+
+
+
+<p>Nvidia accompagne la RTX Spark d’un écosystème très fourni, avec des agents optimisés comme <a href="https://www.frandroid.com/comment-faire/tutoriaux/tutoriels-intelligence-artificielle-ia/3162059_hermes-agent">Hermes</a>, <a href="https://www.frandroid.com/culture-tech/intelligence-artificielle/2954659_openclaw-lassistant-ia-open-source-qui-agit-a-votre-place-a-quoi-ca-sert-comment-linstaller-et-quel-llm-choisir">OpenClaw</a> ou GitHub Copilot, des « skills » CUDA pour les agents de code, le bac à sable OpenShell couplé aux Microsoft Execution Containers de Windows, et PAIR, qui répartit les requêtes d’IA entre les machines d’un réseau local. La marque annonce aussi la prise en charge de 97 % des 15 000 paquets Python les plus utilisés.</p>
+
+
+
+<p>Une partie de cet écosystème n’était pas encore disponible pendant mon test, à commencer par la version de Hermes destinée à la presse. Je pense donc pouvoir revenir plus tard avec un papier dédié aux agents.</p>
+
+
+
+<p>Nvidia avance enfin un argument économique, selon lequel une RTX Spark générant des tokens en continu produirait 61 millions de tokens par mois pour environ 20 dollars d’électricité, contre 1 200 dollars d’API cloud. Ce calcul porte toutefois sur un mini PC tournant 20 heures par jour à 200 W avec Flash-Next, et ne s’applique pas tel quel à un portable. Sur batterie, j’ai mesuré de mon côté 0,36 Wh pour 1 000 tokens sur le ProArt P16, avec un modèle plus petit (direction la partie consacrée à l’autonomie).</p>
+
+
+<h2>Création : la génération d’images plus rapide qu’avec une RTX 5070</h2>
+
+
+
+<p>On peut aussi se servir de l’IA pour créer des images ou des vidéos. Pour ça, j’ai mesuré la génération d’images dans ComfyUI avec Flux.2 Klein 4B, dans sa version NVFP4 que Nvidia met en avant pour les puces Blackwell, avec le même modèle, le même prompt et 20 étapes de calcul sur les deux machines.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/image-164.png" rel="noopener"><img loading="lazy" decoding="async" width="1200" height="900" src="https://images.frandroid.com/wp-content/uploads/2026/10/image-164-1200x900.png" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/10/image-164-1200x900.png 1200w, https://images.frandroid.com/wp-content/uploads/2026/10/image-164-768x576.png 768w, https://images.frandroid.com/wp-content/uploads/2026/10/image-164-928x696.png 928w, https://images.frandroid.com/wp-content/uploads/2026/10/image-164-300x225.png 300w" sizes="auto, (max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+
+<figure><table><thead><tr><th>Flux.2 Klein 4B (NVFP4)</th><th>RTX Spark</th><th>Framework 16 (RTX 5070 12 Go)</th><th>Temps gagné</th></tr></thead><tbody><tr><td>1 image 1 024 x 1 024</td><td><strong>16,2 s</strong></td><td>18,7 s</td><td>13 %</td></tr><tr><td>4 images 1 024 x 1 024</td><td><strong>60,1 s</strong></td><td>65,8 s</td><td>9 %</td></tr><tr><td>1 image 2 048 x 2 048</td><td><strong>90,8 s</strong></td><td>118,5 s</td><td>23 %</td></tr></tbody></table><figcaption>ComfyUI Desktop en version Arm sur la RTX Spark, mêmes fichiers de modèles sur les deux PC.</figcaption></figure>
+
+
+
+<p>La RTX Spark est plus rapide dans tous les cas, et l’écart se creuse avec la définition, jusqu’à 23 % de temps gagné en 2 048 × 2 048. Elle y parvient en tirant moins de watts côté GPU, puisque nvidia-smi relevait 63 W pour la RTX Spark (2 028 MHz, 73 °C, 11,8 Go occupés) contre 97 W pour la RTX 5070 (2 415 MHz, 72 °C, 8,6 Go). </p>
+
+
+
+<p>Les deux outils ne mesurent pas exactement le même périmètre, comme je l’explique dans la partie consommation, mais la tendance est claire. Nvidia annonce 14,69 s pour une image en 1 024 × 1 024 sur le même ProArt, et j’ai mesuré 16,2 s.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/image-165.png" rel="noopener"><img loading="lazy" decoding="async" width="1200" height="900" src="https://images.frandroid.com/wp-content/uploads/2026/10/image-165-1200x900.png" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/10/image-165-1200x900.png 1200w, https://images.frandroid.com/wp-content/uploads/2026/10/image-165-768x576.png 768w, https://images.frandroid.com/wp-content/uploads/2026/10/image-165-928x696.png 928w, https://images.frandroid.com/wp-content/uploads/2026/10/image-165-300x225.png 300w" sizes="auto, (max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-creation-comfyui-flux-2-klein.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-creation-comfyui-flux-2-klein.png" alt="Graphique génération d'images Flux.2 Klein 4B dans ComfyUI : RTX Spark 16,2 s, 60,1 s et 90,8 s, Framework Laptop 16 18,7 s, 65,8 s et 118,5 s"></a><figcaption>Génération d’images avec Flux.2 Klein : la RTX Spark gagne jusqu’à 23 % de temps sur la RTX 5070 portable.</figcaption></figure>
+
+
+
+<p>Côté logiciels, Blender, DaVinci Resolve, Affinity et Photoshop existent en version Arm native, et Nvidia annonce des applications Adobe réécrites pour la RTX Spark, jusqu’à deux fois plus rapides en IA, en montage et en étalonnage.</p>
+
+
+<h2>Jeu vidéo : une RTX 5070 portable, avec les contraintes d’Arm</h2>
+
+
+
+<p>En calcul pur, le GPU fait jeu égal avec une RTX 5070 portable. Un jeu sollicite toutefois aussi le processeur, et l’architecture Arm complique alors les choses. Regardons ce qu’on a obtenu.</p>
+
+
+
+<blockquote>
+<p>En jeu, la RTX Spark reste une RTX 5070 portable, qui doit en plus traduire les instructions x86 de la plupart des jeux.</p>
+</blockquote>
+
+
+
+<h3>Prism : comment un jeu x86 tourne sur Arm</h3>
+
+
+
+<p>Actuellement, presque tous les jeux PC sont compilés pour les processeurs x86 d’Intel et d’AMD. Sur la RTX Spark, ils passent par Prism, qui traduit à la volée les instructions destinées au processeur. Détail amusant, les jeux émulés voient un processeur fictif baptisé « Virtual CPU @ 4.00GHz », présenté comme un AMD avec 10 cœurs et 20 fils d’exécution. En gros, les éditeurs de jeux ne voient pas directement la puce Nvidia. Ils voient un processeur AMD à la place.</p>
+
+
+
+<p>Le travail du GPU n’est pas concerné par cette traduction, mais tout ce que fait le processeur coûte plus cher. Les jeux gourmands en calcul processeur sont donc les plus pénalisés, d’autant que la RTX Spark est déjà en retrait en mono-cœur.</p>
+
+
+
+<h3>Cyberpunk 2077 : du rendu classique au path tracing</h3>
+
+
+
+<p>Passons à un des jeux les plus intéressants pour les benchmarks, et quelques définitions s’imposent avant de lire les résultats. Le <strong>ray tracing</strong> simule le trajet de la lumière pour obtenir des reflets et des ombres réalistes, et le <strong>path tracing</strong> va plus loin en calculant tout l’éclairage de cette façon, au prix d’une charge énorme. Le <strong>DLSS</strong> calcule l’image dans une définition réduite avant de l’agrandir par IA. La <strong>génération d’images (FG)</strong> intercale une à cinq images créées par IA entre deux images réellement calculées, ce qui fluidifie l’affichage sans améliorer la réactivité, qui dépend toujours des images calculées. Enfin, la <strong>Ray Reconstruction (RR)</strong> remplace le débruitage du ray tracing par un modèle d’IA. Ça, c’est ce qu’on appelle une formation en 1 minute chrono.</p>
+
+
+
+<figure><table><thead><tr><th>Cyberpunk 2077, 2 560 x 1 600</th><th>Moyenne (FPS)</th><th>Minimum / maximum</th></tr></thead><tbody><tr><td>Ultra, sans ray tracing, sans DLSS</td><td>44,9</td><td>36,8 / 57,2</td></tr><tr><td>RT Ultra, DLSS Qualité</td><td>33,0</td><td>29,6 / 37,4</td></tr><tr><td>RT Ultra, sans DLSS</td><td>21,3</td><td>19,0 / 23,8</td></tr><tr><td>Path tracing, DLSS Qualité, RR</td><td>24,2</td><td>21,3 / 27,7</td></tr><tr><td>Path tracing, DLSS Qualité, RR, FG x 2</td><td>46,1</td><td>40,7 / 51,8</td></tr><tr><td>Path tracing, DLSS Qualité, RR, FG x 4</td><td>83,2</td><td>75,3 / 91,4</td></tr><tr><td>Réglage Nvidia (RT Bas, DLSS Auto, FG x 3)</td><td>128,7</td><td>110,8 / 153,4</td></tr><tr><td>Sans RT, DLSS Performance, FG x 2</td><td>145,6</td><td>119,3 / 170,2</td></tr><tr><td>4K (3 840 × 2 400), RT Ultra, sans DLSS</td><td>11,6</td><td>10,5 / 13,9</td></tr><tr><td>4K (3 840 × 2 400), sans RT, DLSS Performance (probable), FG x 2</td><td>86,7</td><td>76,9 / 96,2</td></tr></tbody></table><figcaption>Benchmark intégré, pilote 617.42, Reflex activé. Répétabilité mesurée à 0,3 %.</figcaption></figure>
+
+
+
+<p>Sans aucune aide, en Ultra et sans ray tracing, la RTX Spark tient 44,9 images par seconde en 2 560 x 1 600 pixels. Sur ce même réglage, le Framework Laptop 16 fait 27 % mieux avec 56,9 images par seconde (mesure d’août, avec un pilote plus ancien), et il s’agit de la seule ligne directement comparable entre les deux machines.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/image-176.png" rel="noopener"><img loading="lazy" decoding="async" width="1200" height="900" src="https://images.frandroid.com/wp-content/uploads/2026/10/image-176-1200x900.png" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/10/image-176-1200x900.png 1200w, https://images.frandroid.com/wp-content/uploads/2026/10/image-176-768x576.png 768w, https://images.frandroid.com/wp-content/uploads/2026/10/image-176-928x696.png 928w, https://images.frandroid.com/wp-content/uploads/2026/10/image-176-300x225.png 300w" sizes="auto, (max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+
+<p>En path tracing avec le DLSS Qualité, on tombe à 24,2 images par seconde. La génération d’images fluidifie l’affichage (46,1 FPS en x 2, 83,2 en x 4), mais la réactivité reste celle d’un jeu calculé autour de 24 images par seconde. En 4K native, sur la dalle de 3 840 × 2 400, le ray tracing Ultra sans DLSS est hors de portée (11,6 FPS), alors qu’avec le DLSS (en mode Performance selon toute vraisemblance) et la génération × 2, sans ray tracing, on retrouve 86,7 FPS.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-jeu-cyberpunk-2077.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-jeu-cyberpunk-2077.png" alt="Graphique Cyberpunk 2077 sur RTX Spark : de 24,2 FPS en path tracing à 128,7 FPS avec le réglage de Nvidia et la génération d'images × 3"></a><figcaption>Cyberpunk 2077 sur la RTX Spark : la génération d’images multiplie les images affichées, pas les images réellement calculées.</figcaption></figure>
+
+
+
+<h3>Les chiffres de Nvidia reposent sur la génération d’images</h3>
+
+
+
+<p>Nvidia annonce 135 images par seconde dans Cyberpunk 2077 en 1440p. En reprenant son réglage (ray tracing Bas, DLSS, génération × 3), j’obtiens 128,7 FPS en 2 560 × 1 600, un résultat cohérent, qui ne correspond toutefois qu’à environ 43 images réellement calculées chaque seconde.</p>
+
+
+
+<p>Il faudra donc s’assurer avec les technologies de Nvidia pour pouvoir obtenir des performances décentes.</p>
+
+
+
+<blockquote>
+<p>Derrière les 128,7 images par seconde affichées avec le réglage de Nvidia, il n’y a qu’environ 43 images réellement calculées.</p>
+</blockquote>
+
+
+
+<h3>Marvel Rivals : l’émulation se voit</h3>
+
+
+
+<p>Marvel Rivals illustre bien le coût de l’émulation. Dans sa version x64, bloqué en 3 840 x 2 400, en réglages Élevés avec le DLSS Qualité et la génération d’images, le jeu tourne à 35 FPS de moyenne avec un 1 % bas à 11,6 FPS. Il saccade, et ses scores internes suggèrent une limite côté processeur, donc du côté de l’émulation, même si la compilation des shaders au premier lancement peut aussi jouer. </p>
+
+
+
+<p>Nvidia annonce 147 FPS en 1440p avec une version ARM64EC, qui mélange code Arm natif et code x64 émulé. Dès que j’ai accès au jeu, on pourra mettre à jour cette partie pour voir si les performances sont bien meilleures. D’ailleurs, l’anti-triche de NetEase a en tout cas bien laissé le jeu se lancer.</p>
+
+
+
+<h3>NBA 2K27 et le DLSS 5 « d’octobre »</h3>
+
+
+
+<p><a href="https://www.frandroid.com/marques/nvidia/3232433_on-a-teste-le-dlss-5-de-nvidia-sur-nba-2k27-la-revolution-visuelle-a-un-prix">NBA 2K27 est le premier jeu à exploiter le DLSS 5</a>, que Nvidia décrit comme un « rendu neuronal guidé par la 3D », dans lequel un modèle d’IA retravaille l’éclairage et les matières pour un rendu plus réaliste. </p>
+
+
+<p>
+    <span>Pour aller plus loin</span><br>
+            <a href="https://www.frandroid.com/marques/nvidia/3232433_on-a-teste-le-dlss-5-de-nvidia-sur-nba-2k27-la-revolution-visuelle-a-un-prix">Notre premier test du DLSS 5 sur NBA 2K27 : visages plus réalistes, framerate en chute sans upscaling</a>
+            </p>
+
+
+
+<p>D’après Nvidia, le modèle « d’octobre » serait deux fois plus rapide que celui livré avec le jeu en septembre, avec 24 % de paramètres en moins (118 millions) et 20 % de mémoire vidéo en moins en 4K. Pour ce test, Nvidia fournissait des fichiers DLSS (DLL) réservés à la RTX Spark d’après son guide.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/image-166.png" rel="noopener"><img loading="lazy" decoding="async" width="1200" height="900" src="https://images.frandroid.com/wp-content/uploads/2026/10/image-166-1200x900.png" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/10/image-166-1200x900.png 1200w, https://images.frandroid.com/wp-content/uploads/2026/10/image-166-768x576.png 768w, https://images.frandroid.com/wp-content/uploads/2026/10/image-166-928x696.png 928w, https://images.frandroid.com/wp-content/uploads/2026/10/image-166-300x225.png 300w" sizes="auto, (max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+
+<p>Le réalisme du rendu a au moins convaincu un spectateur. Pendant une série de mesures, mon fils Ewenn, 6 ans et demi, est passé derrière moi et m’a demandé : « Pourquoi tu regardes la télévision au lieu de travailler ? ». Il n’a pas tort, les images sont magnifiques.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/image-177.png" rel="noopener"><img loading="lazy" decoding="async" width="1200" height="900" src="https://images.frandroid.com/wp-content/uploads/2026/10/image-177-1200x900.png" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/10/image-177-1200x900.png 1200w, https://images.frandroid.com/wp-content/uploads/2026/10/image-177-768x576.png 768w, https://images.frandroid.com/wp-content/uploads/2026/10/image-177-928x696.png 928w, https://images.frandroid.com/wp-content/uploads/2026/10/image-177-300x225.png 300w" sizes="auto, (max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+
+<p>La mesure a demandé un peu de rigueur, car NBA 2K27 n’a pas de benchmark intégré et le réglage du DLSS 5 n’existe que dans un fichier de configuration. J’ai réglé le jeu à l’identique sur les deux machines (2 560 × 1 600, DLSS Performance, génération × 2, Reflex, reflets en ray tracing, qualité Moyenne), puis mesuré avec PresentMon pendant 30 à 45 secondes en plein match, Spurs contre Knicks (le match que j’ai dû lancer une bonne quinzaine de fois). </p>
+
+
+
+<blockquote>
+<p>Une simple mise à jour du DLSS 5 suffit à faire passer la RTX Spark devant la RTX 5070 portable.</p>
+</blockquote>
+
+
+
+<figure><table><thead><tr><th>NBA 2K27, 2 560 × 1 600, DLSS 5</th><th>Images calculées/s</th><th>1 % bas</th><th>Images affichées/s</th></tr></thead><tbody><tr><td>RTX Spark, modèle de septembre (livré avec le jeu)</td><td>38,2</td><td>24 à 25</td><td>non mesuré proprement</td></tr><tr><td>Framework 16 (RTX 5070), modèle de septembre</td><td>50,9</td><td>24,7</td><td>65,7</td></tr><tr><td>RTX Spark, modèle d’octobre</td><td><strong>68,0</strong></td><td><strong>32 à 34</strong></td><td><strong>88 à 90</strong></td></tr></tbody></table><figcaption>PresentMon, captures en plein match, pilote 617.42 sur les deux machines.</figcaption></figure>
+
+
+
+<p>Avec le modèle livré avec le jeu, la RTX Spark calcule 25 % d’images de moins que la RTX 5070 portable (38,2 contre 50,9), même si l’image reste propre et fluide à l’œil, plutôt comme du 40 images par seconde. Le frein vient très probablement du DLSS 5 lui-même, puisque le simple remplacement des fichiers DLSS fait bondir les performances, ce qu’une limite du processeur émulé n’expliquerait pas.</p>
+
+
+
+<p>Avec le modèle d’octobre (celui qui sera diffusée partout ailleurs bientôt), la RTX Spark grimpe en effet à 68,0 images calculées par seconde, soit 78 % de plus, bien au-delà des « plus de 30 % » annoncés par Nvidia. Le 1 % bas passe de 24-25 à 32-34 images par seconde, l’affichage atteint 88 à 90 images par seconde, et la RTX Spark passe ainsi 34 % devant la RTX 5070 restée sur le modèle de septembre.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-jeu-nba-2k27-dlss-5.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-jeu-nba-2k27-dlss-5.png" alt="Graphique NBA 2K27 avec DLSS 5 : RTX Spark modèle de septembre 38,2 images par seconde, Framework 16 RTX 5070 50,9, RTX Spark modèle d'octobre 68,0"></a><figcaption>Avec le modèle DLSS 5 d’octobre, la RTX Spark calcule 78 % d’images en plus et passe devant la RTX 5070 portable.</figcaption></figure>
+
+
+
+<p>La comparaison est inégale par construction, puisque le Framework ne pouvait pas recevoir ces fichiers. Nvidia annonce toutefois le DLSS 5 d’octobre pour les RTX Spark et les GeForce RTX 50 le 16 octobre, et la RTX 5070 en profitera donc aussi.</p>
+
+
+
+<h3>Anti-triche : les gros jeux compétitifs manquent à l’appel</h3>
+
+
+
+<p>Le sujet revient dès qu’on parle de jeu sur Windows Arm, car les anti-triches fonctionnent au plus près du système et doivent être adaptés à cette architecture pour tourner.</p>
+
+
+
+<blockquote>
+<p>Si vous jouez à Valorant, Call of Duty ou Battlefield, la RTX Spark n’est pas encore faite pour vous.</p>
+</blockquote>
+
+
+
+<p>La liste fournie par Nvidia est déjà longue, avec Easy Anti-Cheat (Fortnite, Rocket League, Rust, Elden Ring), BattlEye (Rainbow Six Siege, DayZ), VAC (Counter-Strike 2, DOTA 2), Hyperion (Roblox), NetEase (Marvel Rivals), nProtect GameGuard (Helldivers 2) ou encore Denuvo Anti-Cheat (ARC Raiders, The Finals).</p>
+
+
+
+<p>Les jeux compétitifs les plus joués manquent pourtant à l’appel, puisque Vanguard (Valorant, League of Legends), RICOCHET (Call of Duty), EA Javelin (Battlefield, EA FC) et les protections de PUBG ne sont pas encore pris en charge, sans date annoncée. De mon côté, j’ai vérifié que Marvel Rivals se lance, et NBA 2K27 se lance hors ligne, sans Easy Anti-Cheat.</p>
+
+
+
+<p>Je pense que c’est quand même essentiel de vérifier ces éléments si vous avez l’habitude de jouer à un de ces jeux. Même s’il y a des promesses, tant que les systèmes anti-triche ne sont pas pris en charge officiellement sur les puces ARM, cela reste des promesses.</p>
+
+
+<h2>Face à la concurrence : quatre duels</h2>
+
+
+
+<p>Jusqu’à maintenant, le test était assez complet, mais je me suis amusé à pousser plus loin pour faire des comparatifs avec mes quatre adversaires. Voici donc la puce RTX Spark face à chacun de ses adversaires, test par test. Sur chaque graphique, la barre part vers la droite quand la RTX Spark est devant et vers la gauche quand elle est derrière.</p>
+
+
+
+<h3>Contre un PC portable x86 avec RTX 5070</h3>
+
+
+
+<p>Face au Framework Laptop 16, la RTX Spark fait jeu égal sur un cœur et prend 35 à 38 % d’avance en multi-cœur, alors que les deux GPU se valent en calcul pur comme dans 3DMark. En IA, la RTX 5070 gagne tant que le modèle tient dans ses 12 Go, puis s’effondre dès qu’il déborde. La RTX Spark génère aussi les images plus vite dans ComfyUI, mais en jeu, la RTX 5070 reste devant à réglage égal, sauf face au DLSS 5 d’octobre. Sur batterie enfin, la RTX 5070 perd un quart de sa vitesse en IA sur un petit modèle et dépense presque deux fois plus d’énergie que la RTX Spark sur un modèle de 22 Go.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-duel-framework-laptop-16-rtx-5070-2.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-duel-framework-laptop-16-rtx-5070-2.png" alt="Graphique duel RTX Spark contre Framework Laptop 16 RTX 5070 : écarts test par test en processeur, calcul graphique, mémoire, IA et génération d'images"></a><figcaption>RTX Spark contre Framework Laptop 16 (Ryzen AI 9 HX 370 et RTX 5070 12 Go) : l’avantage bascule selon la taille du modèle d’IA.</figcaption></figure>
+
+
+
+<h3>Contre le MacBook Pro M5 Pro</h3>
+
+
+
+<p>Le processeur du Mac est nettement plus rapide, de 41 % en mono-cœur et de 45 % en multi-cœur, et l’écriture IA est à égalité. Dès que le calcul compte, la RTX Spark prend en revanche l’avantage, avec une lecture des longs textes 2,5 à 3 fois plus rapide et 65 % de tokens en plus à 16 requêtes. La version 48 Go du Mac ne charge par ailleurs ni gpt-oss-120b ni Flash-Next.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-duel-macbook-pro-m5-pro.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-duel-macbook-pro-m5-pro.png" alt="Graphique duel RTX Spark contre MacBook Pro M5 Pro : processeur en retrait, IA à égalité en écriture, nettement devant en lecture et en multi-requêtes"></a><figcaption>RTX Spark contre MacBook Pro M5 Pro 48 Go : le M5 Pro reste devant sur le processeur, la RTX Spark prend l’avantage en lecture et en travail parallèle.</figcaption></figure>
+
+
+
+<h3>Arm contre Arm : le Snapdragon X2 Elite Extreme</h3>
+
+
+
+<p>Le Snapdragon X2 Elite Extreme mène sur le processeur, de 24 % en mono-cœur et de 16 % en multi-cœur dans Geekbench 7, et un seul de ses cœurs accède plus vite à la mémoire (73 contre 45 Go/s). Tout le reste penche du côté de Nvidia, avec un GPU deux fois plus puissant en Vulkan, 1,9 à 2,4 fois plus de tokens écrits et une lecture 5 à 30 fois plus rapide selon le modèle. Sur le Snapdragon, llama.cpp en Vulkan n’a même pas terminé ses tests en 20 minutes.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-duel-snapdragon-x2-elite-extreme.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-duel-snapdragon-x2-elite-extreme.png" alt="Graphique duel RTX Spark contre Zenbook A16 Snapdragon X2 Elite Extreme : processeur en retrait, GPU et IA largement devant"></a><figcaption>Arm contre Arm sous Windows : le Snapdragon X2 Elite Extreme reste devant sur le processeur, la RTX Spark le devance largement en graphique et en IA.</figcaption></figure>
+
+
+
+<h3>Les deux puces 128 Go : contre le Strix Halo</h3>
+
+
+
+<p>Le Ryzen AI Max+ 395 garde l’avantage en multi-cœur (+12 % dans Geekbench 7, +19 % dans Cinebench 2026), et les deux GPU font jeu égal en Vulkan. En IA, la RTX Spark écrit 11 à 23 % plus vite, lit les prompts environ deux fois plus vite et sert un tiers de tokens en plus à 16 requêtes. Elle tient tête à son rival y compris sur le plus gros modèle, Flash-Next, à condition de suivre la recette de Nvidia (30,8 contre 28,5 tok/s), même si le Strix Halo garde une courte avance à outil identique (28,5 contre 25,6 tok/s avec llama-bench).</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-duel-ryzen-ai-max-395-strix-halo.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-duel-ryzen-ai-max-395-strix-halo.png" alt="Graphique duel RTX Spark contre Ryzen AI Max+ 395 Strix Halo 128 Go : processeur en retrait, IA devant, lecture des prompts deux fois plus rapide"></a><figcaption>Les deux puces 128 Go face à face : la RTX Spark domine l’IA. La ligne Flash-Next reprend la mesure en Vulkan, réalisée avant d’avoir trouvé la solution du fichier d’échange.</figcaption></figure>
+
+
+
+<p>Les multiplicateurs les plus spectaculaires de Nvidia, de 2,7 à 4,6 fois sur le benchmark d’agents d’Artificial Analysis, sur LTX 2.5 ou sur le fine-tuning avec Unsloth, sont calculés face à des Intel Core Ultra, sur des tests absents de mon protocole. Sur ceux que j’ai mesurés, l’avance de la RTX Spark sur le Strix Halo est bien réelle, mais plus modeste en écriture.</p>
+
+
+<h2>Bruit, chauffe et consommation : un comportement de PC gamer</h2>
+
+
+
+<p>Une puce plus efficace laissait espérer une machine plus silencieuse, et ce n’est pas le cas. Ce n’est pas l’objet de ce test, mais on fera un test plus complet de cet Asus. En génération d’images, avec les deux machines côte à côte, la RTX 5070 du Framework soufflait plus fort en 1 024 × 1 024, et les deux faisaient à peu près autant de bruit en 2 048 × 2 048.</p>
+
+
+
+<blockquote>
+<p>On n’a pas perdu ce côté un peu négatif des PC portables, même avec cette nouvelle puce.</p>
+</blockquote>
+
+
+
+<p>Car oui, le ProArt P16 RTX Spark semble reprendre le châssis et la ventilation du ProArt P16 à processeur x86. Si Asus le confirme, la machine n’aurait pas été dessinée autour de la nouvelle puce, ce qui expliquerait ce comportement de PC portable de jeu, et d’autres modèles, comme le Surface Laptop Ultra dont le châssis semble nouveau, pourraient faire mieux.</p>
+
+
+
+<p>J’ai aussi entendu de petits grésillements vers le centre du clavier sous forte charge, aussi bien côté processeur que côté GPU, vraisemblablement un sifflement des bobines (coil whine). Ce n’est pas franchement gênant, mais Vincent l’a remarqué sur son exemplaire, ce qui laisse penser que le défaut est propre à ce modèle Asus.</p>
+
+
+
+<p>Les températures, en revanche, n’ont rien d’inquiétant. En IA prolongée, le GPU ne dépasse pas 69 °C sur mon exemplaire et 71 °C sur celui de Vincent, sans aucun bridage thermique.</p>
+
+
+
+<p>La consommation demande un peu de prudence. Sur la RTX Spark, nvidia-smi ne compte que la partie GPU de la puce, alors que sur la RTX 5070, il compte la carte graphique entière, et seul un wattmètre à la prise mesure toute la machine. Celui-ci relève 114 à 138,4 W dans Cyberpunk 2077, batterie pleine, alors que la partie GPU consomme 43,8 W en moyenne en IA prolongée. Nvidia revendique une efficacité deux fois supérieure à celle d’un portable associant RTX 5070 et Core Ultra 9 285H, et mes mesures dans ComfyUI vont dans ce sens (63 W contre 97 W côté GPU), sans permettre pour autant de valider ce chiffre.</p>
+
+
+<h2>Efficience et autonomie : la RTX Spark loin de la prise</h2>
+
+
+
+<p>Les PC portables puissants déçoivent souvent sur ce point, car une fois le chargeur débranché, la batterie ne fournit pas assez d’énergie à la carte graphique dédiée, qui perd une bonne partie de sa puissance. Nvidia promet l’inverse avec la RTX Spark, et parle de « performances équivalentes en mobilité ».</p>
+
+
+
+<blockquote>
+<p>Chose rare pour un PC portable de ce niveau, la RTX Spark garde presque toute sa vitesse en IA une fois débranchée. </p>
+</blockquote>
+
+
+
+<h3>Le protocole</h3>
+
+
+
+<p>J’ai débranché le ProArt P16 à 17 h 18, batterie pleine, en le laissant en mode Performance dans l’utilitaire d’Asus et en « Performances optimales » dans Windows, écran allumé, capot ouvert, Steam fermé et 85 Gio réservés au GPU. Un script relevait toutes les 10 secondes le niveau de batterie, la puissance tirée et l’état de l’économiseur d’énergie, pendant que nvidia-smi enregistrait l’activité du GPU chaque seconde. J’ai ensuite relancé les mêmes commandes que sur secteur, à savoir llama-bench en CUDA sur quatre modèles, la génération continue de 1 024 tokens et Geekbench 7.</p>
+
+
+
+<figure><table><thead><tr><th>RTX Spark 128 Go, mode Performance</th><th>Secteur</th><th>Batterie (97 à 92 %)</th><th>Écart</th></tr></thead><tbody><tr><td>Qwen3-8B, écriture / lecture (tok/s)</td><td><strong>53,1</strong> / <strong>3 216</strong></td><td>52,0 / 2 997</td><td>−2 % / −7 %</td></tr><tr><td>Qwen3.8-27B, écriture / lecture</td><td><strong>16,3</strong> / <strong>911</strong></td><td>16,1 / 818</td><td>−1 % / −10 %</td></tr><tr><td>Qwen3.6-35B-A3B, écriture / lecture</td><td><strong>74,8</strong> / <strong>2 633</strong></td><td>73,5 / 2 381</td><td>−2 % / −10 %</td></tr><tr><td>gpt-oss-120b, écriture / lecture</td><td><strong>63,3</strong> / <strong>2 084</strong></td><td>62,1 / 2 004</td><td>−2 % / −4 %</td></tr><tr><td>Écriture en continu (35B, 1 024 tokens)</td><td><strong>76,1 tok/s</strong> (GPU à 2 353 MHz, 43,8 W)</td><td>72,0 tok/s (GPU à 2 125 MHz, 30,3 W)</td><td>−5 %</td></tr><tr><td>Geekbench 7 processeur, mono / multi</td><td>2 635 / <strong>23 462</strong></td><td><strong>2 663</strong> / 21 649</td><td>+1 % / −8 %</td></tr><tr><td>Geekbench 7 CUDA</td><td><strong>184 550</strong></td><td>174 399</td><td>−5,5 %</td></tr></tbody></table><figcaption>Sur secteur, 91 Gio réservés au GPU, sur batterie, 85 Gio. Geekbench : une seule passe sur batterie, médiane de trois sur secteur.</figcaption></figure>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-batterie-ia-secteur-contre-batterie.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-batterie-ia-secteur-contre-batterie.png" alt="Graphique écriture IA sur secteur et sur batterie : Qwen3-8B 53,1 contre 52,0 tok/s, Qwen3.8-27B 16,3 contre 16,1, Qwen3.6-35B-A3B 74,8 contre 73,5, gpt-oss-120b 63,3 contre 62,1"></a><figcaption>Sur batterie, en mode Performance, la RTX Spark écrit presque aussi vite que sur secteur, quel que soit le modèle.</figcaption></figure>
+
+
+
+<h3>L’écriture ne bouge presque pas, le calcul recule un peu</h3>
+
+
+
+<p>Au-dessus de 30 % de batterie, la promesse tient presque en IA. La vitesse d’écriture ne perd que 1 à 2 %, et 5 % en génération continue (72,0 contre 76,1 tok/s), car elle dépend de la bande passante mémoire, qui ne baisse pas quand on débranche la machine.</p>
+
+
+
+<p>Les tâches de calcul reculent davantage, de 5 à 10 %, qu’il s’agisse de la lecture des prompts (−4 à −10 % selon le modèle), du multi-cœur de Geekbench (−8 %) ou du calcul CUDA (−5,5 %). Sur batterie, le GPU travaille en effet à 30 W en moyenne au lieu de 44 W, et à 2 125 MHz au lieu de 2 353 MHz. Le mono-cœur, lui, ne perd rien (+1 %, dans la marge de mesure).</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-batterie-performances-en-pourcentage.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-batterie-performances-en-pourcentage.png" alt="Graphique des performances sur batterie en pourcentage de celles sur secteur : Geekbench mono-cœur 101,1 %, écriture IA 98,3 %, écriture continue 94,6 %, CUDA 94,5 %, lecture du prompt 92,4 %, Geekbench multi-cœur 92,3 %"></a><figcaption>Chaque test sur batterie, exprimé en pourcentage de son score sur secteur : l’écriture IA garde plus de 98 % de sa vitesse.</figcaption></figure>
+
+
+
+<p>Pour un PC portable doté d’un GPU de ce niveau, ce comportement est rare, et le Framework Laptop 16 le confirme. Quand le modèle tient dans les 12 Go de sa RTX 5070, comme Qwen3-8B, il perd un quart de sa vitesse d’écriture sur batterie (49,6 contre 65,7 tok/s sous Ollama), car sa carte graphique dispose alors de moins d’énergie. Sur Qwen3.6-35B-A3B, qui déborde déjà sur la mémoire du processeur, la limite se trouve ailleurs et la batterie ne change rien (42,8 tok/s dans les deux cas).</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-batterie-perte-ia-contre-rtx-5070.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-batterie-perte-ia-contre-rtx-5070.png" alt="Graphique vitesse d'écriture IA sur batterie en pourcentage du secteur : RTX Spark 97,9 et 98,3 %, MacBook Pro M5 Pro 100 %, Framework 16 75,5 % sur Qwen3-8B et 100 % sur Qwen3.6-35B"></a><figcaption>Sur batterie, la RTX 5070 perd un quart de sa vitesse sur un petit modèle, alors que la RTX Spark et le MacBook Pro M5 Pro ne perdent presque rien.</figcaption></figure>
+
+
+
+<p>Le MacBook Pro M5 Pro fait à peine mieux que la RTX Spark, puisqu’il n’a perdu aucune performance sur batterie pendant nos tests (54,3 contre 54,4 tok/s sur Qwen3-8B). Le ProArt 64 Go de Vincent confirme aussi la tendance, avec une vitesse d’écriture égale à celle du secteur sur cinq modèles, entre 95 et 62 % de batterie en mode Performance.</p>
+
+
+
+<h3>Combien d’IA sur une charge</h3>
+
+
+
+<p>Garder ses performances sur batterie a toutefois un prix, la consommation. En génération continue avec Qwen3.6-35B-A3B, mesurée entre 92 et 30 % de batterie, le ProArt P16 tire 89 à 93 W et perd environ 1,56 % de batterie par minute, tout en écrivant 72 tok/s. Avec sa batterie de 99,9 Wh, cela représente environ 64 minutes d’IA continue de 100 à 0 %, ou 51 minutes jusqu’à 20 %, et environ 280 000 tokens écrits sur une charge.</p>
+
+
+
+<p>J’ai fait passer exactement le même test au MacBook Pro M5 Pro 14 pouces, avec le même modèle et les mêmes fichiers, en mode « Puissance élevée » sur batterie. Le Mac écrit un peu moins vite, à 68,1 tok/s, mais ne tire que 60 à 65 W, soit environ 40 % de moins que la RTX Spark. Comme sa batterie est plus petite (environ 72 Wh), il tient finalement à peu près autant : il est passé de 100 à 20 % en 53 minutes, ce qui donne environ 66 minutes de 100 à 0 % au même rythme et environ 270 000 tokens écrits sur une charge.</p>
+
+
+
+<p>Le Framework Laptop 16 tient un peu moins longtemps, environ 56 minutes (45 jusqu’à 20 %), avec une batterie d’environ 87 Wh. Sur ce modèle de 22 Go, trop gros pour les 12 Go de sa RTX 5070, il tire 83 W pour écrire environ 43 tok/s, avec des chutes ponctuelles vers 20 à 27 tok/s, soit environ 40 % moins vite que la RTX Spark. Il n’écrit donc qu’environ 145 000 tokens sur une charge, deux fois moins que la RTX Spark et le Mac. Ses mesures sont plus courtes (6 minutes d’écriture continue) et passent par Ollama, faute de pouvoir lancer llama.cpp sur cette machine.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-autonomie-ia-contre-macbook-pro-1.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-autonomie-ia-contre-macbook-pro-1.png" alt="Graphique autonomie en IA intensive : RTX Spark ProArt P16 64 minutes, MacBook Pro M5 Pro 14 pouces 66 minutes, Framework Laptop 16 RTX 5070 56 minutes"></a><figcaption>En IA intensive, la RTX Spark et le MacBook Pro M5 Pro tiennent environ une heure sur batterie, le Framework Laptop 16 un peu moins.</figcaption></figure>
+
+
+
+<p>Rapporté au travail fourni, la RTX Spark consomme 0,36 Wh pour 1 000 tokens écrits, contre 0,27 Wh pour le Mac, qui dépense donc environ un quart d’énergie en moins par réponse, et 0,60 Wh pour le Framework, presque deux fois plus que la RTX Spark. Sur batterie, la puce de Nvidia consomme comme un PC portable de jeu, mais elle tire bien mieux parti de cette énergie qu’une RTX 5070 dès que le modèle dépasse sa mémoire vidéo. Le Mac, lui, ne se bride pas sous 30 % de batterie et garde la même vitesse jusqu’à 5 % (62 W, 68 tok/s), alors que la RTX Spark perd la moitié de sa vitesse avec le réglage d’usine de Windows, comme on le verra plus bas.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-energie-ia-contre-macbook-pro-1.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-energie-ia-contre-macbook-pro-1.png" alt="Graphique énergie tirée sur la batterie pour écrire 10 000 tokens : RTX Spark 3,6 Wh, MacBook Pro M5 Pro 2,7 Wh, Framework Laptop 16 RTX 5070 6,0 Wh"></a><figcaption>Pour écrire le même texte, le MacBook Pro M5 Pro tire un quart d’énergie en moins que la RTX Spark, et le Framework Laptop 16 presque deux fois plus.</figcaption></figure>
+
+
+
+<p>Le Mac a été mesuré de 100 à 20 % et la RTX Spark de 92 à 30 %, à pleine vitesse. Les autonomies de 100 à 0 % sont donc des estimations au rythme mesuré, pas des décharges complètes jusqu’à l’arrêt. La puissance des deux PC est lue par Windows et celle du Mac par la jauge de sa batterie, la luminosité des écrans n’a pas été égalisée, et chaque machine tournait dans son mode le plus rapide. Sur son exemplaire 64 Go, Vincent relevait de son côté environ 75 W en moyenne, pour une autonomie estimée à 1 h 15.</p>
+
+
+
+<p>Un agent IA peut donc travailler environ une heure à pleine vitesse sans prise, sur la RTX Spark comme sur le Mac, ce qui suffit pour une session de travail ou une démonstration. On est encore loin d’une journée complète de travail sur batterie.</p>
+
+
+
+<h3>Les pièges de Windows sur batterie</h3>
+
+
+
+<p>Ma première série sur batterie a d’ailleurs été jetée. Lancée juste après le débranchement, elle donnait des résultats 9 à 15 % plus bas que sur secteur (47,6 tok/s au lieu de 53,1 sur le 8B, 65,2 au lieu de 74,8 sur le 35B), à cause d’un réglage par défaut de Windows qui arrête les tâches planifiées au débranchement. Mes scripts et l’outil chargé d’empêcher la mise en veille se sont donc arrêtés, la machine a glissé vers la veille, et elle a fini par s’endormir en plein Geekbench.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/image-167.png" rel="noopener"><img loading="lazy" decoding="async" width="1200" height="336" src="https://images.frandroid.com/wp-content/uploads/2026/10/image-167-1200x336.png" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/10/image-167-1200x336.png 1200w, https://images.frandroid.com/wp-content/uploads/2026/10/image-167-768x215.png 768w, https://images.frandroid.com/wp-content/uploads/2026/10/image-167-928x260.png 928w, https://images.frandroid.com/wp-content/uploads/2026/10/image-167-300x84.png 300w" sizes="auto, (max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+
+<p>Mon interprétation, que je n’ai pas pu prouver, est que Windows réduit déjà la puissance de la machine avant même la mise en veille lorsqu’aucune demande d’éveil n’est active. Après avoir autorisé ces tâches à tourner sur batterie, j’ai refait la série complète, la seule retenue ici. Avant de confier une longue tâche à un agent sur batterie, mieux vaut donc vérifier qu’aucun réglage d’énergie ne laisse la machine s’assoupir.</p>
+
+
+
+<h3>Le seuil des 30 % : l’économiseur d’énergie en cause</h3>
+
+
+
+<p>Sur son exemplaire 64 Go, Vincent avait observé un bridage brutal à 30 % de batterie, avec un GPU tombé à 689 MHz et environ 7 W malgré 94 % d’occupation, et une vitesse d’écriture divisée par deux (de 78 à 38 tok/s sur gpt-oss-20b). J’ai donc laissé tourner la génération continue sur mon exemplaire jusqu’à 27 % de batterie, avec les réglages d’usine, qui prévoient justement d’activer l’économiseur d’énergie de Windows à 30 %.</p>
+
+
+
+<blockquote>
+<p>Un réglage de Windows, activé d’usine, divise par deux la vitesse de l’IA sous 30 % de batterie.</p>
+</blockquote>
+
+
+
+<figure><table><thead><tr><th>Génération IA continue (Qwen3.6-35B-A3B)</th><th>Écriture</th><th>GPU</th><th>Machine (tirée sur la batterie)</th></tr></thead><tbody><tr><td>De 92 à 31 %</td><td><strong>70,7 à 72,1 tok/s</strong></td><td>2 000 à 2 125 MHz, 27 à 30 W</td><td>89 à 91 W</td></tr><tr><td>Sous 30 %, réglage d’usine</td><td>37 tok/s (−48 %)</td><td>environ 800 MHz, 8 W, occupé à 88 %</td><td>42 W</td></tr><tr><td>À 27 %, économiseur réglé sur « Jamais »</td><td>62 tok/s</td><td>environ 1 735 MHz, 18 W</td><td>65 W</td></tr></tbody></table><figcaption>Réponses de 1 024 tokens enchaînées, mode Performance. La chute intervient à 18 h 20 min 36 s, au passage sous 30 %.</figcaption></figure>
+
+
+
+<p>Le bridage se reproduit bien. Pile au passage sous 30 %, la vitesse tombe en deux secondes de 71 à 37 tok/s, alors que le GPU reste occupé à 88 %. Il ne manque donc pas de travail, il est plafonné en puissance, et la machine ne tire plus que 42 W sur sa batterie.</p>
+
+
+
+<figure><a href="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-batterie-seuil-30-pourcent.png" rel="noopener"><img decoding="async" src="https://images.frandroid.com/wp-content/uploads/2026/10/rtx-spark-batterie-seuil-30-pourcent.png" alt="Graphique écriture IA continue sur batterie : 71 tok/s de 92 à 31 %, 37 tok/s sous 30 % avec le réglage d'usine, 62 tok/s sous 30 % avec l'économiseur d'énergie réglé sur jamais"></a><figcaption>Sous 30 % de batterie, l’économiseur d’énergie de Windows divise par deux la vitesse de l’IA. Le désactiver en récupère l’essentiel.</figcaption></figure>
+
+
+
+<p>L’économiseur d’énergie de Windows en est en grande partie responsable. En coupant son déclenchement automatique à 27 %, la vitesse remonte de 37 à 62 tok/s dès le bloc suivant, sans toutefois retrouver les 71 tok/s mesurés au-dessus de 30 %. Cet écart restant n’a pas d’explication établie (autre réglage ou batterie basse), et comme l’économiseur était désactivé sur la machine de Vincent lors de sa mesure, un second mécanisme peut aussi entrer en jeu. Sur le plan technique, l’indicateur d’économiseur que relevait mon script est resté à zéro tout du long, ce qui montre qu’il ne reflète pas l’économiseur de Windows 11.</p>
+
+
+
+<p>Pour garder la vitesse de l’IA sur batterie, il faut donc régler l’économiseur d’énergie sur « Jamais » dans Paramètres, Système, Alimentation et batterie, un réglage que le guide de Nvidia demande d’ailleurs aux testeurs. Sans lui, la RTX Spark perd la moitié de sa vitesse sous 30 %.</p>
+
+
+
+<h3>La recharge</h3>
+
+
+
+<p>Une fois rebranché à 24 %, au repos, le ProArt P16 tire une pointe de 128 W à la prise, puis 115 W, dont 76 W envoyés dans la batterie selon Windows. En pleine charge d’IA pendant la recharge, la prise mesure 137 à 138,7 W, et Windows estime à environ une heure le passage de 25 à 100 %.</p>
+
+
+<h2>Ce qu’annonce Nvidia, ce qu’on a mesuré</h2>
+
+
+
+<p>J’ai repris les protocoles de Nvidia et les annonces, et j’ai essayé d’obtenir les mêmes résultats. </p>
+
+
+
+<figure><table><thead><tr><th>Annonce de Nvidia</th><th>Nos mesures</th></tr></thead><tbody><tr><td>Bande passante mémoire jusqu’à 300 Go/s</td><td>249 à 274 Go/s côté GPU, 139,8 Go/s côté processeur</td></tr><tr><td>Qwen3.8-27B à 23,81 tok/s (SpeedBench)</td><td>16,1 à 16,3 tok/s sans brouillon, 31,4 à 56,7 avec DFlash, 23,9 à 28,2 en conversation</td></tr><tr><td>Qwen3.8 Flash-Next avec au moins 78 Go alloués au GPU</td><td>Se charge en CUDA à condition d’avoir de la place libre sur le SSD : 25,6 tok/s avec llama-bench, 30,8 avec la recette de Nvidia (46,3 avec MTP)</td></tr><tr><td>3DMark : Steel Nomad 2 991, Speed Way 3 072, Port Royal 9 112</td><td>2 970, 2 970 et 9 135, soit 0,3 à 3,3 % d’écart</td></tr><tr><td>Flux.2 Klein 4B en 14,69 s</td><td>16,2 s</td></tr><tr><td>Cyberpunk 2077 à 135 FPS en 1440p (génération × 3)</td><td>128,7 FPS en 2 560 x 1 600, soit environ 43 images réellement calculées</td></tr><tr><td>Marvel Rivals à 147 FPS (version ARM64EC)</td><td>35 FPS en version x64 émulée, en 3 840 x 2 400, version ARM64EC non testée</td></tr><tr><td>DLSS 5 d’octobre : plus de 30 % de gain sur NBA 2K27</td><td>+78 % d’images calculées (38,2 à 68,0)</td></tr><tr><td>Performances équivalentes sous batterie</td><td>Presque vrai en IA au-dessus de 30 % de batterie : écriture −1 à −2 %, calcul −5 à −10 %. Sous 30 %, vitesse divisée par deux avec l’économiseur d’énergie réglé d’usine</td></tr></tbody></table><figcaption>Comparaison entre les références de Nvidia et mes mesures. Évidemment, je n’avais pas exactement les différents réglages des méthodes Nvidia, mais j’ai essayé de m’en rapprocher.</figcaption></figure>
+
+
+<h2>Prix et disponibilité</h2>
+
+
+
+<p>Les premiers PC portables RTX Spark arrivent à partir du 16 octobre, et le ticket d’entrée s’établit à 2 899,99 € avec la Surface Ultra 15 pouces de Microsoft en 24 Go, équipée de la version 18 cœurs de la puce. Entre 3 300 et 3 450 €, on trouve ensuite l’Asus ProArt P16 en 24 Go et les modèles en 32 Go de HP et de Lenovo, tous dotés d’un écran OLED, alors que la Surface Ultra en 32 Go, qui passe à la puce 20 cœurs, grimpe à 4 239,99 €.</p>
+
+
+
+<blockquote>
+<p>Les 128 Go se paient 2 300 € de plus que la version 64 Go, pour une vitesse identique sur les modèles qui tiennent dans 64 Go.</p>
+</blockquote>
+
+
+
+<figure><table><thead><tr><th>Modèle</th><th>Mémoire / SSD</th><th>Écran ou puce</th><th>Prix indicatif</th></tr></thead><tbody><tr><td>Microsoft Surface Ultra 15 pouces</td><td>24 Go / 512 Go</td><td>Puce 18 cœurs, GPU 5 120 cœurs</td><td>2 899,99 €</td></tr><tr><td>Asus ProArt P16 (H7607BA-SR308W)</td><td>24 Go / 512 Go</td><td>OLED 16 pouces 120 Hz tactile</td><td>3 299,99 €</td></tr><tr><td>HP OmniBook Ultra 16</td><td>32 Go / 1 To</td><td>OLED 16 pouces 120 Hz tactile</td><td>3 299,99 €</td></tr><tr><td>Lenovo Yoga Pro 9 15 (15N1X11)</td><td>32 Go / 1 To</td><td>OLED 15,3 pouces 165 Hz</td><td>3 449,99 €</td></tr><tr><td>Microsoft Surface Ultra 15 pouces</td><td>32 Go / 1 To</td><td>Puce 20 cœurs, GPU 6 144 cœurs</td><td>4 239,99 €</td></tr><tr><td>MSI Prestige N16 Flip AI+</td><td>64 Go / 1 To</td><td>OLED 16 pouces 120 Hz tactile, convertible</td><td>5 099,99 €</td></tr><tr><td>Asus ProArt P16 (H7607BA-SE030X)</td><td>64 Go / 1 To</td><td>OLED 16 pouces 120 Hz tactile</td><td>5 299,99 €</td></tr><tr><td>Asus ProArt P14 (H7407BA-SM250X)</td><td>128 Go / 1 To</td><td>OLED 14 pouces 120 Hz tactile</td><td>6 899,99 €</td></tr><tr><td>Asus ProArt P16 (H7607BA-SE378X)</td><td>128 Go / 2 To</td><td>OLED 16 pouces 120 Hz tactile</td><td>7 599,99 €</td></tr><tr><td>Lenovo Yoga Pro 9 15 (Pack Pro)</td><td>128 Go / 2 To</td><td>OLED 15,3 pouces 165 Hz</td><td>7 799,99 €</td></tr></tbody></table><figcaption>Prix indicatifs TTC des PC portables RTX Spark N1X relevés le 14 octobre 2026, classés du moins cher au plus cher.</figcaption></figure>
+
+
+
+<p>La quantité de mémoire fait ensuite grimper la facture très vite. Il faut compter environ 5 100 à 5 300 € en 64 Go, puis entre 6 900 et 7 800 € en 128 Go, la seule capacité qui permette de charger gpt-oss-120b ou Flash-Next comme dans ce test. Le ProArt P16 en 128 Go est ainsi vendu 7 599,99 € avec 2 To de stockage, soit 2 300 € de plus que la version 64 Go. Comme les deux versions écrivent à la même vitesse sur les modèles qui tiennent dans 64 Go, ce supplément ne se justifie que si vous comptez vraiment utiliser les plus gros modèles. Des mini PC RTX Spark sont par ailleurs attendus en novembre.</p>
+
+
+
+<p>La puce existe en deux versions, une N1X à 18 cœurs processeur et 5 120 cœurs CUDA et celle testée ici, à 20 cœurs et 6 144 cœurs CUDA, avec 24 à 128 Go de mémoire selon les configurations. Nvidia destine les gros modèles d’IA et les grandes scènes 3D aux versions 64 et 128 Go.</p>
+<div id="embedded-tag-nvidia-rtx-spark">
+            <p>
+            Retrouvez l’actualité de Nvidia RTX Spark             <a href="https://www.frandroid.com/tag/nvidia-rtx-spark">
+                Nvidia RTX Spark            </a>
+        </p>
+
+        <ul>
+                            <li>
+                    <a href="https://www.frandroid.com/marques/asus/3280559_asus-promet-100-fps-en-1440p-avec-140-watts-sur-son-mini-pc-rtx-spark-sans-dire-comment">
+                        Asus promet 100 FPS en 1440p avec 140 watts sur son mini-PC RTX Spark, sans dire comment                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/marques/microsoft/3277643_surface-laptop-ultra-combien-microsoft-facture-t-il-vraiment-le-go-de-memoire">
+                        Surface Laptop Ultra : combien Microsoft facture-t-il vraiment le Go de mémoire ?                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/marques/microsoft/3277545_nouveaux-pc-microsoft-sous-rtx-spark-une-mauvaise-nouvelle-pour-les-joueurs-de-call-of-duty">
+                        Nouveaux PC Microsoft sous RTX Spark : une mauvaise nouvelle pour les joueurs de Call of Duty                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/produits-android/ordinateurs/pc-fixes/mini-pc/3277435_surface-rtx-spark-dev-box-microsoft-lance-son-mini-pc-nvidia-pour-lia-locale">
+                        Surface RTX Spark Dev Box : Microsoft lance son mini PC Nvidia pour l’IA locale                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/marques/microsoft/3277357_microsoft-a-paye-69-milliards-pour-call-of-duty-et-loublie-sur-ses-propres-pc">
+                        Microsoft a payé 69 milliards pour Call of Duty et l’oublie sur ses propres PC                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/marques/3276725_combien-coutera-un-pc-rtx-spark-en-france-une-fuite-de-hp-donne-un-premier-ordre-didee">
+                        Combien coûtera un PC RTX Spark en France ? Une fuite de HP donne un premier ordre d’idée                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/marques/microsoft/3275677_microsoft-surface-laptop-ultra-18-coeurs-et-24-go-de-vram-le-modele-que-les-joueurs-se-paieront-a-fuite">
+                        Microsoft Surface Laptop Ultra : 18 cœurs et 24 Go de VRAM, le modèle que les joueurs se paieront a fuité                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.frandroid.com/marques/microsoft/3248975_rtx-spark-en-approche-microsoft-annonce-sa-keynote-windows-et-surface">
+                        RTX Spark en approche ? Microsoft annonce sa keynote Windows et Surface                    </a>
+                </li>
+                    </ul>
+    </div>
+            </div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>

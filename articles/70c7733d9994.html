@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>Claude Mythos a découvert une faille de sécurité qui existe depuis près de 30 ans — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>Claude Mythos a découvert une faille de sécurité qui existe depuis près de 30 ans</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">Florian Bayard</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://www.01net.com/actualites/claude-mythos-decouvert-faille-securite-qui-existe-30-ans.html">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><p>Claude Mythos, l’IA d’Anthropic jugée trop puissante pour être rendue publique, vient de lever le voile sur une faille de sécurité vieille de 29 ans. Cette vulnérabilité permettait à un attaquant de voler les identifiants ou les mots de passe d’autres utilisateurs partageant le même réseau. Présente depuis 1997, elle est passée inaperçue des audits humains et des outils de sécurité classiques.</p><div>
+        <p><a href="https://www.01net.com/actualites/effraye-effet-secondaire-nouveau-claude-anthropic-prend-decision-inedite.html">Claude Mythos</a>, la version la plus puissante de l’IA d’Anthropic, continue de faire des prouesses. Réservée aux entreprises membres du projet Glasswing, l’IA vient de débusquer <strong>une faille de sécurité dans Squid</strong>, l’un des serveurs proxy web les plus répandus au monde. Le serveur est utilisé dans des milliers d’entreprises, d’écoles et même à bord d’avions commerciaux, pour gérer le trafic internet des utilisateurs.</p> <p>La faille, baptisée «&nbsp;Squidbleed&nbsp;» par les chercheurs de la société Calif.io, est apparue dans le code de Squid <strong>en 1997, il y a 29 ans</strong>. Tout découle d’une vieille fonctionnalité intégrée à Squid, à savoir la gestion du protocole FTP, un ancien système de transfert de fichiers sur internet. Dans les années 90, les développeurs avaient ajouté un petit bout de code pour que Squid fonctionne aussi avec les serveurs NetWare, un logiciel réseau très répandu dans les entreprises de l’époque. Ces serveurs affichaient la liste de leurs fichiers dans un format légèrement différent des autres. C’est ce bout de code qui a donné naissance à «&nbsp;Squidbleed&nbsp;».</p>
+
+ <blockquote><p>À lire aussi&nbsp;: <a href="https://www.01net.com/actualites/claude-mythos-penetre-quasi-totalite-systemes-classifies-nsa-quelques-heures-mais-simple-test.html">Claude Mythos a piraté la «&nbsp;quasi-totalité des systèmes classifiés&nbsp;» de la NSA en «&nbsp;quelques heures&nbsp;», mais c’était un test</a></p></blockquote> <h2>Une faille cachée dans un détail technique</h2> <p>Il y a quelques semaines, les chercheurs ont chargé Claude Mythos de <strong>scanner tout le code de Squid</strong>. Rapidement, l’intelligence artificielle a remarqué une anomalie dans la programmation du serveur proxy. Le bug se cache dans un tout petit détail technique. Lors de la lecture d’une liste de fichiers FTP, le programme utilise une instruction censée ignorer les espaces dans un texte. Malheureusement, cette instruction a un comportement inattendu quand elle atteint la fin du texte. Au lieu de s’arrêter, elle continue à avancer dans la mémoire et se met alors à lire des données qui ne lui appartiennent pas, potentiellement celles d’un autre utilisateur.</p>
+
+ <p>Des identifiants de connexion, des tokens de session, des mots de passe en clair peuvent ainsi être exposés à un attaquant qui exploite la vulnérabilité. C’est potentiellement une catastrophe pour les nombreux utilisateurs de Squid. Pendant des décennies, la faille est <strong>passée inaperçue</strong>. Aucun chercheur n’a jamais mis le doigt sur ce comportement imprévu.&nbsp;La faille a été qualifiée de «&nbsp;modérée&nbsp;» par les chercheurs. Pour l’exploiter, il faut déjà être un utilisateur légitime du proxy ciblé et contrôler un serveur FTP accessible depuis ce proxy. Le trafic HTTPS, qui représente aujourd’hui la grande majorité des connexions, n’est pas concerné par la faille de sécurité. Un correctif a été ajouté à la mise à jour Squid v7.6 pour colmater la brèche.</p>
+
+ <h2>10&nbsp;000 failles de sécurité débusquées par Mythos</h2> <p>Ce n’est pas la première fois que Claude Mythos débusque une faille inconnue qui gangrénait du code informatique depuis des années. L’IA a d’ailleurs retrouvé <strong>une vulnérabilité vieille de&nbsp;27 ans</strong> dans le système OpenBSD, utilisé pour faire tourner des pare-feux critiques, et un bug existant depuis 16 ans dans FFmpeg, une bibliothèque vidéo utilisée sur des millions d’appareils. Depuis sa création, Mythos a déniché plus de 10&nbsp;000 vulnérabilités dans des logiciels open source.</p> <blockquote> <p>👉🏻 Suivez l’actualité tech en temps réel&nbsp;: ajoutez 01net à vos sources sur <a href="https://profile.google.com/cp/CgovbS8wd2Juam1fGhZodHRwczovL3d3dy4wMW5ldC5jb20v?pf=6">Google</a>, et abonnez-vous à notre canal <a href="https://whatsapp.com/channel/0029VaH5gKg6xCSG9nQQhQ1Z">WhatsApp</a>.</p> </blockquote>        
+                  <p>
+            <span>Source :</span>
+            <a href="https://blog.calif.io/p/squidbleed-cve-2026-47729" rel="noopener">
+              Calif
+            </a>
+          </p>
+        
+              </div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>

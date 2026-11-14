@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>METEO PARIS par Météo-France - Prévisions Météo gratuites pour aujourd’hui, demain et à 15 jours. — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>METEO PARIS par Météo-France - Prévisions Météo gratuites pour aujourd’hui, demain et à 15 jours.</h1>
+        
+        <p class="small"><a rel="noopener" target="_blank" href="https://meteofrance.com/previsions-meteo-france/paris/75000">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div id="page">
+
+                                <div id="primary_section">
+
+                        <div id="primary_content">
+                                                                                        <div id="page_breadcrumbs">
+    <div id="block-bandeauadministrablepoi">
+  
+    
+      
+
+
+          
+<p><a href="https://meteofrance.com/applications-mobiles" rel="">
+        		    								    
+
+
+            <img loading="lazy" data-src="/sites/default/files/2026-09/bannieres_web_fixe_728x90_0.png" width="728" height="90" alt="L'application météo de référence" title="Applications mobiles de Météo-France" src="https://meteofrance.com/sites/default/files/2026-09/bannieres_web_fixe_728x90_0.png">
+
+
+          
+
+	        
+	    	</a>
+    </p>
+          
+
+  </div>
+
+<div id="block-breadcrumbs-2">
+  
+    
+      	<ul>
+	  	    
+    	<li>
+    		<a href="https://meteofrance.com/">    		Accueil
+    		</a>    	</li>
+	  	    
+    	<li>
+    		<a href="https://meteofrance.com/previsions-meteo-france/ile-de-france/3">    		Île-de-France
+    		</a>    	</li>
+	  	    
+    	<li>
+    		<a href="https://meteofrance.com/previsions-meteo-france/paris-dept/75">    		Paris (dept)
+    		</a>    	</li>
+	  	    
+    	<li>
+    		    		Paris
+    		    	</li>
+	  	</ul>
+
+  </div>
+
+  </div>
+                            
+                                                                                        <div id="page_content_header">
+  
+    
+      <p id="title-block">
+  
+  
+  
+    
+    
+  
+      </p><h2>METEO Paris (75000)</h2>
+  
+  
+  
+  
+  
+  
+  
+<p></p>
+
+  </div>
+                            
+                                                          <div>
+    
+
+
+<div id="block-mfhourrain">
+    <h2>Pluie dans l'heure</h2>
+
+    <div id="hour-rain-container">
+        <div>
+            <p>
+                ${settings.rain_subtitle}
+            </p>
+            <p>
+                ${settings.no_rain_subtitle}
+            </p>
+            <p>Actualisées à                ${updated_time}</p>
+        </div>
+        <div>
+
+            <div>
+                <p>${getStartHour()}</p>
+                <p>${getEndHour()}</p>
+            </div>
+
+            <ul>
+                <li>
+                    <img alt="Pluie faible" title="Pluie faible" src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/rain/pluie-faible.svg">
+                    <img alt="Pluie modérée" title="Pluie modérée" src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/rain/pluie-moderee.svg">
+                    <img alt="Pluie forte" title="Pluie forte" src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/rain/pluie-forte.svg">
+                    <img alt="Pas de pluie" title="Pas de pluie" src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/rain/pas-de-pluie.svg">
+                    <p>5<br>min</p>
+                    <p>10<br>min</p>
+                    <p>20<br>min</p>
+                    <p>30<br>min</p>
+                    <p>40<br>min</p>
+                    <p>50<br>min</p>
+                </li>
+            </ul>
+            
+
+
+        </div>
+        <p>Une erreur est survenue...</p>
+        
+
+        
+
+
+    </div>
+</div>
+<div id="block-mfnormales">
+    <h2>Comparaison aux normales</h2>
+    <div id="normales-container">
+        <div>
+            <div>
+                <div>
+                    <p>
+                        <span>minimale</span>
+                        du jour                    </p>
+                    <p><span>Ecart</span>
+                </p></div>
+                <div>
+                    <p>
+                        <strong>${Math.round(min)}°</strong>
+                    </p>
+                    <p>
+                        <strong>${diff(Math.round(min), Math.round(normales.T_min))}°</strong>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>
+                        <span>maximale</span>
+                        du jour                    </p>
+                    <p><span>Ecart</span>
+                </p></div>
+                <div>
+                    <p>
+                        <strong>${Math.round(max)}°</strong>
+                    </p>
+                    <p>
+                        <strong>${Math.abs(Math.round(max) - Math.round(normales.T_max))}°</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>Écarts avec les moyennes de températures minimales et maximales du mois de <strong>${month}</strong> sur <strong>${poi_name}</strong></p>
+    </div>
+</div>
+<div id="block-mfvigilancepopup">
+        	<header>
+        		<img src="https://meteofrance.com/themes/custom/theme_public/dist/img/logo.svg" width="50" alt="Météo-France">
+        		<h2>Vigilance rouge</h2>
+        		<a></a>
+        	</header>
+            
+
+            
+        </div>
+
+
+<div id="block-mfzonebulletinvideo">
+	<h2><i></i> Que faire en cas de Vigilance Pluie-inondation ? </h2>
+	<div>		
+		<div>
+		
+			<p><img alt="Miniature bulletin dailymotion" src="https://meteofrance.com/sites/default/files/bulletin/assets/vigilance-pluie-inondation-comment-se-proteger-meteo-france.jpg">
+			</p>
+
+			<div>
+							<p id="zone-bulletin-iframe">
+							
+							</p>
+						 </div>
+		</div>
+
+		<p>🌧️ Rivières qui débordent, routes coupées, maisons inondés... La pluie, lorsqu’elle tombe en grande quantité,  est un phénomène météorologique impressionnant et dangereux. 
+Les inondations représentent le premier risque naturel en France, par le nombre de personnes exposées et l’importance des dégâts provoqués. Réduire les risques et s’en protéger est possible. </p>
+
+	</div>
+</div>
+<div id="block-mfzonebulletinville">
+		<p><span>Bulletin météo</span>
+			<img id="zone-bulletin-ville-img" data-src="/modules/custom/mf_zone_bulletin_ville/bulletins/default_image.jpg" alt="zone-bulletin-ville-img" src="https://meteofrance.com/modules/custom/mf_zone_bulletin_ville/bulletins/default_image.jpg">
+		</p>
+		<div>			
+			<h2>Paris: prévisions sur les 3 prochains jours</h2>
+			<p>10/11/2026 15:00</p>
+			<div>
+				<p>Pour ce soir.</p><p>A 16 heures, la pression atmosphérique au niveau de la mer sur la commune, est de 1006 hectopascals.</p><p>Temps changeant accompagné d'ondées éparses. 
+</p><p>Quantité de précipitations d'environ 2 millimètres. </p><p>Les températures sont proches de 12 degrés vers 19 heures.
+</p><p>Vent faible.
+</p></div>
+			
+		</div>
+		<div id="targetDiv">
+                	<h2>METEO Paris prévisions sur les 3 prochains jours</h2>
+					<p>2026-11-10 15:00:00</p>
+                	<p>
+
+
+	
+		Pour ce soir.
+		A 16 heures, la pression atmosphérique au niveau de la mer sur la commune, est de 1006 hectopascals.
+		Temps changeant accompagné d'ondées éparses. 
+
+		Quantité de précipitations d'environ 2 millimètres. 
+		Les températures sont proches de 12 degrés vers 19 heures.
+
+		Vent faible.
+
+	
+	
+		Pour la nuit prochaine.
+		Ciel couvert. 
+
+		
+		Température sous abri de 12 degrés vers 1 heure.
+
+		Vent faible de direction variable.
+
+	
+	
+		Pour mercredi matin.
+		Ciel très nuageux à couvert. 
+
+		
+		Température : 11 degrés vers 7 heures.
+
+		Vent faible.
+
+	
+	
+		Pour mercredi après-midi.
+		Temps le plus souvent très nuageux. 
+
+		
+		Température : 14 degrés vers 13 heures.
+
+		Vent faible de direction variable.
+
+	
+	
+		Pour jeudi matin.
+		Après dissipation des brumes en matinée, temps très nuageux. 
+
+		
+		Températures minimales : 8 degrés. 
+		Vent de Nord-Nord-Est faible à modéré.
+
+	
+	
+		Pour jeudi après-midi.
+		Voile de nuages élevés. 
+
+		
+		Températures maximales : 11 degrés. 
+		Vent faible à modéré de Nord-Nord-Est.
+
+	
+	
+		Pour vendredi matin.
+		Beau temps sec et bien ensoleillé. 
+
+		
+		Températures minimales : 5 degrés. 
+		Vent faible.
+
+	
+	
+		Pour vendredi après-midi.
+		Le soleil brille sans partage. 
+
+		
+		Températures maximales : 11 degrés. 
+		Vent faible de direction variable.
+
+	
+
+</p>
+
+                	
+                </div>
+	</div>
+
+<div id="block-mftexteseo">
+		
+
+<h2>Météo-France et le Climat à Paris</h2>
+
+<p>Paris est la première destination touristique en France et dans le monde, avec plusieurs millions de visiteurs chaque année, à toutes les saisons.</p>
+
+<p>Le climat de l'Ile-de-France est assez comparable à celui de Paris et permet, selon les mois, de choisir entre une des nombreuses attractions en plein air (comme DisneyLand Paris) ou visiter le Château de Versailles.</p>
+
+<p>Pour mieux prévoir vos loisirs, vos déplacements personnels et professionnels, mais aussi mieux vous accompagner, Météo-France réalise des prévisions météo sur l'Ile-de-France, sur Paris et tous ses arrondissements, tels que Paris 12 ou Paris 15, chaque jour et pour les 15 prochains jours. Vous pouvez également et à tout moment savoir s'il va pleuvoir dans l'heure à venir grâce à notre service "Pluie dans l'heure".</p>
+
+	</div>
+<div id="block-mfephemeride">
+    <h2>Ephéméride du ${getDate()} à ${poi_name}</h2>
+    <div id="ephemeride_container">
+        
+        <div>
+
+            <ul>
+                <li>
+                    <figure>
+                        <img src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/weather/p1j.svg" alt="Lever du Soleil" title="Lever du Soleil">
+                    </figure>
+                    <i></i>
+                </li>
+
+                <li>
+                    <p>
+                        <small>Lever</small>
+                        <strong>${sun_rise}</strong>
+                    </p>
+                </li>
+                <li>
+                    <figure>
+                        <img src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/weather/p1j.svg" alt="Coucher du Soleil" title="Coucher du Soleil">
+                    </figure>
+                    <i></i>
+                </li>
+
+                <li>
+                    <p>
+                        <small>Coucher</small>
+                        <strong>${sun_set}</strong>
+                    </p>
+                </li>
+            </ul>
+
+            <h3>${saint_name}</h3>
+        </div>
+
+        
+        <div>
+
+            <ul>
+                <li>
+                    <figure>
+                        <img src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/weather/p1n.svg" alt="Lever de la Lune" title="Lever de la Lune">
+                    </figure>
+                    <i></i>
+                </li>
+
+                <li>
+                    <p>
+                        <small>Lever</small>
+                        <strong>${moon_rise}</strong>
+                    </p>
+                </li>
+                <li>
+                    <figure>
+                        <img src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/weather/p1n.svg" alt="Coucher de la Lune" title="Coucher de la Lune">
+                    </figure>
+                    <i></i>
+                </li>
+
+                <li>
+                    <p>
+                        <small>Coucher</small>
+                        <strong>${moon_set}</strong>
+                    </p>
+                </li>
+            </ul>
+
+
+            <h3>${lune_phase}</h3>
+        </div>
+
+    </div>
+</div>
+
+<article>
+
+  
+    
+
+  
+  
+
+</article>
+
+  </div>
+
+                        </div>
+
+                                                                            <div id="primary_sidebar">
+  
+    
+      <ul>
+            <li>
+            <a href="https://meteofrance.com/actualites/meteo-temps-agite-et-pluvieux-cette-semaine" title="Météo : temps agité et pluvieux cette semaine">
+                <figure>
+                    <img alt="Météo : temps agité et pluvieux cette semaine" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/sites/default/files/styles/80_56/public/images/articles/temps%20perturb%C3%A9%20Infoclimat%20MeteoVagabonde.gif?itok=r1j9C_aP">
+                </figure>
+                <div>
+                    <h3>Météo : temps agité et pluvieux cette semaine</h3>
+                    <p>10/11/2026</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/actualites/cop-31-comment-la-ville-influence-t-elle-la-pluie" title="COP 31 : Comment la ville influence-t-elle la pluie ?">
+                <figure>
+                    <img alt="COP 31 : Comment la ville influence-t-elle la pluie ?" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/sites/default/files/styles/80_56/public/images/articles/VIlle%20-%20pluie%20-%20getty.gif?itok=6-mZDCza">
+                </figure>
+                <div>
+                    <h3>COP 31 : Comment la ville influence-t-elle la pluie ?</h3>
+                    <p>09/11/2026</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/actualites/bilan-climatique-doctobre-2026-de-nombreux-episodes-mediterraneens-la-secheresse" title="Bilan climatique d’octobre 2026 : de nombreux épisodes méditerranéens, la sécheresse persiste ailleurs">
+                <figure>
+                    <img alt="Bilan climatique d’octobre 2026 : de nombreux épisodes méditerranéens, la sécheresse persiste ailleurs" data-src="/sites/default/files/styles/80_56/public/images/articles/Infoclimat%20Meteo78.jpg?itok=HZa4jVw6" src="https://meteofrance.com/sites/default/files/styles/80_56/public/images/articles/Infoclimat%20Meteo78.jpg?itok=HZa4jVw6">
+                </figure>
+                <div>
+                    <h3>Bilan climatique d’octobre 2026 : de nombreux épisodes méditerranéens, la sécheresse persiste ailleurs</h3>
+                    <p>05/11/2026</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+  </div>
+                                            </div>
+                
+                                                
+                                                    
+                
+                                
+                                                    <div id="secondary_section">
+
+                            <div id="secondary_content">
+    <div id="block-mfzonebulletintext">		
+		<p><span>Bulletin Météo-France</span>
+			<img alt="Bulletin Météo-France" title="Bulletin Météo-France" src="https://meteofrance.com/modules/custom/mf_zone_bulletin/img/bulletin.png">
+		</p>
+		<div>
+				<p>Demain mercredi 11 novembre</p><p>Encore pluvieux, mais toujours doux.</p><p>Des pluies orageuses sont attendues le matin de l'Auvergne à l'Alsace Lorraine et sur le Centre-Est. De la grisaille se forme sur les régions centrales, alors qu'une perturbation arrive en première...</p>
+			</div>
+		<div id="targetDiv">
+
+                	<p>
+
+
+  Voici les tempÃ©ratures relevÃ©es Ã&nbsp; 16h suivies des minimales prÃ©vues demain matin :
+
+Brest    : 15/12  Paris       : 12/11  Lyon      : 20/14  Biarritz  : 22/17  Cherbourg  : 12/11              
+Tours    : 17/10  Clermont-Fd : 20/12  Perpignan : 17/15  Nice      : 16/14  Rennes     : 15/11   
+Nancy    :  8/ 7  Limoges     : 17/13  Marseille : 20/16  Nantes    : 18/10  Strasbourg :  8/ 7
+Bordeaux : 20/14  Lille       :  9/ 7  Dijon     : 17/11  Toulouse  : 19/15  Ajaccio    : 20/18
+  
+    Demain mercredi 11 novembre
+    Encore pluvieux, mais toujours doux. 
+    Des pluies orageuses sont attendues le matin de l'Auvergne Ã&nbsp; l'Alsace Lorraine et sur le Centre-Est. De la grisaille se forme sur les rÃ©gions centrales, alors qu'une perturbation arrive en premiÃ¨re partie de journÃ©e sur la Bretagne. Quelques pluies circulent Ã©galement proche de la frontiÃ¨re belge. Le ciel est bien gris dans le Sud-Est avec encore des pluies possibles vers la cÃ´te d'Azur. En journÃ©e les nuages restent nombreux sur l'est du pays et sur la moitiÃ© nord, et s'accompagnent de passages pluvieux. Quelques Ã©claircies se dÃ©veloppent tout de mÃªme proche de la MÃ©diterranÃ©e. Le temps est plus perturbÃ© sur la Corse, avec des averses orageuses sur l'ouest de l'Ã®le. 
+Dans le Sud-Ouest, le temps est un peu plus agrÃ©able avec un ciel lumineux et une atmosphÃ¨re douce. Seul le piÃ©mont pyrÃ©nÃ©en reste chargÃ©, avec des pluies continues se mettant en place dans l'aprÃ¨s-midi. Le vent de sud se renforce dans la soirÃ©e et nuit suivante avec des rafales entre 80/100 km/h sur les crÃªtes, et des rafales dÃ©bordant sur le pays basque. Le vent d'autan se met en place en cours de nuit. 
+Au petit matin, les tempÃ©ratures sont comprises entre 6 et 10 degrÃ©s sur un quart Nord-Est et jusqu'au Nord, 10 Ã&nbsp; 16 degrÃ©s sur le reste du pays, jusqu'Ã&nbsp; 15 Ã&nbsp; 19 sur la Corse. L'aprÃ¨s-midi, les tempÃ©ratures restent douces avec 19 Ã&nbsp; 23 degrÃ©s sur un quart Sud-ouest et en bord de MÃ©diterranÃ©e, 9 Ã&nbsp; 14 degrÃ©s en bord de Manche et 14 Ã&nbsp; 20 degrÃ©s ailleurs. 
+  
+</p>
+
+                	
+                </div>
+	</div>
+<div id="block-mfcontenueditorialwidget-5">
+  
+    
+      <ul>
+            <li>
+            <a href="https://meteofrance.com/meteo-a-z/quest-ce-quun-episode-mediterraneen" title="Qu’est-ce qu’un épisode méditerranéen&nbsp;?">
+                <figure>
+                    <img alt="Qu’est-ce qu’un épisode méditerranéen&nbsp;?" data-src="/sites/default/files/styles/345_180/public/images/articles/GettyImages-909171638.jpg?itok=RLuK9Uoh" src="https://meteofrance.com/sites/default/files/styles/345_180/public/images/articles/GettyImages-909171638.jpg?itok=RLuK9Uoh">
+                                            <p>Précipitations</p>
+                                    </figure>
+                <div>
+                    <h3>Qu’est-ce qu’un épisode méditerranéen&nbsp;?</h3>
+                    <p>Un épisode méditerranéen est un épisode de très fortes précipitations sur une durée courte (1h à 24h en général) touchant les départements méditerranéens, le plus souvent à l’automne. L'équivalent de plusieurs mois de précipitations tombe alors en seulement quelques heures ou quelques jours, ce qui peut être dangereux et provoquer localement de lourds dégâts. Les épisodes méditerranéens se produisent 3 à 6 fois par an en moyenne. </p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/vigilance-et-securite/pluie-inondation-quels-dangers-et-comment-se-proteger" title="Pluie-inondation : quels dangers et comment se protéger ?">
+                <figure>
+                    <img alt="Pluie-inondation : quels dangers et comment se protéger ?" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/sites/default/files/styles/345_180/public/images/articles/pluie2.gif?itok=y0Nc1R0J">
+                                            <p>Vigilance</p>
+                                    </figure>
+                <div>
+                    <h3>Pluie-inondation : quels dangers et comment se protéger ?</h3>
+                    <p>Les fortes précipitations peuvent avoir des conséquences graves pour la sécurité des personnes et des biens. Elles peuvent provoquer des inondations par ruissellement et par débordement des cours d’eau, mais aussi des glissements de terrain, des coulées de boues et des laves torrentielles (coulées de débris). Afin de se protéger, il est nécessaire de connaître les dangers et les bons réflexes à adopter.</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/meteo-a-z/combien-pese-un-nuage" title="Combien pèse un nuage ?">
+                <figure>
+                    <img alt="Combien pèse un nuage ?" data-src="/sites/default/files/styles/345_180/public/images/articles/cumulonimbus_cotopaxim.jpg?itok=R2WclW32" src="https://meteofrance.com/sites/default/files/styles/345_180/public/images/articles/cumulonimbus_cotopaxim.jpg?itok=R2WclW32">
+                                            <p>Les nuages</p>
+                                    </figure>
+                <div>
+                    <h3>Combien pèse un nuage ?</h3>
+                    <p>Un nuage est composé de gouttelettes d’eau et/ou de cristaux en suspension dans l’atmosphère. La forme, la couleur et la taille d’un nuage varient selon les conditions atmosphériques.</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/meteo-a-z/glossaire" title="Glossaire">
+                <figure>
+                    <img alt="Glossaire" data-src="/sites/default/files/styles/345_180/public/images/articles/glossaire-meteo-france.jpg?itok=0QqM1tjL" src="https://meteofrance.com/sites/default/files/styles/345_180/public/images/articles/glossaire-meteo-france.jpg?itok=0QqM1tjL">
+                                            <p>Météo-France</p>
+                                    </figure>
+                <div>
+                    <h3>Glossaire</h3>
+                    <p>De l’anticyclone au vortex polaire, consultez notre glossaire météo et climat. Non exhaustif, il est mis à jour régulièrement, au fil de nos publications. Vous y trouverez également des liens utiles vers nos contenus pédagogiques concernant les phénomènes météorologiques et des informations scientifiques sur le changement climatique.</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+  </div>
+
+  </div>
+
+                                                                                        <div id="secondary_sidebar">
+  
+    
+      <ul>
+            <li>
+            <a href="https://meteofrance.com/meteo-a-z/le-vent-dautan" title="Le vent d’autan">
+                <figure>
+                    <img alt="Le vent d’autan" data-src="/sites/default/files/styles/80_56/public/images/articles/autan-vent.jpg?itok=Z2rr9Hea" src="https://meteofrance.com/sites/default/files/styles/80_56/public/images/articles/autan-vent.jpg?itok=Z2rr9Hea">
+                </figure>
+                <div>
+                    <h3>Le vent d’autan</h3>
+                    <p>10/07/2026</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/meteo-a-z/comment-choisit-on-le-nom-dune-tempete" title="Comment choisit-on le nom d’une tempête&nbsp;?">
+                <figure>
+                    <img alt="Comment choisit-on le nom d’une tempête&nbsp;?" data-src="/sites/default/files/styles/80_56/public/images/articles/QR23GETTY.jpg?itok=8sOfTcgK" src="https://meteofrance.com/sites/default/files/styles/80_56/public/images/articles/QR23GETTY.jpg?itok=8sOfTcgK">
+                </figure>
+                <div>
+                    <h3>Comment choisit-on le nom d’une tempête&nbsp;?</h3>
+                    <p>28/08/2026</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/quel-est-limpact-du-changement-climatique-sur-les-episodes-mediterraneens" title="Quel est l’impact du changement climatique sur les épisodes méditerranéens&nbsp;?">
+                <figure>
+                    <img alt="Quel est l’impact du changement climatique sur les épisodes méditerranéens&nbsp;?" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/sites/default/files/styles/80_56/public/images/articles/71247719920201131.gif?itok=loYmwFKi">
+                </figure>
+                <div>
+                    <h3>Quel est l’impact du changement climatique sur les épisodes méditerranéens&nbsp;?</h3>
+                    <p>05/09/2025</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/comment-le-changement-climatique-modifie-les-precipitations-en-france" title="Comment le changement climatique modifie les précipitations en France">
+                <figure>
+                    <img alt="Comment le changement climatique modifie les précipitations en France" data-src="/sites/default/files/styles/80_56/public/images/articles/pluie_0.jpg?itok=szrWp0Ap" src="https://meteofrance.com/sites/default/files/styles/80_56/public/images/articles/pluie_0.jpg?itok=szrWp0Ap">
+                </figure>
+                <div>
+                    <h3>Comment le changement climatique modifie les précipitations en France</h3>
+                    <p>08/10/2025</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/ressources-utiles-sur-le-changement-climatique" title="Ressources utiles sur le changement climatique">
+                <figure>
+                    <img alt="Ressources utiles sur le changement climatique" data-src="/sites/default/files/styles/80_56/public/images/articles/Baptiste%20Mourcel%20-%20Quand%20la%20vigne%20s%E2%80%99installe%20en%20Bretagne.jpg?itok=TSHFtBdp" src="https://meteofrance.com/sites/default/files/styles/80_56/public/images/articles/Baptiste%20Mourcel%20-%20Quand%20la%20vigne%20s%E2%80%99installe%20en%20Bretagne.jpg?itok=TSHFtBdp">
+                </figure>
+                <div>
+                    <h3>Ressources utiles sur le changement climatique</h3>
+                    <p>16/10/2026</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+  </div>
+                                                    </div>
+                
+                                                    
+                                
+                                                    <div id="tertiary_section">
+    <p><span>
+        <i></i>
+        IMAGES &amp; VIDÉOS</span></p><div>
+            <ul>
+                                <li role="button">
+                    <i></i>
+                    Recommandées
+                </li>
+                               <li role="button">
+                    <i></i>
+                    Récents
+                </li>
+                               <li role="button">
+                    <i></i>
+                    Populaires
+                </li>
+                           </ul>
+            <div>
+                                    <ul>
+                        <li>
+                            <figure>
+                                <img>
+                            </figure>
+                            <p>${vid.title}</p>
+                        </li>
+                    </ul>
+                                    <ul>
+                        <li>
+                            <figure>
+                                <img>
+                            </figure>
+                            <p>${vid.title}</p>
+                        </li>
+                    </ul>
+                                    <ul>
+                        <li>
+                            <figure>
+                                <img>
+                            </figure>
+                            <p>${vid.title}</p>
+                        </li>
+                    </ul>
+                            </div>
+        </div>
+</div>
+                
+                                
+                                                    <div id="quinary_section">
+  
+    
+      <ul>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/rechauffement-climatique-quel-climat-en-france-en-2050" title="Réchauffement climatique : quel climat en France en 2050&nbsp;?">
+                <figure>
+                    <img alt="Réchauffement climatique : quel climat en France en 2050&nbsp;?" data-src="/sites/default/files/styles/345_180/public/images/articles/comme%20un%20volcan-clement-viala.jpg?itok=sF6m-n55" src="https://meteofrance.com/sites/default/files/styles/345_180/public/images/articles/comme%20un%20volcan-clement-viala.jpg?itok=sF6m-n55">
+                                            <p>Changement climatique</p>
+                                    </figure>
+                <div>
+                    <h3>Réchauffement climatique : quel climat en France en 2050&nbsp;?</h3>
+                    <p>Un réchauffement de +2,7 °C en France hexagonale et Corse correspond à un réchauffement planétaire de +2 °C, ce que l’accord de Paris indiquait comme seuil limite à ne pas franchir : c’est donc une valeur qui n’a rien d’anodin. En effet, les experts estiment qu’à ce niveau, les phénomènes extrêmes comme les canicules, les sécheresses, les feux de forêt et les inondations deviendraient beaucoup plus fréquents et intenses.</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/quel-climat-futur-dans-votre-region" title="Quel climat futur dans votre région&nbsp;?">
+                <figure>
+                    <img alt="Quel climat futur dans votre région&nbsp;?" data-src="/sites/default/files/styles/345_180/public/images/articles/carte-france-region.jpg?itok=MlC-5VBo" src="https://meteofrance.com/sites/default/files/styles/345_180/public/images/articles/carte-france-region.jpg?itok=MlC-5VBo">
+                                            <p>Changement climatique</p>
+                                    </figure>
+                <div>
+                    <h3>Quel climat futur dans votre région&nbsp;?</h3>
+                    <p>Les projections climatiques, produites à des échelles fines, permettent d’appréhender les évolutions locales du climat futur. Ainsi le réchauffement climatique ne se traduit pas par une évolution uniforme des températures et des précipitations sur l’ensemble du territoire. À l'horizon 2100, selon la trajectoire de réchauffement de référence pour l'adaptation au changement climatique (TRACC), un écart est attendu entre le Sud-Est, qui se réchauffe davantage, et le Nord-Ouest du pays. En matière de précipitation, des différences entre régions apparaissent entre le Nord Est et le Sud Ouest. Cette cartographie vise à éclairer la prise en compte de la TRACC à l'échelle régionale et infrarégionale.</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+  </div>
+                
+                
+                                    <div id="sixary_section">
+  
+    
+      	<ul>
+	  	    
+    	<li>
+    		<a href="https://meteofrance.com/">    		Accueil
+    		</a>    	</li>
+	  	    
+    	<li>
+    		<a href="https://meteofrance.com/previsions-meteo-france/ile-de-france/3">    		Île-de-France
+    		</a>    	</li>
+	  	    
+    	<li>
+    		<a href="https://meteofrance.com/previsions-meteo-france/paris-dept/75">    		Paris (dept)
+    		</a>    	</li>
+	  	    
+    	<li>
+    		    		Paris
+    		    	</li>
+	  	</ul>
+
+  </div>
+                
+            </div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>

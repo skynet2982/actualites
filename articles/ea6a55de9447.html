@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>Failles critiques dans PHP : alerte maximale et mise à jour d&rsquo;urgence ce mercredi à 16 h — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>Failles critiques dans PHP : alerte maximale et mise à jour d&rsquo;urgence ce mercredi à 16 h</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">Ulrich Rozier</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://www.frandroid.com/culture-tech/3293371_failles-critiques-dans-php-alerte-maximale-et-mise-a-jour-durgence-ce-mercredi-a-16-h">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div>
+                                                                    <div>
+<p>Les serveurs du monde entier s’apprêtent à passer une fin de journée sous tension. Ce mercredi 21 octobre à 16 heures, le projet PHP va corriger en urgence deux failles majeures susceptibles de permettre la prise de contrôle à distance de millions de sites, de WordPress aux grandes plateformes d’e-commerce.</p>
+</div>
+
+
+<figure><a rel="noopener" href="https://images.frandroid.com/wp-content/uploads/2026/10/image-258.png"><img decoding="async" loading="eager" width="1200" height="675" src="https://img.frandroid.com/images.frandroid.com/wp-content/uploads/2026/10/image-258.png?resize=1200&amp;key=c7174d90" alt="" srcset="https://images.frandroid.com/wp-content/uploads/2026/10/image-258-1200x675.png 1200w, https://images.frandroid.com/wp-content/uploads/2026/10/image-258-768x432.png 768w, https://images.frandroid.com/wp-content/uploads/2026/10/image-258-928x522.png 928w, https://images.frandroid.com/wp-content/uploads/2026/10/image-258-300x169.png 300w" sizes="(max-width: 1200px) 100vw, 1200px"></a></figure>
+
+
+
+<p>Branle-bas de combat pour les administrateurs système et les développeurs web. PHP publiera ce mercredi 21 octobre à 16 heures (heure de Paris) des correctifs d’urgence pour colmater deux failles de sécurité critiques. </p>
+
+
+
+<p>L’équipe chargée de la sécurité de PHP a publié <a rel="noopener" href="https://www.php.net/archive/2026.php#2026-10-20-1">un avis ce mardi 20 octobre</a>. Elle y annonce des correctifs pour deux failles critiques, attendus ce mercredi 21 octobre à 14 heures UTC, soit 16 heures à Paris. Moins d’une journée sépare donc l’alerte de la mise à jour. Et le public concerné est énorme&nbsp;: <strong>PHP est utilisé par 69,3&nbsp;% des sites</strong> dont on connaît le langage côté serveur, d’après <a rel="noopener" href="https://w3techs.com/technologies/details/pl-php">les relevés de W3Techs</a>. On y trouve WordPress, une bonne partie des boutiques en ligne et une foule d’applications maison.</p>
+
+
+
+<p>Les deux failles portent les identifiants CVE-2026-109618 et CVE-2026-109619, la référence du registre public qui numérote les vulnérabilités. PHP les note 9,2 sur 10 selon CVSS v4.0, la grille standard qui mesure la gravité d’une faille. Pour le reste, l’équipe garde tout jusqu’à la sortie des correctifs&nbsp;: versions touchées, mode d’exploitation et versions corrigées. Elle demande aux utilisateurs de se préparer dès maintenant pour mettre à jour dès la publication.</p>
+
+
+
+<h2>Une fuite sur Hacker News a bousculé le calendrier</h2>
+
+
+
+<p>Si PHP prévient avec si peu de délai, c’est que l’information circulait déjà. Le 20 octobre, peu avant l’avis officiel, un utilisateur nommé «&nbsp;petecooper&nbsp;» a publié un message sur Hacker News, le forum tech de l’incubateur Y Combinator. Il y annonçait deux failles d’exécution de code à distance (RCE) dans PHP. En clair, ce type de faille permet à un attaquant de lancer ses propres commandes sur le serveur visé.</p>
+
+
+
+<p>Le message a été supprimé depuis, mais <a rel="noopener" href="https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/">BleepingComputer</a> a pu le lire. Il donnait les mêmes identifiants CVE, une note de 10 sur 10 et une divulgation prévue le 22 octobre. </p>
+
+
+
+<p>D’après <a rel="noopener" href="https://arstechnica.com/security/2026/10/php-maintainers-tell-web-devs-to-prepare-themselves-for-critical-security-patches/">Ars Technica</a>, la fuite comprenait aussi une vidéo, non authentifiée, d’un outil baptisé PHP2Shell. On l’y voyait exécuter du code sur des sites WordPress, Drupal, Magento ou Joomla.</p>
+
+
+
+<h2>Plus d’un site PHP sur trois tourne encore sur une vieille version</h2>
+
+
+
+<p>Les sources ne s’accordent pas sur la gravité. watchTowr et le message de Hacker News parlent d’une note de 10, le maximum. De son côté, PHP s’en tient à 9,2, et personne n’a encore expliqué cet écart.</p>
+
+
+
+<p>Toujours selon watchTowr, les failles toucheraient PHP 5, 6, 7 et 8. PHP 6 n’est jamais sorti en version stable (le projet l’a abandonné en 2010 et est passé directement de PHP 5 à PHP 7), mais le reste de la liste inquiète davantage. Le site officiel de PHP ne cite aujourd’hui que quatre branches maintenues, de PHP 8.2 à PHP 8.5.</p>
+
+
+
+<p>Pourtant, au 20 octobre, 27&nbsp;% des sites sous PHP utilisaient encore PHP 7 et 7,7&nbsp;% PHP 5, une version sortie en 2004, toujours d’après W3Techs. Si watchTowr a raison, plus d’un site PHP sur trois tourne donc sur une version que le projet ne suit plus. Surtout, les détails techniques sortiront en même temps que les correctifs. </p>
+
+
+
+<p>Cités par Ars Technica, les chercheurs de Sansec, spécialisés dans la sécurité des boutiques en ligne, s’attendent à des attaques de masse dans le quart d’heure qui suivra.</p>
+
+
+
+<p>Alors que faire&nbsp;? Vérifiez la version de PHP de vos serveurs (la commande <code>php -v</code> suffit) et prévoyez une fenêtre de maintenance ce mercredi après-midi. Sur un hébergement mutualisé, la mise à jour dépend de l’hébergeur&nbsp;: demandez-lui quand il compte l’appliquer. PHP annoncera les versions corrigées à 16 heures, heure de Paris, dans la rubrique actualités de php.net.</p>
+<hr>            </div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>
