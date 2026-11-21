@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueHammer - Le zero-day Windows lâché par un chercheur en colère — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>BlueHammer - Le zero-day Windows lâché par un chercheur en colère</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">Korben</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://korben.info/bluehammer-faille-zero-day-windows.html">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div><p>Ce week-end, pendant qu'on se gavait d'oeufs de Pâques au Cadmium, un chercheur en sécu a balancé un zero-day Windows dans la nature... et tout ça d'après ce que j'ai compris, à cause de Microsoft qui l'a vraiment poussé à bout. L'exploit s'appelle <strong>BlueHammer</strong> et il permet à quiconque ayant un accès local sur une machine Windows 11 25H2 de passer SYSTEM. Et vous vous en doutez y'a toujours pas de patch.</p><p>Il s'agit d'une d'une escalade de privilèges locale (LPE) qui exploite une
+<a href="https://korben.info/des-agents-ia-decouvrent-deux-failles-critiques-dans-le-systeme-dimpression-de-linux-et-macos.html">race condition</a>
+de type TOCTOU (time-of-check to time-of-use), combinée avec une confusion de chemins dans le processus de mise à jour des signatures de Windows Defender. Je sais, il est trop tôt pour ces conneries mais disons que c'est le bug classique où un programme vérifie un truc, puis l'utilise, mais entre les deux quelqu'un a changé le truc en question.</p><p>En gros, l'exploit profite d'une fenêtre de temps entre le moment où Defender vérifie un fichier et celui où il l'utilise pour glisser un lien symbolique qui redirige vers la ruche SAM, le fichier C:\Windows\System32\config\SAM (là où Windows stocke les identifiants locaux). Et là, après ça devient open bar sur
+<a href="https://korben.info/windows-faille-critique-vol-mots-de-passe-ntlm.html">les hash de mots de passe</a>
+de tous les comptes locaux.</p><p>Le chercheur derrière tout ça opère sous les pseudos Chaotic Eclipse et Nightmare-Eclipse et le 3 avril 2026, il a publié
+<a href="https://github.com/Nightmare-Eclipse/BlueHammer">le code source complet sur GitHub</a>
+, signé PGP, avec ce message assez salé : "<em>
+<a href="https://deadeclipse666.blogspot.com/2026/04/public-disclosure.html">I was not bluffing Microsoft, and I'm doing it again.</a>
+</em>"</p><p><img src="https://korben.info/bluehammer-faille-zero-day-windows/bluehammer-faille-zero-day-windows-2.png" alt="" loading="lazy" decoding="async"></p><p>Son reproche ? D'abord le MSRC (Microsoft Security Response Center) qui lui a demandé une vidéo de démonstration pour valider son rapport, et ensuite une réponse sur ce bug Windows Defender qui ne l'a visiblement pas satisfait : "<em>I'm just really wondering what was the math behind their decision</em>"</p><p>Will Dormann, analyste principal chez Tharros (ex-Analygence) et référence dans le milieu, a confirmé que l'exploit fonctionne, même s'il précise que l'exploitation n'est pas triviale. Une fois les privilèges obtenus, l'attaquant a les clés du royaume et peut lancer un shell avec les privilèges SYSTEM comme si c'était chez lui... Donc pas trivial, certes mais bien réel. D'ailleurs, c'est pas la première fois que
+<a href="https://korben.info/agents-ia-100-bugs-kernel-windows.html">Windows se fait éplucher par des chercheurs</a>
+qui trouvent sans difficultés des failles d'escalade de privilèges en série.</p><p>Après, sous le capot, c'est quand même bien foutu. Un développeur (0xjustBen) a réimplémenté le PoC de manière modulaire et ça montre bien la mécanique : un module télécharge une vraie mise à jour Defender, un autre surveille les Volume Shadow Copies, un troisième enregistre un callback via l'API Cloud Files.</p><p>Et le cœur du truc joue la race condition avec un swap de lien symbolique pour lire la ruche SAM.</p><p>Notez quand même que le PoC original contient des bugs (le chercheur l'admet lui-même dans le README) et ne fonctionne pas sur Windows Server... ce qui ne veut pas dire que c'est inoffensif, attention. Et la réimplémentation de 0xjustBen, elle, n'a fonctionné que sur Windows 11 25H2, les versions 22H2, 23H2 et 24H2 n'étant pas affectées. Pas de CVE attribuée non plus pour l'instant, ce qui veut dire que Microsoft n'a même pas encore catalogué officiellement le problème.</p><p>Côté protection, c'est pas simple vu qu'il n'y a pas de correctif officiel mais comme l'attaque nécessite un accès local à la machine, ça limite pas mal les scénarios. Faut déjà être sur le poste Windows, que ce soit via un malware, du social engineering ou un accès physique. Après on sait bien qu'en entreprise, un poste partagé ou un stagiaire un peu curieux, c'est pas rare...</p><p>Premier réflexe donc : allez vérifier votre version de Windows (Paramètres &gt; Système &gt; À propos, ou winver dans Exécuter). Si vous n'êtes pas sur 25H2, vous n'êtes pas concerné. Sinon, vérifiez que vos comptes locaux ont des mots de passe costauds (pas "admin123"), désactivez les comptes inutilisés et gardez un œil sur les processus qui tournent avec des privilèges élevés. Côté entreprise, les solutions EDR devraient pouvoir détecter le comportement suspect (création de service temporaire, accès SAM inhabituel).</p><p>Bref, je pense que Microsoft finira bien par patcher... un jour.</p><p><a href="https://www.bleepingcomputer.com/news/security/disgruntled-researcher-leaks-bluehammer-windows-zero-day-exploit/">Source</a></p></div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>
