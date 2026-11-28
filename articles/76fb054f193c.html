@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>Windows 11 - Un clic sur le bon lien et hop, vous avez un compte local — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>Windows 11 - Un clic sur le bon lien et hop, vous avez un compte local</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">Korben</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://korben.info/bypass-compte-microsoft-windows-11.html">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div><p>Jusqu'à présent, personne ne l'avait remarqué, mais sur l'écran d'installation de Windows 11 Home, celui qui vous réclame un compte Microsoft avant de vous laisser aller plus loin, il y a un tout petit lien "Learn more" planqué au milieu d'un paragraphe. Personne ne clique jamais dessus mais
+<a href="https://twitter.com/TheBobPony/status/2098825591285776775">Bob Pony, lui, l'a fait</a>
+et magie-magie, Windows l'a propulsé directement sur la création d'un compte local.</p><div id="video-container-bypass-compte-microsoft-windows-11-1.mp4"><video controls="" preload="metadata">
+<source src="https://korben.info/bypass-compte-microsoft-windows-11/bypass-compte-microsoft-windows-11-1.mp4" type="video/mp4"><pre><code>Votre navigateur ne supporte pas la lecture de vidéos HTML5. Voici un
+&lt;a href="/bypass-compte-microsoft-windows-11/bypass-compte-microsoft-windows-11-1.mp4"&gt;lien vers la vidéo&lt;/a&gt;.
+</code></pre></video></div><p>Sur la page qui s'ouvre, on vous demande alors le nom de celui qui va utiliser cet ordi, puis derrière, c'est un mot de passe, trois questions de sécurité, et hop vous voilà sur le bureau avec votre compte local ! C'est top non ? Plus besoin de vous prendre la tête avec une invite de commandes, ou des clés de base de registre !</p><p>Plusieurs sites ont fait le test, moi je n'ai pas encore eu le temps, mais apparemment ça fonctionne très bien sur la version Home de Windows 11 mais je ne sais pas pour la version Pro.</p><p>Faut dire que ça fait un an que Microsoft ferme les autres portes du compte local. La clé de registre BypassNRO, puis la commande <code>ms-cxh:localonly</code>
+<a href="https://korben.info/windows-11-bloque-ms-cxh-localonly.html">dont je vous parlais l'automne dernier</a>
+, ont été rebouchées les unes après les autres dans les préversions, avec à chaque fois la même explication foireuse : Ces bidouilles laissaient soi-disant des gens sortir du process d'installation avec une machine qui n'était pas entièrement configurée. Sauf que ce lien qui mène exactement au même compte local, lui, bah visiblement il a échappé à Microsoft... lol.</p><p>Un truc à savoir quand même avant de choisir le compte local, et
+<a href="https://support.microsoft.com/en-us/windows/device-encryption-in-windows-cf7e2b6f-3e70-4882-9532-18633605b7df">c'est Microsoft qui le dit</a>
+: le chiffrement de l'appareil ne s'activera pas tout seul. Quand vous ouvrez la session avec un compte Microsoft, il boote et la clé de récupération va se loger dans ce compte alors qu'avec un compte local, il reste inactif. Ça peut bien sûr se régler en allant dans les Paramètres, Confidentialité et sécurité, Chiffrement de l'appareil, mais faut y penser avant le jour où votre portable partira sous le bras de quelqu'un d'autre pendant que vous tapez votre meilleure sieste dans le TGV...</p><p>Alors maintenant, combien de temps tiendra cette astuce ?</p><p>Aucune idée, mais on espère tous que Microsoft laissera ça tranquille. Et si le lien a disparu quand vous lirez ces lignes, sachez qu'il reste des chemins qui passent par le média d'installation notamment via
+<a href="https://korben.info/rufus-cle-usb-bootable.html">Rufus, que je vous ai déjà présenté</a>
+. Suffit de cocher une case et hop, ça vous fera une clé USB qui ne réclamera aucun compte.</p><p>Voilà, si vous avez une machine à installer ce week-end, c'est donc le bon moment de tester cette astuce !</p><p>Source : les tests de
+<a href="https://www.windowslatest.com/2026/09/13/microsoft-blocked-every-windows-11-account-bypass-except-the-most-boring-link-on-its-own-page/">Windows Latest</a>
+et de
+<a href="https://www.pcgamer.com/software/operating-systems/we-tested-the-simple-windows-11-account-bypass-and-it-works-just-no-one-tell-microsoft/">PC Gamer</a>
+, et
+<a href="https://www.xda-developers.com/windows-11-without-microsoft-account-possible-2026/">XDA</a>
+pour la méthode Rufus.</p></div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>

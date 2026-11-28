@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>Qu&rsquo;est-ce que le prompt injection attack : ce danger inhérent à tous les navigateurs IA — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>Qu&rsquo;est-ce que le prompt injection attack : ce danger inhérent à tous les navigateurs IA</h1>
+        <p style="color: var(--bs-gray-600, #6c757d);">Akandé Philippe ABIODOUN</p>
+        <p class="small"><a rel="noopener" target="_blank" href="https://www.buzzwebzine.fr/prompt-injection-attack-danger-navigateurs-ia/">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div>
+
+		
+				
+		
+<p><strong>De Comet de Perlexity à Atlas d’OpenAI en passant par Opera Neon, nous sommes en train de basculer dans l’ère des navigateurs agentiques ou navigateurs IA. Mais cela devra attendre, car ils sont venus avec leur propre problème de sécurité.</strong></p>
+
+
+
+
+<figure><img decoding="async" width="1024" height="683" src="https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-1024x683.jpg" alt="Navigateurs agentiques ou navigateurs IA" srcset="https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-1024x683.jpg 1024w, https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-300x200.jpg 300w, https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-150x100.jpg 150w, https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-450x300.jpg 450w, https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-1200x800.jpg 1200w, https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-768x512.jpg 768w, https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043.jpg 1279w" sizes="(max-width: 1024px) 100vw, 1024px" data-old-src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20683'%3E%3C/svg%3E" data-lazy-srcset="https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-1024x683.jpg 1024w, https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-300x200.jpg 300w, https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-150x100.jpg 150w, https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-450x300.jpg 450w, https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-1200x800.jpg 1200w, https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-768x512.jpg 768w, https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043.jpg 1279w" data-lazy-src="https://www.buzzwebzine.fr/wp-content/uploads/2025/11/pexels-cottonbro-5077043-1024x683.jpg"></figure>
+
+
+
+<p>Les navigateurs web constituent l’interface entre nous et les serveurs du monde entier. Ce sont eux qui recoivent <a href="https://www.buzzwebzine.fr/la-securite-de-votre-pc/">la commande via nos clics </a>pour aller rechercher l’information et nous la ramener. <strong>Ils sont passifs </strong>et attendent des ordres de la part de l’utilisateur à chaque étape. Mais avec les navigateurs agentiques tels que Comet, Atlas ou encore Opera Neon, dopés à l’IA, les choses changent. <strong>Ils sont actifs</strong> et ne reçoivent que le but. Ils connaissent les étapes et peuvent naviguer tout seul. Et c’est justement là que se trouve le danger fondamental que nous appelons le prompt injection attack.</p>
+
+
+
+
+<h2><span id="quest-ce-que-le-prompt-injection-attack-auquel-sont-vulnerables-tous-les-navigateurs-ia-actuels"></span>Qu’est-ce que le prompt injection attack auquel sont vulnérables tous les navigateurs IA actuels ?<span></span></h2>
+
+
+
+<p>Fondamentalement, un navigateur IA est un navigateur simple fonctionnant avec des modèles et algorithmes puissants en arrière-plan, que l’on surnomme <strong>agent IA</strong>. Vous entrez une requête qui est envoyée, analysée et retournée à cet agent qui se charge de <strong>suivre les différentes étapes à votre place</strong>. Lorsque vous parcourez un site web avec ce navigateur et lui demander d’expliquer ce qui se passe, il prend connaissance de la page web et répond à votre requête.</p>
+
+
+
+
+<p>Le problème avec ce mode de fonctionnement, c’est que si vous surfez avec ce navigateur sur une <strong>page web vérolée</strong> contenant des <strong>instructions malveillantes</strong> sous forme de texte, l’agent IA pourrait facilment les exécuter. Ainsi faisant, les pirates pourraient prendre le contrôle de votre PC à distance pour passer à l’acte : phishing, vol de données, installation de virus, etc. La faille, c’est que cet agent IA ne fait pas encore précisément <strong>la différence entre les instructions à exécuter</strong> qu’il reçoit en entrée et les données qu’il analyse.</p>
+
+
+
+<p>Les analystes de <strong><a href="https://www.buzzwebzine.fr/navigateur-brave-plus-interessant-que-google-chrome/">Brave</a></strong> ont par exemple montré dans leur rapport comment <strong>un commentaire Reddit,</strong> simple en apparence, mais contenant du code malveillant, peut amener un agent IA à réaliser <strong>des actions indésirables</strong>.</p>
+
+
+
+<figure><blockquote><p>Ce risque, les navigateurs traditionnels ne l’ont pas, car ils n’exécutent absolument rien d’eux-même.</p></blockquote></figure>
+
+
+
+<p>Il ne s’agit donc pas d’un risque de sécurité isolé, mais fondamentalement lié au fonctionnement des navigateurs IA : Atlas d’OpenAI, Comet de Perplexity, Opera Neon, Chrome dopé à l’IA ou encore Copilot Edge.</p>
+
+
+
+
+<p><strong>VOIR AUSSI : <a href="f872e4ec6d78.html">Google Chrome est-il vraiment le navigateur avec le moins de sécurités ?</a></strong></p>
+
+
+
+<h2>Comment éviter les attaques par injection de prompt ?<span></span></h2>
+
+
+
+<p>Vous en conviendrez, les attaques par injection de prompt peuvent être catastrophiques. Il ne s’agit que de la première partie d’une opération d’envergure qui peut conduire à&nbsp; :&nbsp;</p>
+
+
+
+<ul>
+<li>vol de données (si l’IA révèle des infos du contexte de session ou du prompt utilisateur),</li>
+
+
+
+<li>l’altération des réponses (désinformation, propagande, biais injecté)</li>
+
+
+
+<li>contournement des filtres de sécurité (faire générer à l’IA du contenu normalement interdit).</li>
+
+
+
+<li>attaques en chaîne : une page infectée peut modifier le comportement d’un navigateur IA, qui à son tour “propage” les instructions à d’autres contextes.</li>
+</ul>
+
+
+
+<p>Pour contrer tout cela, il n’y a <strong>aucune solution actuellement</strong>, car le danger est lié au mode de fonctionnement même des navigateurs. Le sandbox ne permet même pas de le contourner. La seule recommandation pour le moment est tout simplement d’<strong>éviter d’utiliser ces navigateurs IA</strong> et demeurer sur les versions traditionnelles.&nbsp;</p>
+
+
+
+
+
+
+<div data-payload="{&quot;align&quot;:&quot;right&quot;,&quot;id&quot;:&quot;162388&quot;,&quot;slug&quot;:&quot;default&quot;,&quot;valign&quot;:&quot;bottom&quot;,&quot;ignore&quot;:&quot;&quot;,&quot;reference&quot;:&quot;auto&quot;,&quot;class&quot;:&quot;&quot;,&quot;count&quot;:&quot;0&quot;,&quot;legendonly&quot;:&quot;&quot;,&quot;readonly&quot;:&quot;&quot;,&quot;score&quot;:&quot;0&quot;,&quot;starsonly&quot;:&quot;&quot;,&quot;best&quot;:&quot;5&quot;,&quot;gap&quot;:&quot;4&quot;,&quot;greet&quot;:&quot;Notez cet article&quot;,&quot;legend&quot;:&quot;0\/5 - (0 vote)&quot;,&quot;size&quot;:&quot;24&quot;,&quot;title&quot;:&quot;Qu\u0026#039;est-ce que le prompt injection attack : ce danger inhérent à tous les navigateurs IA&quot;,&quot;width&quot;:&quot;0&quot;,&quot;_legend&quot;:&quot;{score}\/{best} - ({count} {votes})&quot;,&quot;font_factor&quot;:&quot;1.25&quot;}">
+            
+
+                
+
+<p><span>Notez cet article</span>
+    </p>
+    </div>
+
+
+
+		<div>
+<p><strong>BuzzWebzine est un média indépendant. Soutiens-nous en nous ajoutant à tes favoris sur Google Actualités  :</strong></p>
+
+</div>		
+		
+		
+		
+	</div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+    <title>METEO AGEN par Météo-France - Prévisions Météo gratuites pour aujourd’hui, demain et à 15 jours. — Actualités</title>
+    <link type="text/css" rel="stylesheet" href="../styles.css" media="all">
+  </head>
+  <body>
+    <main class="container mb-3" style="max-width: 700px;">
+      <p style="margin-top: 1rem;"><a href="../index.html">&larr; Retour aux actualités</a></p>
+      <article>
+        <h1>METEO AGEN par Météo-France - Prévisions Météo gratuites pour aujourd’hui, demain et à 15 jours.</h1>
+        
+        <p class="small"><a rel="noopener" target="_blank" href="https://meteofrance.com/previsions-meteo-france/agen/47000">Voir l'article original</a></p>
+        <hr>
+        <div class="article-content"><div id="readability-page-1" class="page"><div id="page">
+
+                                <div id="primary_section">
+
+                        <div id="primary_content">
+                                                                                        <div id="page_breadcrumbs">
+    <div id="block-bandeauadministrablepoi">
+  
+    
+      
+
+
+          
+<p><a href="https://meteofrance.com/applications-mobiles" rel="">
+        		    								    
+
+
+            <img loading="lazy" data-src="/sites/default/files/2026-09/bannieres_web_fixe_728x90_0.png" width="728" height="90" alt="L'application météo de référence" title="Applications mobiles de Météo-France" src="https://meteofrance.com/sites/default/files/2026-09/bannieres_web_fixe_728x90_0.png">
+
+
+          
+
+	        
+	    	</a>
+    </p>
+          
+
+  </div>
+
+<div id="block-breadcrumbs-2">
+  
+    
+      	<ul>
+	  	    
+    	<li>
+    		<a href="https://meteofrance.com/">    		Accueil
+    		</a>    	</li>
+	  	    
+    	<li>
+    		<a href="https://meteofrance.com/previsions-meteo-france/nouvelle-aquitaine/9">    		Nouvelle Aquitaine
+    		</a>    	</li>
+	  	    
+    	<li>
+    		<a href="https://meteofrance.com/previsions-meteo-france/lot-et-garonne/47">    		Lot-et-Garonne
+    		</a>    	</li>
+	  	    
+    	<li>
+    		    		Agen
+    		    	</li>
+	  	</ul>
+
+  </div>
+
+  </div>
+                            
+                                                                                        <div id="page_content_header">
+  
+    
+      <p id="title-block">
+  
+  
+  
+    
+    
+  
+      </p><h2>METEO Agen (47000)</h2>
+  
+  
+  
+  
+  
+  
+  
+<p></p>
+
+  </div>
+                            
+                                                          <div>
+    
+
+
+<div id="block-mfhourrain">
+    <h2>Pluie dans l'heure</h2>
+
+    <div id="hour-rain-container">
+        <div>
+            <p>
+                ${settings.rain_subtitle}
+            </p>
+            <p>
+                ${settings.no_rain_subtitle}
+            </p>
+            <p>Actualisées à                ${updated_time}</p>
+        </div>
+        <div>
+
+            <div>
+                <p>${getStartHour()}</p>
+                <p>${getEndHour()}</p>
+            </div>
+
+            <ul>
+                <li>
+                    <img alt="Pluie faible" title="Pluie faible" src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/rain/pluie-faible.svg">
+                    <img alt="Pluie modérée" title="Pluie modérée" src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/rain/pluie-moderee.svg">
+                    <img alt="Pluie forte" title="Pluie forte" src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/rain/pluie-forte.svg">
+                    <img alt="Pas de pluie" title="Pas de pluie" src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/rain/pas-de-pluie.svg">
+                    <p>5<br>min</p>
+                    <p>10<br>min</p>
+                    <p>20<br>min</p>
+                    <p>30<br>min</p>
+                    <p>40<br>min</p>
+                    <p>50<br>min</p>
+                </li>
+            </ul>
+            
+
+
+        </div>
+        <p>Une erreur est survenue...</p>
+        
+
+        
+
+
+    </div>
+</div>
+<div id="block-mfnormales">
+    <h2>Comparaison aux normales</h2>
+    <div id="normales-container">
+        <div>
+            <div>
+                <div>
+                    <p>
+                        <span>minimale</span>
+                        du jour                    </p>
+                    <p><span>Ecart</span>
+                </p></div>
+                <div>
+                    <p>
+                        <strong>${Math.round(min)}°</strong>
+                    </p>
+                    <p>
+                        <strong>${diff(Math.round(min), Math.round(normales.T_min))}°</strong>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>
+                        <span>maximale</span>
+                        du jour                    </p>
+                    <p><span>Ecart</span>
+                </p></div>
+                <div>
+                    <p>
+                        <strong>${Math.round(max)}°</strong>
+                    </p>
+                    <p>
+                        <strong>${Math.abs(Math.round(max) - Math.round(normales.T_max))}°</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>Écarts avec les moyennes de températures minimales et maximales du mois de <strong>${month}</strong> sur <strong>${poi_name}</strong></p>
+    </div>
+</div>
+<div id="block-mfvigilancepopup">
+        	<header>
+        		<img src="https://meteofrance.com/themes/custom/theme_public/dist/img/logo.svg" width="50" alt="Météo-France">
+        		<h2>Vigilance rouge</h2>
+        		<a></a>
+        	</header>
+            
+
+            
+        </div>
+
+
+<div id="block-mfzonebulletinvideo">
+	<h2><i></i> Le verglas</h2>
+	<div>		
+		<div>
+		
+			<p><img alt="Miniature bulletin dailymotion" src="https://meteofrance.com/sites/default/files/bulletin/assets/le_verglas_minia.png">
+			</p>
+
+			<div>
+							<p id="zone-bulletin-iframe">
+							
+							</p>
+						 </div>
+		</div>
+
+		<p>Pluies verglaçantes, regel… En hiver, le verglas forme une fine couche de glace sur les trottoirs et les routes. Parfois difficile à repérer à l’œil nu, il peut compliquer nos déplacements.</p>
+
+	</div>
+</div>
+<div id="block-mfzonebulletinville">
+		<p><span>Bulletin météo</span>
+			<img id="zone-bulletin-ville-img" data-src="/modules/custom/mf_zone_bulletin_ville/bulletins/default_image.jpg" alt="zone-bulletin-ville-img" src="https://meteofrance.com/modules/custom/mf_zone_bulletin_ville/bulletins/default_image.jpg">
+		</p>
+		<div>			
+			<h2>Agen: prévisions sur les 3 prochains jours</h2>
+			<p>27/11/2026 06:00</p>
+			<div>
+				<p>Pour ce matin.</p><p>A 7 heures, la pression atmosphérique au niveau de la mer sur la commune, est de 1019 hectopascals.</p><p>Nombreux passages nuageux sans conséquences. 
+</p><p>La température se situe aux alentours de 5 degrés vers 7 heures.
+</p><p>Vent faible.
+</p></div>
+			
+		</div>
+		<div id="targetDiv">
+                	<h2>METEO Agen prévisions sur les 3 prochains jours</h2>
+					<p>2026-11-27 06:00:00</p>
+                	<p>
+
+
+	
+		Pour ce matin.
+		A 7 heures, la pression atmosphérique au niveau de la mer sur la commune, est de 1019 hectopascals.
+		Nombreux passages nuageux sans conséquences. 
+
+		
+		La température se situe aux alentours de 5 degrés vers 7 heures.
+
+		Vent faible.
+
+	
+	
+		Pour cet après-midi.
+		Beau temps ensoleillé. 
+
+		
+		Les températures avoisinent 8 degrés vers 13 heures.
+
+		Vent faible de direction variable.
+
+	
+	
+		Pour ce soir.
+		Temps largement ensoleillé. 
+
+		
+		La température se situe aux alentours de 7 degrés vers 19 heures.
+
+		Vent faible.
+
+	
+	
+		Pour la nuit prochaine.
+		Ciel étoilé, puis apparition de brouillard en deuxième partie de nuit. 
+
+		
+		Les températures avoisinent 5 degrés vers 1 heure.
+
+		Vent faible de direction variable.
+
+	
+	
+		Pour samedi matin.
+		Dissipation des bancs de brouillard en matinée, puis ciel bleu. 
+
+		
+		Température : 3 degrés vers 7 heures.
+
+		Vent faible.
+
+	
+	
+		Pour samedi après-midi.
+		Le soleil brille généreusement. 
+
+		
+		Température : 9 degrés vers 13 heures.
+
+		Vent faible de direction variable.
+
+	
+	
+		Pour dimanche matin.
+		Ciel chargé de nuages. 
+
+		
+		Températures minimales : 3 degrés. 
+		Vent faible.
+
+	
+	
+		Pour dimanche après-midi.
+		Temps couvert avec pluie ensuite ciel changeant avec averses. 
+
+		Environ 1 millimètres de précipitations sont prévus. 
+		Températures maximales : 10 degrés. 
+		Vent faible de direction variable.
+
+	
+	
+		Pour lundi matin.
+		Dissipation des brouillards en cours de matinée, puis ciel nuageux. 
+
+		
+		Températures minimales : 7 degrés. 
+		Vent faible de direction variable.
+
+	
+	
+		Pour lundi après-midi.
+		Soleil prédominant. 
+
+		
+		Températures maximales : 11 degrés. 
+		Vent faible.
+
+	
+
+</p>
+
+                	
+                </div>
+	</div>
+
+
+<div id="block-mfephemeride">
+    <h2>Ephéméride du ${getDate()} à ${poi_name}</h2>
+    <div id="ephemeride_container">
+        
+        <div>
+
+            <ul>
+                <li>
+                    <figure>
+                        <img src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/weather/p1j.svg" alt="Lever du Soleil" title="Lever du Soleil">
+                    </figure>
+                    <i></i>
+                </li>
+
+                <li>
+                    <p>
+                        <small>Lever</small>
+                        <strong>${sun_rise}</strong>
+                    </p>
+                </li>
+                <li>
+                    <figure>
+                        <img src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/weather/p1j.svg" alt="Coucher du Soleil" title="Coucher du Soleil">
+                    </figure>
+                    <i></i>
+                </li>
+
+                <li>
+                    <p>
+                        <small>Coucher</small>
+                        <strong>${sun_set}</strong>
+                    </p>
+                </li>
+            </ul>
+
+            <h3>${saint_name}</h3>
+        </div>
+
+        
+        <div>
+
+            <ul>
+                <li>
+                    <figure>
+                        <img src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/weather/p1n.svg" alt="Lever de la Lune" title="Lever de la Lune">
+                    </figure>
+                    <i></i>
+                </li>
+
+                <li>
+                    <p>
+                        <small>Lever</small>
+                        <strong>${moon_rise}</strong>
+                    </p>
+                </li>
+                <li>
+                    <figure>
+                        <img src="https://meteofrance.com/modules/custom/mf_tools_common_theme_public/svg/weather/p1n.svg" alt="Coucher de la Lune" title="Coucher de la Lune">
+                    </figure>
+                    <i></i>
+                </li>
+
+                <li>
+                    <p>
+                        <small>Coucher</small>
+                        <strong>${moon_set}</strong>
+                    </p>
+                </li>
+            </ul>
+
+
+            <h3>${lune_phase}</h3>
+        </div>
+
+    </div>
+</div>
+
+<article>
+
+  
+    
+
+  
+  
+
+</article>
+
+  </div>
+
+                        </div>
+
+                                                                            <div id="primary_sidebar">
+  
+    
+      <ul>
+            <li>
+            <a href="efd13b1e1845.html" title="Météo : temps hivernal  sur le nord-est du pays">
+                <figure>
+                    <img alt="Météo : temps hivernal  sur le nord-est du pays" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/sites/default/files/styles/80_56/public/images/articles/Illustration%20Temps%20hivernal.gif?itok=ki5QD5bv">
+                </figure>
+                <div>
+                    <h3>Météo : temps hivernal  sur le nord-est du pays</h3>
+                    <p>26/11/2026</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/quel-climat-futur-dans-votre-ville" title="Quel climat futur dans votre ville&nbsp;?">
+                <figure>
+                    <img alt="Quel climat futur dans votre ville&nbsp;?" data-src="/sites/default/files/styles/80_56/public/images/articles/climat-futur-ville.jpg?itok=uYLtT0Yr" src="https://meteofrance.com/sites/default/files/styles/80_56/public/images/articles/climat-futur-ville.jpg?itok=uYLtT0Yr">
+                </figure>
+                <div>
+                    <h3>Quel climat futur dans votre ville&nbsp;?</h3>
+                    <p>23/11/2026</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/actualites/colloque-meteo-france-2026-adapter-les-territoires-et-faire-face-au-changement" title="Colloque Météo-France 2026&nbsp;: Adapter les territoires et faire face au changement après un été inédit">
+                <figure>
+                    <img alt="Colloque Météo-France 2026&nbsp;: Adapter les territoires et faire face au changement après un été inédit" data-src="/sites/default/files/styles/80_56/public/images/articles/Visuel%20article%20Colloque%20M%C3%A9t%C3%A9o-France%2015.12.2026.jpg?itok=1UU_QzI0" src="https://meteofrance.com/sites/default/files/styles/80_56/public/images/articles/Visuel%20article%20Colloque%20M%C3%A9t%C3%A9o-France%2015.12.2026.jpg?itok=1UU_QzI0">
+                </figure>
+                <div>
+                    <h3>Colloque Météo-France 2026&nbsp;: Adapter les territoires et faire face au changement après un été inédit</h3>
+                    <p>28/10/2026</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+  </div>
+                                            </div>
+                
+                                                
+                                                    
+                
+                                
+                                                    <div id="secondary_section">
+
+                            <div id="secondary_content">
+    <div id="block-mfzonebulletintext">		
+		<p><span>Bulletin Météo-France</span>
+			<img alt="Bulletin Météo-France" title="Bulletin Météo-France" src="https://meteofrance.com/modules/custom/mf_zone_bulletin/img/bulletin.png">
+		</p>
+		<div>
+				<p>Cet après-midi vendredi 27 novembre</p><p>Fort contraste thermique entre Nord-Est et Sud-Ouest</p><p>Une perturbation apporte des nuages sur la façade Atlantique et quelques pluies faibles entre Bretagne et Cotentin. Elle ne progresse que lentement vers l'intérieur, contrariée par l'air froid pré...</p>
+			</div>
+		<div id="targetDiv">
+
+                	<p>
+
+
+  Voici les tempÃ©ratures relevÃ©es Ã&nbsp; 10h suivies des maximales prÃ©vues cet aprÃ¨s-midi :
+
+Brest    : 11/14  Paris       :  1/ 5  Lyon      :  6/ 7  Biarritz  : 10/15  Cherbourg  :  7/10              
+Tours    :  6/ 9  Clermont-Fd :  6/ 8  Perpignan : 12/16  Nice      : 10/16  Rennes     :  7/10   
+Nancy    :  0/ 2  Limoges     :  5/10  Marseille :  8/12  Nantes    :  7/11  Strasbourg :  0/ 3
+Bordeaux :  7/12  Lille       : -1/ 2  Dijon     :  2/ 4  Toulouse  :  7/11  Ajaccio    : 12/15
+  
+    Cet aprÃ¨s-midi vendredi 27 novembre
+    Fort contraste thermique entre Nord-Est et Sud-Ouest
+    Une perturbation apporte des nuages sur la faÃ§ade Atlantique et quelques pluies faibles entre Bretagne et Cotentin. Elle ne progresse que lentement vers l'intÃ©rieur, contrariÃ©e par l'air froid prÃ©sent plus Ã&nbsp; l'est. Le ciel est plus lumineux avec des Ã©claircies des Hauts-de-France Ã&nbsp; l'est du Bassin Parisien et Champagne-Ardenne. Ces Ã©claircies l'emportent des PyrÃ©nÃ©es Ã&nbsp; la MÃ©diterranÃ©e, la moyenne vallÃ©e du RhÃ´ne et les Alpes. Sur les autres rÃ©gions, les grisailles nombreuses ce matin ont gÃ©nÃ©ralement du mal Ã&nbsp; se dÃ©chirer, malgrÃ© tout quelques rares trouÃ©es se dessinent localement. En Corse, quelques averses se dÃ©veloppent, plus particuliÃ¨rement sur la faÃ§ade nord-est.
+Mistral et tramontane sont sensibles dans leur domaine avec des rafales entre 60 et 70 km/h, voire localement jusqu'Ã&nbsp; 80 km/h.
+Les tempÃ©ratures restent froides sur le quart nord-est et prÃ¨s de frontiÃ¨res belges avec pas plus de 1 Ã&nbsp; 4 degrÃ©s. Il fait 4 Ã&nbsp; 8 degrÃ©s de la capitale au Centre, 9 Ã&nbsp; 15 degrÃ©s Ã&nbsp; l'Ouest et au Sud, avec localement 17 au pied des PyrÃ©nÃ©es et en Corse.
+  
+  
+    Demain samedi 28 novembre
+    MatinÃ©e bien froide sauf sur le Nord-Ouest oÃ¹ se produisent quelques pluies.
+    Le matin, le ciel est couvert sur le quart nord-ouest, avec quelques pluies faibles en Bretagne. La grisaille domine de l'Auvergne aux frontiÃ¨res allemandes avec par endroits des brouillards givrants. Les brouillards sont Ã©galement nombreux et denses en vallÃ©e de la Garonne. Ailleurs, le temps est dÃ©jÃ&nbsp; Ã&nbsp; l'Ã©claircie. En basse vallÃ©e du RhÃ´ne, le mistral donne encore quelques rafales Ã&nbsp; 50 km/h avant de s?essouffler. Hormis quelques poches de brouillards persistantes, comme localement en Val de SaÃ´ne, l'Ã©volution du ciel est gÃ©nÃ©ralement favorable, et le soleil finit par l'emporter l'aprÃ¨s-midi sur la majoritÃ© du pays. A l'inverse, la perturbation nuageuses est toujours prÃ©sente sur le quart nord-ouest, proposant des pluies en Bretagne qui gagnent progressivement jusqu' aux abords de la Normandie et des Pays de la Loire, et un vent sensible sur les CÃ´tes de la Manche. 
+Au petit matin, la baisse de tempÃ©rature se gÃ©nÃ©ralise. On attend de fortes gelÃ©es sur le Nord-Est avec -7 Ã&nbsp; -4 degrÃ©s et parfois moins Ã&nbsp; proximitÃ© du relief. Ailleurs les minimales sont le plus souvent comprises entre -4 et 1 degrÃ©s du nord au sud, hors littoral mÃ©diterranÃ©en. Il fait plus doux Ã&nbsp; l'ouest, avec 6 Ã&nbsp; 9 degrÃ©s. 
+L'aprÃ¨s-midi, les valeurs n'affichent pas plus de 0 Ã&nbsp; 4 degrÃ©s au nord-est, 5 Ã&nbsp; 12 degrÃ©s en gÃ©nÃ©ral ailleurs, jusqu'Ã&nbsp; 17 degrÃ©s au pays basque.
+  
+</p>
+
+                	
+                </div>
+	</div>
+<div id="block-mfcontenueditorialwidget-5">
+  
+    
+      <ul>
+            <li>
+            <a href="https://meteofrance.com/meteo-a-z/le-vortex-polaire" title="Le vortex polaire">
+                <figure>
+                    <img alt="Le vortex polaire" data-src="/sites/default/files/styles/345_180/public/images/articles/Vortex%20polaire.jpg?itok=zglzNHhS" src="https://meteofrance.com/sites/default/files/styles/345_180/public/images/articles/Vortex%20polaire.jpg?itok=zglzNHhS">
+                                            <p>Atmosphère</p>
+                                    </figure>
+                <div>
+                    <h3>Le vortex polaire</h3>
+                    <p>Le vortex polaire est une zone de basses pressions en altitude centrée sur les pôles géographiques durant l’hiver. La variation de sa position, sa forme ou son réchauffement peut avoir des conséquences sur la météo.</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/meteo-a-z/combien-pese-un-nuage" title="Combien pèse un nuage ?">
+                <figure>
+                    <img alt="Combien pèse un nuage ?" data-src="/sites/default/files/styles/345_180/public/images/articles/cumulonimbus_cotopaxim.jpg?itok=R2WclW32" src="https://meteofrance.com/sites/default/files/styles/345_180/public/images/articles/cumulonimbus_cotopaxim.jpg?itok=R2WclW32">
+                                            <p>Les nuages</p>
+                                    </figure>
+                <div>
+                    <h3>Combien pèse un nuage ?</h3>
+                    <p>Un nuage est composé de gouttelettes d’eau et/ou de cristaux en suspension dans l’atmosphère. La forme, la couleur et la taille d’un nuage varient selon les conditions atmosphériques.</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/les-gelees-seront-elles-de-plus-en-plus-rares-dans-le-futur" title="Les gelées seront-elles de plus en plus rares dans le futur&nbsp;?">
+                <figure>
+                    <img alt="Les gelées seront-elles de plus en plus rares dans le futur&nbsp;?" data-src="/sites/default/files/styles/345_180/public/images/articles/7751281120211035.jpg?itok=YkaSOlIF" src="https://meteofrance.com/sites/default/files/styles/345_180/public/images/articles/7751281120211035.jpg?itok=YkaSOlIF">
+                                            <p>Changement climatique</p>
+                                    </figure>
+                <div>
+                    <h3>Les gelées seront-elles de plus en plus rares dans le futur&nbsp;?</h3>
+                    <p>Dans un climat réchauffé, les épisodes de gel seront de de moins en moins fréquents. Les journées avec une température minimale sous abri inférieure à 0 °C ont déjà baissé partout en France entre les périodes 1961-1990 et 1991-2020.</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/meteo-a-z/glossaire" title="Glossaire">
+                <figure>
+                    <img alt="Glossaire" data-src="/sites/default/files/styles/345_180/public/images/articles/glossaire-meteo-france.jpg?itok=0QqM1tjL" src="https://meteofrance.com/sites/default/files/styles/345_180/public/images/articles/glossaire-meteo-france.jpg?itok=0QqM1tjL">
+                                            <p>Météo-France</p>
+                                    </figure>
+                <div>
+                    <h3>Glossaire</h3>
+                    <p>De l’anticyclone au vortex polaire, consultez notre glossaire météo et climat. Non exhaustif, il est mis à jour régulièrement, au fil de nos publications. Vous y trouverez également des liens utiles vers nos contenus pédagogiques concernant les phénomènes météorologiques et des informations scientifiques sur le changement climatique.</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+  </div>
+
+  </div>
+
+                                                                                        <div id="secondary_sidebar">
+  
+    
+      <ul>
+            <li>
+            <a href="https://meteofrance.com/actualites/intensification-des-pluies-en-novembre-2026-des-niveaux-de-secheresse-differents" title="Intensification des pluies en novembre 2026 : des niveaux de sécheresse différents selon les régions">
+                <figure>
+                    <img alt="Intensification des pluies en novembre 2026 : des niveaux de sécheresse différents selon les régions" data-src="/sites/default/files/styles/80_56/public/images/articles/ic-meteo78-261021.jpg?itok=LF9vEHA0" src="https://meteofrance.com/sites/default/files/styles/80_56/public/images/articles/ic-meteo78-261021.jpg?itok=LF9vEHA0">
+                </figure>
+                <div>
+                    <h3>Intensification des pluies en novembre 2026 : des niveaux de sécheresse différents selon les régions</h3>
+                    <p>24/11/2026</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/quel-climat-futur-dans-votre-region" title="Quel climat futur dans votre région&nbsp;?">
+                <figure>
+                    <img alt="Quel climat futur dans votre région&nbsp;?" data-src="/sites/default/files/styles/80_56/public/images/articles/carte-france-region.jpg?itok=Wc9shy9I" src="https://meteofrance.com/sites/default/files/styles/80_56/public/images/articles/carte-france-region.jpg?itok=Wc9shy9I">
+                </figure>
+                <div>
+                    <h3>Quel climat futur dans votre région&nbsp;?</h3>
+                    <p>13/05/2026</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/quel-climat-a-brest-a-lhorizon-2050" title="Quel climat à Brest à l'horizon 2050 ?">
+                <figure>
+                    <img alt="Quel climat à Brest à l'horizon 2050 ?" data-src="/sites/default/files/styles/80_56/public/images/articles/brest.jpg?itok=hGkV_8uK" src="https://meteofrance.com/sites/default/files/styles/80_56/public/images/articles/brest.jpg?itok=hGkV_8uK">
+                </figure>
+                <div>
+                    <h3>Quel climat à Brest à l'horizon 2050 ?</h3>
+                    <p>17/11/2026</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/quel-climat-a-lyon-a-lhorizon-2050" title="Quel climat à Lyon à l’horizon 2050 ?">
+                <figure>
+                    <img alt="Quel climat à Lyon à l’horizon 2050 ?" data-src="/sites/default/files/styles/80_56/public/images/articles/lyon-2050.jpg?itok=nEhI2mTz" src="https://meteofrance.com/sites/default/files/styles/80_56/public/images/articles/lyon-2050.jpg?itok=nEhI2mTz">
+                </figure>
+                <div>
+                    <h3>Quel climat à Lyon à l’horizon 2050 ?</h3>
+                    <p>17/11/2026</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/quel-climat-a-marseille-a-lhorizon-2050" title="Quel climat à Marseille à l’horizon 2050 ?">
+                <figure>
+                    <img alt="Quel climat à Marseille à l’horizon 2050 ?" data-src="/sites/default/files/styles/80_56/public/images/articles/marseille-2050.jpg?itok=e4DnYV1D" src="https://meteofrance.com/sites/default/files/styles/80_56/public/images/articles/marseille-2050.jpg?itok=e4DnYV1D">
+                </figure>
+                <div>
+                    <h3>Quel climat à Marseille à l’horizon 2050 ?</h3>
+                    <p>16/11/2026</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/quel-climat-a-paris-a-lhorizon-2050" title="Quel climat à Paris à l’horizon 2050 ?">
+                <figure>
+                    <img alt="Quel climat à Paris à l’horizon 2050 ?" data-src="/sites/default/files/styles/80_56/public/images/articles/paris-climat-futur.jpg?itok=ail_taqj" src="https://meteofrance.com/sites/default/files/styles/80_56/public/images/articles/paris-climat-futur.jpg?itok=ail_taqj">
+                </figure>
+                <div>
+                    <h3>Quel climat à Paris à l’horizon 2050 ?</h3>
+                    <p>17/11/2026</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+  </div>
+                                                    </div>
+                
+                                                    
+                                
+                                                    <div id="tertiary_section">
+    <p><span>
+        <i></i>
+        IMAGES &amp; VIDÉOS</span></p><div>
+            <ul>
+                                <li role="button">
+                    <i></i>
+                    Recommandées
+                </li>
+                               <li role="button">
+                    <i></i>
+                    Récents
+                </li>
+                               <li role="button">
+                    <i></i>
+                    Populaires
+                </li>
+                           </ul>
+            <div>
+                                    <ul>
+                        <li>
+                            <figure>
+                                <img>
+                            </figure>
+                            <p>${vid.title}</p>
+                        </li>
+                    </ul>
+                                    <ul>
+                        <li>
+                            <figure>
+                                <img>
+                            </figure>
+                            <p>${vid.title}</p>
+                        </li>
+                    </ul>
+                                    <ul>
+                        <li>
+                            <figure>
+                                <img>
+                            </figure>
+                            <p>${vid.title}</p>
+                        </li>
+                    </ul>
+                            </div>
+        </div>
+</div>
+                
+                                
+                                                    <div id="quinary_section">
+  
+    
+      <ul>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/quel-climat-futur-dans-votre-region" title="Quel climat futur dans votre région&nbsp;?">
+                <figure>
+                    <img alt="Quel climat futur dans votre région&nbsp;?" data-src="/sites/default/files/styles/345_180/public/images/articles/carte-france-region.jpg?itok=MlC-5VBo" src="https://meteofrance.com/sites/default/files/styles/345_180/public/images/articles/carte-france-region.jpg?itok=MlC-5VBo">
+                                            <p>Changement climatique</p>
+                                    </figure>
+                <div>
+                    <h3>Quel climat futur dans votre région&nbsp;?</h3>
+                    <p>Les projections climatiques, produites à des échelles fines, permettent d’appréhender les évolutions locales du climat futur. Ainsi le réchauffement climatique ne se traduit pas par une évolution uniforme des températures et des précipitations sur l’ensemble du territoire. À l'horizon 2100, selon la trajectoire de réchauffement de référence pour l'adaptation au changement climatique (TRACC), un écart est attendu entre le Sud-Est, qui se réchauffe davantage, et le Nord-Ouest du pays. En matière de précipitation, des différences entre régions apparaissent entre le Nord Est et le Sud Ouest. Cette cartographie vise à éclairer la prise en compte de la TRACC à l'échelle régionale et infrarégionale.</p>
+                </div>
+            </a>
+        </li>
+            <li>
+            <a href="https://meteofrance.com/changement-climatique/quel-climat-futur-dans-votre-ville" title="Quel climat futur dans votre ville&nbsp;?">
+                <figure>
+                    <img alt="Quel climat futur dans votre ville&nbsp;?" data-src="/sites/default/files/styles/345_180/public/images/articles/climat-futur-ville.jpg?itok=4wMUGNht" src="https://meteofrance.com/sites/default/files/styles/345_180/public/images/articles/climat-futur-ville.jpg?itok=4wMUGNht">
+                                            <p>A la une</p>
+                                    </figure>
+                <div>
+                    <h3>Quel climat futur dans votre ville&nbsp;?</h3>
+                    <p>À quoi ressemblerait le climat des villes françaises d'ici 2050 ? Selon la Trajectoire de réchauffement de référence pour l'adaptation au changement climatique (TRACC), la hausse moyenne des températures en France hexagonale et Corse atteindrait +2,4 °C en été et +1,9 °C en hiver. À travers un premier échantillon de 7 grandes villes représentatives (Brest, Bordeaux, Lyon, Marseille, Paris, Strasbourg et Toulouse), découvrez les projections locales de Météo-France issues des données de l’outil Climadiag Commune : hausse des températures, multiplication des nuits chaudes, évolution des précipitations, risque de feux de végétation et élévation du niveau de la mer.</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+  </div>
+                
+                
+                                    <div id="sixary_section">
+  
+    
+      	<ul>
+	  	    
+    	<li>
+    		<a href="https://meteofrance.com/">    		Accueil
+    		</a>    	</li>
+	  	    
+    	<li>
+    		<a href="https://meteofrance.com/previsions-meteo-france/nouvelle-aquitaine/9">    		Nouvelle Aquitaine
+    		</a>    	</li>
+	  	    
+    	<li>
+    		<a href="https://meteofrance.com/previsions-meteo-france/lot-et-garonne/47">    		Lot-et-Garonne
+    		</a>    	</li>
+	  	    
+    	<li>
+    		    		Agen
+    		    	</li>
+	  	</ul>
+
+  </div>
+                
+            </div></div></div>
+      </article>
+    </main>
+  </body>
+  </html>
